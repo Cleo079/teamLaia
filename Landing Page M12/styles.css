@@ -1,0 +1,49 @@
+.divi{
+    width: 377px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: rgba(217, 217, 217, 0.45);
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+}
+.div{
+    /*width: 377px;
+    height: 66px;*/
+    grid-row: inherit;
+    margin-left: 50%;
+}
+.bg{
+    background-color: #67A8D7;
+    border-radius: 15px;
+    padding: 8px;
+    color: #ffffff;
+}
+body{
+    background: url("fondo.png");
+    background-size: cover;
+}
+.tierra{
+    margin-left: 50%;
+}
+.claro{
+    background-image: url("modo claro.svg");
+    background-size: 100%;
+    width: 109px;
+    height: 50.867px;
+    margin-left: 17%;
+}
+.testo{
+    color: #F7F8D5;
+    text-shadow: 4px 8px 15px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+mark{
+    background-color: transparent;
+    color: #09E8F6;
+}

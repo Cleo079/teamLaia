@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Maze Game</title>
+</head>
+<body>
+
+    <button id="back">
+        back
+    </button>
+    <div class="game">
+        <h1 id="title">Maze</h1>
+        <select id="levelSelect">
+            <option selected>Levels</option>
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+        </select>
+
+        <div id="maze-container">
+            <img src="images/warrior/warrior_down.gif" alt="warrior" id="warrior" height="50px" width="50px">
+            <!-- <img src="img/door.png" alt="door" id="door" height="50px" width="50px"> -->
+            <div id="lantern"></div>
+            <div id="lanternDoor"></div>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

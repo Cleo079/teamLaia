@@ -1,0 +1,213 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.background {
+    background-image: url('../images/background.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    filter: blur(2px);
+}
+
+
+.topBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color:#c6c6c6;
+    text-shadow: 2px 2px 8px #000000;    
+}
+
+.gameContainer {
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-color: beige;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textMessage {
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(49, 59, 67);
+    font-weight: 700;
+}
+
+.organicCategory {
+    background-color: rgb(72, 39, 16);
+    height: 40px;
+    opacity: 70%;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-align: left;
+    color: rgb(229, 229, 229);
+    font-weight: 500;
+}
+
+.organicCategory:hover {
+    cursor: pointer;
+}
+
+.glassCategory {
+    background-color: rgb(20, 90, 30);
+    height: 40px;
+    opacity: 70%;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-align: left;
+    color: rgb(229, 229, 229);
+    font-weight: 500;
+}
+
+.glassCategory:hover {
+    cursor: pointer;
+}
+
+.paperCardboardCategory {
+    background-color: rgb(32, 41, 122);
+    height: 40px;
+    opacity: 70%;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-align: left;
+    color: rgb(229, 229, 229);
+    font-weight: 500;
+}
+
+.paperCardboardCategory:hover {
+    cursor: pointer;
+}
+
+.plasticsCategory {
+    background-color: rgb(195, 186, 21);
+    height: 40px;
+    opacity: 70%;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-align: left;
+    color: rgb(229, 229, 229);
+    font-weight: 500;
+}
+
+.plasticsCategory:hover {
+    cursor: pointer;
+}
+
+
+
+.trashCan {
+    background-image: url('/images/trashcan.png');
+    background-size: cover;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 45%;  /*Centra horizontalmente */
+}
+
+
+.element {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 2em;
+    line-height: 100px;
+    text-align: center;
+    background-size: cover; /* ajusta el tamaño de la imagen al contenedor */
+    background-position: center; /* posiciona la imagen al centro del contenedor */
+}
+
+.countdown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.countdown {
+    font-size: 500px; /* Tamaño del texto del contador */
+    font-weight: 500;
+    text-shadow: 2px 2px 8px #000000;    
+    color: #c6c6c6; /* Color del texto */
+    padding: 20px;
+    pointer-events: none;
+}
+
+.gameOverMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    font-size: 100px; /* Tamaño del texto del contador */
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000000;    
+    color: #f50000; /* Color del texto */
+}
+
+.youWinMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    font-size: 100px; /* Tamaño del texto del contador */
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000000;    
+    color: rgb(0, 245, 33); /* Color del texto */
+}
+
+.restartButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    background-color: rgb(75, 198, 91);
+    font-size: 30px;
+    text-align: center;
+    color: rgb(229, 229, 229);
+    font-weight: 500;
+}
+
+.restartButton:hover {
+    cursor: pointer;
+}

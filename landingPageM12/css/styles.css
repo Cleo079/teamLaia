@@ -1,7 +1,8 @@
 body {
     font-family: 'Inter', sans-serif;
     background: #000;
-    background: url("/images/fondo.png");
+    background: url("../images/fondo.png");
+    
     background-size: cover;
 }
 

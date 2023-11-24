@@ -94,7 +94,7 @@
     </div>
 
     <div class="tituloPrincipal">
-        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"> iluminandolo</mark></h1>
+        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"> iluminándolo</mark></h1>
         <div class="botonJuegaAhora">
             <p class="textoJuega">Juega ahora!</p>
         </div>

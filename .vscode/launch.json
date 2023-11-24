@@ -14,7 +14,12 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "http://localhost:8080/collection/index.php",
+            // EVIAM
+            "url": "http://localhost:8080/teamLaia/landingPageM12/index.php",
+
+            // ISAAC
+            //"url": "http://localhost:8080/collection/index.php",
+
             "webRoot": "${workspaceFolder}"
         }
     ]

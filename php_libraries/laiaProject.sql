@@ -32,7 +32,7 @@ CREATE TABLE stats (
   score varchar(50) not null,
   PRIMARY KEY (id_user, id_game),
   FOREIGN KEY (id_user) REFERENCES users (id_user),
-  FOREIGN KEY (id_type) REFERENCES games (id_game)
+  FOREIGN KEY (id_game) REFERENCES games (id_game)
   );
   
   

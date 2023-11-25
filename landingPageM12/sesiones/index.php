@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cat">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">    
     <link rel="stylesheet" href="css/styles.css" />
     <title>Landing Page</title>
 </head>
 
 <body>
+<!-- Comento estas lineas que son las que hacen el scroll suave porque sino no funiona el modal -->
+<!-- <div class="js-cont">
+	<div class="js-scroll"> -->
+
+    <img src="images/fondo.png" class="imagenFondo" alt="fondo">
     <div class="divIdentificacionUsuario">
         <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="divIniciarSesionMinimizado">
             <p class="iniciarSesionTextoDivMinimizado">Iniciar Sesion</p>
@@ -94,21 +98,46 @@
     </div>
 
     <div class="tituloPrincipal">
-        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"> iluminándolo</mark></h1>
+        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"><br> iluminandolo</mark></h1>
         <div class="botonJuegaAhora">
             <p class="textoJuega">Juega ahora!</p>
         </div>
+
+        <div class="averiguaMas">
+            <p id="textoAveriguaMas">Averigua Más</p>
+            <img id="imagenFlechaAbajo" src="images/iconamoonArrowDown2Bold.png" alt="flecha">
+        </div>
+        
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <div class="divTextoLore">
+        <p class="textoLore">
+        En un mundo donde la tecnología y la magia se entrelazan, Laia Ferrer se erige como una poderosa ingeniera con la misión de tejer las fibras invisibles que alimentan la vida de los diversos pueblos. Nacida en Barcelona, pero con raíces profundas en el tranquilo pueblo de Forcall, en Castelló, Laia se sumerge en el corazón de la naturaleza cada vez que sus deberes como creadora de redes de energía sostenible lo permiten.<br><br>
+
+        Con 46 años de edad, Laia lidera un equipo de valientes colaboradores, todos ellos unidos por un propósito común: satisfacer las necesidades energéticas de los pueblos. Su jornada no es solo un ejercicio técnico, sino una aventura que comienza con el contacto directo con la gente y los líderes locales. Juntos, recopilan información vital sobre las necesidades específicas de cada población.<br><br>
+
+        A medida que Laia y sus colaboradores recorren los diversos pueblos, el juego se despliega ante ellos. Desafíos matemáticos, preguntas sobre geografía, problemas combinatorios: estas pruebas se presentan como obstáculos en su camino. Sin embargo, son estas pruebas las que dan forma a su misión, guiándolos hacia la creación de una red eléctrica útil y sostenible para las comunidades que sirven.<br><br>
+
+        La formación en Ingeniería Industrial en la Universitat Politècnica de Catalunya ha preparado a Laia para este viaje. Como catedrática, no solo transmite conocimientos, sino que también encabeza la búsqueda de alternativas innovadoras con energías sostenibles. Su compromiso con la creación de un mundo mejor resuena con la niña que alguna vez soñó con viajar y dejar una huella positiva en el mundo.<br><br>
+
+        Adéntrate en este juego épico, donde cada decisión cuenta y cada desafío superado acerca a Laia y su equipo a la realización de un sueño compartido: iluminar el mundo con una red de energía sostenible que perdure a través de las eras. ¡Prepárate para un viaje emocionante, donde la magia de la ingeniería y el espíritu aventurero se entrelazan para forjar un futuro brillante!<br><br>
+        </p>
+    </div>
+
+    <div class="botonJuegaAhoraFondo">
+        <p class="textoJuega">Juega ahora!</p>
+    </div>
+    <br>
+
+    <!-- jQuery y Popper.js (Reemplaza la versión con la que estás usando) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- </div>
+</div> -->
 </body>
 
 </html>

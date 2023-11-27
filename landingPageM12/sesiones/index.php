@@ -55,7 +55,7 @@
                         <p class="textoIniciaSesionVentanaIniciarSesion">Inicia Sesión</p>
                     </div>
                     <div class="divFormularioIniciarSesion">
-                        <form action="../php_controllers/userController.php" method="POST">
+                        <form action="./php_controllers/userController.php" method="POST">
                             <label for="labelNombreUsuarioIniciarSesion" id="labelNombreUsuarioIniciarSesion">Nombre de
                                 Usuario</label>
                             <input type="text" name="user_name"
@@ -73,7 +73,7 @@
                                 </div>
 
                                 <div class="botonEntrar">
-                                    <button type="submit" name="insert" class="textoEntrar">Entrar</button>
+                                    <button type="submit" name="logIn" class="textoEntrar">Entrar</button>
                                 </div>
                             </div>
                         </form>
@@ -91,14 +91,14 @@
                         <p class="textoNuevoUsuarioVentanaRegistrarse">Nuevo Usuario</p>
                     </div>
                     <div class="divFormularioRegistrarse">
-                        <form action="#">
+                        <form action="./php_controllers/userController.php" method="POST">
                             <label for="labelNombreUsuarioRegistrarse" id="labelNombreUsuarioRegistrarse">Nombre de
                                 Usuario</label>
-                            <input type="text" name="inputNombreUsuarioRegistrarse"
-                                id="inputNombreUsuarioRegistrarse" />
+                            <input type="text" name="user_name"
+                                id="inputNombreUsuarioRegistrarse" value="<?php echo $user['user_name']?>" />
 
                             <label for="labelContrasenaRegistrarse" id="labelContrasenaRegistrarse">Contraseña</label>
-                            <input type="password" name="inputContrasenaRegistrarse" id="inputContrasenaRegistrarse" />
+                            <input type="password" name="user_password" id="inputContrasenaRegistrarse" value="<?php echo $user['user_password']?>" />
 
                             <label for="labelTienesCuenta" class="labelTienesCuenta">Ya tienes cuenta?</label>
                             <div class="contenedorBotones">
@@ -107,7 +107,7 @@
                                 </div>
 
                                 <div class="botonRegistrarse">
-                                    <p class="textoRegistrarse">Registrarse</p>
+                                    <button type="submit" name="singUp" class="textoRegistrarse">Registrarse</p>
                                 </div>
                             </div>
                         </form>

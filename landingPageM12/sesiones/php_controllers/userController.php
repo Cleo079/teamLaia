@@ -1,27 +1,44 @@
 <?php
 
-require_once('../php_librarys/db.php');
+session_start();
 
-if (isset($_POST['insert']))
+require_once('../php_libraries/db.php');
+
+if (isset($_POST['logIn']))
 {
-    $users = selectUsers();
+    $user = selectUserbyName($_POST['user_name']);
+    $userExists = false;
 
     // compruebo si existe este usuario
-    foreach ($users as $user)
+    if ($user['user_name'] == $_POST['user_name'] && $user['user_password'] == $_POST['user_password'])
     {
-        if ($user['user_name'] == $_POST['user_name'] && $user['user_password'] == $_POST['user_password'])
-        {
-            echo 'todo correcto';
-        }
-        else
-        {
-            $_SESSION['error'];
-        }
-    }
+        $userExists = true;
+        // esto me lo guardo...
+        $_SESSION['user'] = $user;
+        header('Location: ../stats.php');
+
+    };
+
+    if ($userExists == false )
+    {
+        $_SESSION['error'] = "";
+    };
 
     if (isset($_SESSION['error']))
     {
-        header('Location: ../landingPageM12/index.php');
+        header('Location: ../index.php');
+        exit();
+    };
+};
+
+
+if (isset($_POST['singUp']))
+{
+    insertUser($_POST['user_name'], $_POST['user_password']);
+
+    if (isset($_SESSION['error']))
+    {
+        header('Location: ../index.php');
         exit();
     }
     else
@@ -30,7 +47,5 @@ if (isset($_POST['insert']))
         exit();
     };
 };
-
-
 
 ?>

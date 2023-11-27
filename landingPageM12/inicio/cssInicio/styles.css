@@ -1,19 +1,36 @@
 :root{
     /* --textFamily: 'Pixelify Sans'; */
     --textColorWhite: rgb(221, 208, 208);
-    --backgroundImage: url("./Imagenes/fondo.png");
+    --backgroundImage: url("../Imagenes/fondo.png");
 }
-
+/*index.html*/
 .bodyBg{
     font-family: sans-serif;
     background-image: var(--backgroundImage);
     background-size: cover;
 }
-body{
-    font-family: sans-serif;
+.centrado{
+    text-align: center;
+    color: var(--textColorWhite);
 }
 h1{
     color: var(--textColorWhite);
+}
+.ol{
+    list-style-type: none;
+}
+.li_a{
+    text-decoration: none;
+    /* color: var(--textColor); */
+    color: violet;
+}
+.borderBottom{
+    color: var(--textColorWhite);
+    border-bottom: 1px solid var(--textColorWhite);
+}
+/*containerJuegos.html*/
+body{
+    font-family: sans-serif;
 }
 h2{
     font-size: 50px;
@@ -35,26 +52,9 @@ p{
     background-color: var(--textColorWhite);
     margin: 0px;
 }
-.centrado{
-    text-align: center;
-    color: var(--textColorWhite);
-}
-ol{
-    list-style-type: none;
-}
-li a{
-    text-decoration: none;
-    /* color: var(--textColor); */
-    color: violet;
-}
-p{
-    color: violet;
-}
+
+/*No se*/
 .espacio{
     width: 12px;
     height: 12px;
-}
-.borderBottom{
-    color: var(--textColorWhite);
-    border-bottom: 1px solid var(--textColorWhite);
 }

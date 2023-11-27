@@ -15,7 +15,7 @@
             "request": "launch",
             "type": "chrome",
             // EVIAM
-            "url": "http://localhost:8080/teamLaia/landingPageM12/index.php",
+            "url": "http://localhost:8080/teamLaia/landingPageM12/sesiones/index.php",
 
             // ISAAC
             //"url": "http://localhost:8080/collection/index.php",

@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./imagenes/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.quiz-container {
+    background: rgb(60, 59, 56);
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.question {
+    width: 50%;
+    padding: 20px;
+    margin-top: 20px; /* Añade esta línea */
+    border-radius: 10px; /* Añade esta línea */
+    
+}
+
+.question img {
+    width: 100%; /* Cambia este valor al tamaño que desees */
+    height: auto; /* Esto mantendrá la relación de aspecto de la imagen */
+    border-radius: 20px;
+    background: none;
+    margin: 0px;
+}
+
+.enunciado{
+    font-size: 23px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7); /* Añade esta línea */
+    word-wrap: nowrap;
+    margin-right: 200px;
+    margin: 40px 80px;
+
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    font-size: 130%;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7); /* Añade esta línea */
+}
+
+.option:hover {
+    background-color: #eee;
+}
+
+.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+.bombillas img{
+    max-width: 10%;
+    margin-top: 45px;
+    margin-left: 40px;
+    
+
+}
+
+.colb{
+    width: 50%;
+}
+

@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include_once ('./php_partials/menu.php') ?>
     <h1>hola</h1>
 </body>
 </html>

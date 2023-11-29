@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Belleza', sans-serif;
     background: #000;
 }
 
@@ -110,7 +110,6 @@ body::-webkit-scrollbar-button {
 .registrarseTextoDivMinimizado,
 .iniciarSesionTextoDivMinimizado {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -160,7 +159,6 @@ body::-webkit-scrollbar-button {
 .textoIniciaSesionVentanaIniciarSesion,
 .textoNuevoUsuarioVentanaRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 72px;
     font-style: normal;
     font-weight: 700;
@@ -186,7 +184,6 @@ form {
 #labelNombreUsuarioIniciarSesion,
 #labelContrasenaIniciarSesion {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -210,7 +207,6 @@ form {
     padding: 10px;
 
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -233,7 +229,6 @@ form {
 
 .labelNoTienesCuenta {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -257,7 +252,6 @@ form {
 
 .textoRegistrarseNoTienesCuenta {
     color: #292929;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -284,7 +278,6 @@ form {
 
 .textoEntrar {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -303,7 +296,6 @@ form {
 #labelNombreUsuarioRegistrarse,
 #labelContrasenaRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -327,7 +319,6 @@ form {
     padding: 10px;
 
     color: #292929;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -350,7 +341,6 @@ form {
 
 .labelTienesCuenta {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -372,7 +362,6 @@ form {
 
 .textoEntrarTienesCuenta {
     color: #292929;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -399,7 +388,6 @@ form {
 
 .textoRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -420,7 +408,6 @@ form {
 .textoTituloPrincipal{
     color: #F7F8D5;
     text-shadow: 4px 8px 15px rgba(0, 0, 0, 0.25);
-    font-family: Inter;
     font-size: 110px;
     font-style: normal;
     font-weight: 700;
@@ -432,9 +419,8 @@ form {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: Inter;
     font-size: 96px;
-    font-style: italic;
+    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
@@ -475,7 +461,6 @@ form {
 
 .textoJuega {
     color: #FFF;
-    font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -585,7 +570,6 @@ form {
 
     .textoJuega {
         color: #FFF;
-        font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;

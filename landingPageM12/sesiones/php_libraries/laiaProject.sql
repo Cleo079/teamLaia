@@ -46,8 +46,15 @@ INSERT INTO users (user_name, user_password, userRol) values
 ('Isaac', '12345', 2),
 ('Ivan', '123456', 3);
 
+SELECT
+    u.id_user,
+    u.user_name,
+    u.user_password,
+    r.name_rol as userRol
+FROM
+    users u
+JOIN
+    rols r ON u.userRol = r.id_rol;
 
-  
-  
   
   

@@ -1,3 +1,15 @@
+<?php
+
+  require_once('./php_libraries/db.php');
+
+  if (isset($_SESSION['user']))
+  {
+      $user = $_SESSION['user'];
+      unset($_SESSION['user']);
+  };
+
+?>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="./gallery.php">
@@ -14,10 +26,10 @@
             Actions
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./pokemon.php">New Pokemon</a></li>
-            <li><a class="dropdown-item" href="./gallery.php">Gallery</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="./pokemon.php">New Pokemon</a></li>
+              <li><a class="dropdown-item" href="./gallery.php">Gallery</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
       </ul>

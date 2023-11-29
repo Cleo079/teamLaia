@@ -15,7 +15,15 @@ if (isset($_POST['logIn']))
         $_SESSION['userExist'] = true;
         // esto me lo guardo...
         $_SESSION['user'] = $user;
-        header('Location: ../../inicio/index.html');
+
+        if ($user['userRol'] == 3)
+        {
+            header('Location: ../administration.php');
+        }
+        else
+        {
+            header('Location: ../../inicio/index.php');
+        }
         exit();
 
     };

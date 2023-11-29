@@ -1,3 +1,19 @@
+<?php
+
+    session_start();
+
+    $areUser = true;
+
+
+    $userSession = $_SESSION['user'];
+
+    if ($userSession['userRol'] != 1)
+    { 
+        $areUser = false;
+    };
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +44,12 @@
                 <li>
                     <a href="./containerJuegos.html"><p>Creditos</p></a>
                 </li>
+                <?php if ($areUser == false) { ?>
+                    <li>
+                    <a href="../sesiones/administration.php"><p>Administration</p></a>
+                    </li>
+                <?php } ?>
+
             </ol>
         </div>
     </div>

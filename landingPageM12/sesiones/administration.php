@@ -2,9 +2,7 @@
 
     require_once('./php_libraries/db.php');
 
-    $players = selectPlayers();
-
-    $n = 1;
+    $userSession = $_SESSION['user'];
 
 ?>
 
@@ -20,26 +18,36 @@
 </head>
 <body>
     <?php include_once ('./php_partials/menu.php') ?>
+
+    <!-- Here i kown what rol has the user and what he can will see -->
+    <?php
+        if ($userSession['userRol'] == 3)
+        { 
+            $users = selectAll();
+        }
+        else if ($userSession['userRol'] == 2)
+        {
+            $users = selectPlayers();
+        };
+    ?>
     
     <div class="container">
         <table class="table table-dark table-striped">
             <tr>
-                <th>Posición</th>
-                <th>Nombre</th>
-                <th>Puntuación</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Rol</th>
             </tr>
-            
-            <?php foreach($players as $player) { ?>
 
+            <?php foreach($users as $user) { ?>
                 <tr>
-                    <td><?php echo $n; ?></td>
-                    <td><?php echo $player['user_name']; ?></td>
+                    <td><?php echo $user['id_user']; ?></td>
+                    <td><?php echo $user['user_name']; ?></td>
+                    <td><?php echo $user['user_password']; ?></td>
+                    <td><?php echo $user['userRol']; ?></td>
                 </tr>
-            <?php 
-
-                $n += 1;
-
-            } ?>
+            <?php } ?>
 
         </table>
 

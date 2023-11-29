@@ -68,13 +68,47 @@ function closeDb()
 }
 
 
-function selectUsers()
+function selectAll()
 {
     $connection = openDb();
 
-    $statementTxt = "SELECT * FROM users;";
+    $statementTxt = "SELECT
+                        u.id_user,
+                        u.user_name,
+                        u.user_password,
+                        r.name_rol as userRol
+                    FROM
+                        users u
+                    JOIN
+                        rols r ON u.userRol = r.id_rol;
+                     ";
 
     $statement = $connection->prepare($statementTxt);
+    $statement->execute();
+
+    // fetchAll return me an associative array (data table)
+    $result = $statement->fetchAll();
+
+    $connection = closeDb();
+
+    return $result;
+}
+
+function selectUsersAdmins()
+{
+    $userRol1 = 1;
+    $userRol2 = 2;
+
+    $connection = openDb();
+
+    $statementTxt = "SELECT * FROM users
+                     WHERE userRol = :userRol1
+                     AND userRol = :userRol2;
+                    ";
+
+    $statement = $connection->prepare($statementTxt);
+    $statement->bindParam(':userRol1', $userRol1);
+    $statement->bindParam(':userRol2', $userRol2);
     $statement->execute();
 
     // fetchAll return me an associative array (data table)
@@ -101,6 +135,35 @@ function selectUserbyName($user_name)
     $connection = closeDb();
 
     return $result[0];
+}
+
+function selectPlayers()
+{
+    $userRol = 1;
+    $connection = openDb();
+
+    $statementTxt = "SELECT
+                        u.id_user,
+                        u.user_name,
+                        u.user_password,
+                        r.name_rol as userRol
+                    FROM
+                        users u
+                    JOIN
+                        rols r ON u.userRol = r.id_rol
+                    WHERE
+                        userRol = :userRol;";
+
+    $statement = $connection->prepare($statementTxt);
+    $statement->bindParam(':userRol', $userRol);
+    $statement->execute();
+
+    // fetchAll(PDO::FETCH_ASSOC) return me an associative array AND OLNY THE NAMES!!
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $connection = closeDb();
+
+    return $result;
 }
 
 function insertUser($user_name, $user_password)

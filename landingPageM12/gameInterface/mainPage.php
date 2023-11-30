@@ -69,7 +69,7 @@
                             <img src="./images/LaiaChibi.png" alt="LaiaChibi"
                                 width="433px" height="500px">
                             <p class="textbg">Gatita493</p>
-                            <p>kk</p>
+                           
                         </div>
                         <div class="row row-cols-2">
                                 <div class="col">

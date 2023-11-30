@@ -1,9 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Belleza', sans-serif;
     background: #000;
-    background: url("../images/fondo.png");
-    
-    background-size: cover;
+}
+
+/* total width */
+body::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #000000;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+    display:none;
+}
+
+
+.js-cont {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.js-scroll {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	will-change: transform;
+}
+
+.imagenFondo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
 }
 
 .divIdentificacionUsuario {
@@ -58,7 +110,6 @@ body {
 .registrarseTextoDivMinimizado,
 .iniciarSesionTextoDivMinimizado {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -108,7 +159,6 @@ body {
 .textoIniciaSesionVentanaIniciarSesion,
 .textoNuevoUsuarioVentanaRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 72px;
     font-style: normal;
     font-weight: 700;
@@ -134,7 +184,6 @@ form {
 #labelNombreUsuarioIniciarSesion,
 #labelContrasenaIniciarSesion {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -158,7 +207,6 @@ form {
     padding: 10px;
 
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -181,7 +229,6 @@ form {
 
 .labelNoTienesCuenta {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -205,7 +252,6 @@ form {
 
 .textoRegistrarseNoTienesCuenta {
     color: #292929;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -232,7 +278,6 @@ form {
 
 .textoEntrar {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -251,7 +296,6 @@ form {
 #labelNombreUsuarioRegistrarse,
 #labelContrasenaRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -275,7 +319,6 @@ form {
     padding: 10px;
 
     color: #292929;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -298,7 +341,6 @@ form {
 
 .labelTienesCuenta {
     color: #FFF;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -320,7 +362,6 @@ form {
 
 .textoEntrarTienesCuenta {
     color: #292929;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -347,7 +388,6 @@ form {
 
 .textoRegistrarse {
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -368,7 +408,6 @@ form {
 .textoTituloPrincipal{
     color: #F7F8D5;
     text-shadow: 4px 8px 15px rgba(0, 0, 0, 0.25);
-    font-family: Inter;
     font-size: 110px;
     font-style: normal;
     font-weight: 700;
@@ -380,9 +419,8 @@ form {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: Inter;
     font-size: 96px;
-    font-style: italic;
+    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
@@ -401,11 +439,28 @@ form {
     transform: translateX(-50%);
     cursor: pointer;
     margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.botonJuegaAhoraFondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 248px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    background: #67A8D7;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .textoJuega {
     color: #FFF;
-    font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -413,5 +468,135 @@ form {
     margin: 0;    
 }
 
+.averiguaMas {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-end; /* Coloca el contenido al final del contenedor */
+    align-items: center;
+    width: 100%;
+}
 
+#textoAveriguaMas {
+    color: #F7F8D5;
+    font-weight: 500;
+}
+
+#imagenFlechaAbajo {
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+}
+
+.divTextoLore {
+    top: 10%;
+    width: 70%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.textoLore {
+    color: #dfdfdf;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .divTextoLore {
+        top: 20%;
+        width: 90%;
+    }
+
+    .textoLore {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ventanaIniciarSesion,
+    .ventanaRegistrarse {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #labelNombreUsuarioIniciarSesion,
+    #labelContrasenaIniciarSesion,
+    #labelNombreUsuarioRegistrarse,
+    #labelContrasenaRegistrarse {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    #inputNombreUsuarioIniciarSesion,
+    #inputContrasenaIniciarSesion,
+    #inputNombreUsuarioRegistrarse,
+    #inputContrasenaRegistrarse {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contenedorBotones {
+        flex-direction: column;
+    }
+
+    .botonEntrar,
+    .botonRegistrarse,
+    .botonEntrarTienesCuenta {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .tituloPrincipal {
+        width: 100%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .botonJuegaAhora,
+    .botonJuegaAhoraFondo {
+        width: 124px;
+        height: 37.5px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+
+    .textoJuega {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 66px;
+        margin: 0;    
+    }
+
+    .textoTituloPrincipal {
+        font-size: 40px;
+    }
+
+    .textoTituloPrincipalIluminandolo {
+        font-size: 36px;
+    }
+
+    .averiguaMas {
+        display: none;
+    }
+
+    .divTextoLore {
+        top: 30%;
+        width: 90%;
+    }
+
+    .textoLore {
+        font-size: 16px;
+    }
+    
+}
 

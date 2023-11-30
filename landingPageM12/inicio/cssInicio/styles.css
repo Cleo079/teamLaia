@@ -109,3 +109,27 @@ p{
     width: 12px;
     height: 12px;
 }
+
+/* carrouselJuegos */
+
+.carousel-inner {
+    height: 100vh;
+}
+
+.carousel {
+    overflow: hidden;
+  }
+
+  /* Estilo para cada elemento del carrusel */
+  .carousel-item {
+    height: 100vh; /* Establece la altura al 100% de la altura de la ventana */
+  }
+
+  /* Estilo para las imágenes dentro de los elementos del carrusel */
+  .carousel-item img {
+    object-fit: cover; /* Hace que la imagen cubra completamente el contenedor manteniendo su relación de aspecto */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    max-height: 100vh; /* Establece la altura máxima de la imagen a la altura de la ventana */
+    margin: auto; /* Centra la imagen verticalmente */
+    display: block; /* Elimina espacio adicional debajo de la imagen */
+  }

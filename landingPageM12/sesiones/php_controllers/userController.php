@@ -1,36 +1,64 @@
 <?php
 
-require_once('../php_librarys/db.php');
+session_start();
 
-if (isset($_POST['insert']))
+require_once('../php_libraries/db.php');
+
+if (isset($_POST['logIn']))
 {
-    $users = selectUsers();
+    $user = selectUserbyName($_POST['user_name']);
+    $_SESSION['userExist'] = false;
 
     // compruebo si existe este usuario
-    foreach ($users as $user)
+    if ($user['user_name'] == $_POST['user_name'] && $user['user_password'] == $_POST['user_password'])
     {
-        if ($user['user_name'] == $_POST['user_name'] && $user['user_password'] == $_POST['user_password'])
+        $_SESSION['userExist'] = true;
+        // esto me lo guardo...
+        $_SESSION['user'] = $user;
+
+        if ($user['userRol'] == 3)
         {
-            echo 'todo correcto';
+            header('Location: ../administration.php');
         }
         else
         {
-            $_SESSION['error'];
+            header('Location: ../../inicio/index.php');
         }
-    }
-
-    if (isset($_SESSION['error']))
-    {
-        header('Location: ../landingPageM12/index.php');
         exit();
-    }
-    else
+
+    };
+
+    if ($_SESSION['userExist'] == false )
     {
-        header('Location: ../stats.php');
+        $_SESSION['userExist'] = false;
+    };
+
+    if (isset($_SESSION['userExist']))
+    {
+        header('Location: ../index.php');
         exit();
     };
 };
 
 
+if (isset($_POST['singUp']))
+{
+    if ($_POST['user_name'] != "" && $_POST['user_password'] != "")
+    {
+        insertUser($_POST['user_name'], $_POST['user_password']);
+        header('Location: ../../inicio/index.html');
+    }
+    else
+    {
+        //mesaje de error
+        $_SESSION['error'] = "";
+    };
+
+    if (isset($_SESSION['error']))
+    {
+        header('Location: ../index.php');
+        exit();
+    };
+};
 
 ?>

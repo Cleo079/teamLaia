@@ -15,8 +15,12 @@
             "request": "launch",
             "type": "chrome",
             // EVIAM
-            "url": "http://localhost:8080/teamLaia/landingPageM12/landing/index.php",
+            //"url": "http://localhost:8080/teamLaia/landingPageM12/landing/index.php",
 
+            //IVAN
+            "url": "http://localhost:8080/teamLaia/landingPageM12/gameInterface/mainPage.php",
+            //IVAN-Jogo
+            //"url": "http://localhost:8080/teamLaia/JuegosM12/Ivan/index.html",
             // ISAAC
             //"url": "http://localhost:8080/collection/index.php",
 

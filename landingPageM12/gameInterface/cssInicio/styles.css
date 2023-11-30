@@ -4,8 +4,9 @@
 
 :root{
     /* --textFamily: 'Pixelify Sans'; */
-    --textColorWhite: rgb(221, 208, 208);
-    --backgroundImage: url("../Imagenes/fondo.png");
+    --textColorWhite: #E0D3C6;
+    --textShadow: 2px 2px 5px #5F4A43;
+    --backgroundImage: url("../images/fondo.png");
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
 }
 /*index.html*/
@@ -17,9 +18,12 @@
 .centrado{
     text-align: center;
     color: var(--textColorWhite);
+    text-shadow: var(--textShadow);
 }
 h1{
+    font-size: 50px;
     color: var(--textColorWhite);
+    text-shadow: #5F4A43;
 }
 .ol{
     list-style-type: none;
@@ -70,18 +74,24 @@ h1{
 .btn{
     font-size: 37px;
     color: var(--textColorWhite);
+    text-shadow: var(--textShadow);
 }
 .divContenedor{
+    margin-left: 4px;
     border: 2px solid grey;
     border-radius: 5px;
     width: 300px;
     height: 207px;
 }
+/* .modal-dialog-scrollable{
+    overflow-y: auto;
+} */
 .textbg{
     margin: 2%;
     font-size: 37px;
     border-radius: 5px;
     background: #766a6a;
+    color: var(--textColorWhite);
 }
 /*containerJuegos.html*/
 body{

@@ -39,7 +39,7 @@
                     <a href="./containerJuegos.html"><p>Nuevo Juego</p></a>
                 </li>
                 <li>
-                    <a href="../sesiones/stats.php"><p>Estadisticas</p></a>
+                    <a href="../sesiones/ranking.php"><p>Ranking</p></a>
                 </li>
                 <li>
                     <a href="./containerJuegos.html"><p>Creditos</p></a>

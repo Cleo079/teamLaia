@@ -2,11 +2,8 @@
 
   require_once('./php_libraries/db.php');
 
-  if (isset($_SESSION['user']))
-  {
-      $user = $_SESSION['user'];
-      unset($_SESSION['user']);
-  };
+  $user = $_SESSION['user'];
+ 
 
 ?>
 

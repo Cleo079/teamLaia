@@ -46,7 +46,11 @@ if (isset($_POST['singUp']))
     if ($_POST['user_name'] != "" && $_POST['user_password'] != "")
     {
         insertUser($_POST['user_name'], $_POST['user_password']);
-        header('Location: ../../inicio/index.html');
+
+        $user = selectUserbyName($_POST['user_name']);
+        $_SESSION['user'] = $user;
+        
+        header('Location: ../../inicio/index.php');
     }
     else
     {

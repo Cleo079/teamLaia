@@ -2,6 +2,8 @@
 
     require_once('./php_libraries/db.php');
 
+    $userSession = $_SESSION['user'];
+
     $players = selectPlayers();
 
     $n = 1;

@@ -1,7 +1,12 @@
+* {
+    font-family: 'Belleza', sans-serif;
+}
+
 :root{
     /* --textFamily: 'Pixelify Sans'; */
-    --textColorWhite: rgb(221, 208, 208);
-    --backgroundImage: url("../Imagenes/fondo.png");
+    --textColorWhite: #E0D3C6;
+    --textShadow: 2px 2px 5px #5F4A43;
+    --backgroundImage: url("../images/fondo.png");
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
 }
 /*index.html*/
@@ -13,9 +18,12 @@
 .centrado{
     text-align: center;
     color: var(--textColorWhite);
+    text-shadow: var(--textShadow);
 }
 h1{
+    font-size: 50px;
     color: var(--textColorWhite);
+    text-shadow: #5F4A43;
 }
 .ol{
     list-style-type: none;
@@ -66,18 +74,24 @@ h1{
 .btn{
     font-size: 37px;
     color: var(--textColorWhite);
+    text-shadow: var(--textShadow);
 }
 .divContenedor{
+    margin-left: 4px;
     border: 2px solid grey;
     border-radius: 5px;
     width: 300px;
     height: 207px;
 }
+/* .modal-dialog-scrollable{
+    overflow-y: auto;
+} */
 .textbg{
     margin: 2%;
     font-size: 37px;
     border-radius: 5px;
     background: #766a6a;
+    color: var(--textColorWhite);
 }
 /*containerJuegos.html*/
 body{
@@ -111,25 +125,94 @@ p{
 }
 
 /* carrouselJuegos */
+.carouselBody {
+    margin: 0;
+    padding: 0;
+}
 
-.carousel-inner {
-    height: 100vh;
+.carouselContainer {
+    position: relative;
 }
 
 .carousel {
-    overflow: hidden;
-  }
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
 
-  /* Estilo para cada elemento del carrusel */
-  .carousel-item {
-    height: 100vh; /* Establece la altura al 100% de la altura de la ventana */
-  }
+.slide-1 {
+    background-image: url("../images/barcelona.png");
+}
 
-  /* Estilo para las imágenes dentro de los elementos del carrusel */
-  .carousel-item img {
-    object-fit: cover; /* Hace que la imagen cubra completamente el contenedor manteniendo su relación de aspecto */
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    max-height: 100vh; /* Establece la altura máxima de la imagen a la altura de la ventana */
-    margin: auto; /* Centra la imagen verticalmente */
-    display: block; /* Elimina espacio adicional debajo de la imagen */
-  }
+.slide-2 {
+    background-image: url("../images/brasil.png");
+}
+
+.slide-3 {
+    background-image: url("../images/kenia.png");
+}
+
+.slide-4 {
+    background-image: url("../images/india.png");
+}
+
+.carousel-caption {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 0px;
+}
+
+.carousel-caption h1 {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+    font-family: Belleza;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.carousel-caption p {
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+    font-family: Belleza;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hazClick {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 100;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.izquierda {
+    left: 0;
+}
+
+.derecha {
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+}

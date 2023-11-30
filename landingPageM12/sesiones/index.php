@@ -18,7 +18,7 @@
 <!-- <div class="js-cont">
 	<div class="js-scroll"> -->
 
-    <img src="images/fondo.png" class="imagenFondo" alt="fondo">
+    <img src="images/fondo.webp" class="imagenFondo" alt="fondo">
 
     <?php
                 
@@ -118,7 +118,7 @@
     </div>
 
     <div class="tituloPrincipal">
-        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"><br> iluminandolo</mark></h1>
+        <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"><br> iluminándolo </mark></h1>
         <div class="botonJuegaAhora">
             <p class="textoJuega">Juega ahora!</p>
         </div>

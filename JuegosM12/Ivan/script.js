@@ -12,7 +12,7 @@ let startBtnContainer = document.querySelector('.startBtn-container');
 let counterElement = document.querySelector('.counter');
 let pistaElement = document.querySelector('.pista');
 let pauseElement = document.querySelector('.pause');
-let counter = 120;
+let counter = 240;
 let playerWin = false;
 
 /*Animacion botones*/
@@ -40,7 +40,7 @@ startBtn.addEventListener('click', ()=> {
     //     ['7', '', '8']
     // ];
     drawTokens();
-    counter = 120;
+    counter = 240;
     playerWin = false;
     startCounter();
     addEventListeners();
@@ -217,7 +217,7 @@ function compareMatrix(){
     matrix.forEach((row, indexRow) => {
         row.forEach((element, indexColumn) => {
             if(element == finalMatrix[indexRow][indexColumn]){
-                counter++;
+                counter--;
             }
         })
     })

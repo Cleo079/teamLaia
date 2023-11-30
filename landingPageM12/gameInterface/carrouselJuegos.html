@@ -4,58 +4,114 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssInicio/styles.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
-<body>
+<body class="carouselBody">
 
 <!-- Carousel -->
 <div class="carouselContainer">
-
-  <!-- Indicators/dots -->
-  <!-- <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-  </div> -->
-
-  <div class="flechaIzquierdaCarousel">
+  <div class="flecha izquierda" onclick="prev()">
     <img src="images/leftArrow.png" alt="Flecha izquierda">
   </div>
-  
+
   <!-- The slideshow/carousel -->
-  <div class="carousel">
-    <div class="carousel carousel-1">
+  <div class="carousel slide-1">
+    <a href="/JuegosM12/Isaac/meuJogoDoLixo/meuJogoDoLixo.html">
       <div class="carousel-caption">
-        <h3>Barcelona</h3>
-        <p>UwU</p>
+        <p class="hazClick">Haz click en cualquier parte de la pantalla para ir al juego</p>
+        <h1>Barcelona</h1>
+        <p>Descripcion</p>
       </div>
-    </div>
+    </a>
+  </div>
 
-    <div class="carousel carousel-1">
-        <div class="carousel-caption">
-          <h2>Brazil</h2>
-          <p>UwU</p>
-        </div>
-    </div>
+  <div class="carousel slide-2">
+    <a href="/JuegosM12/Eviam/index.html">
+      <div class="carousel-caption">
+        <p class="hazClick">Haz click en cualquier parte de la pantalla para ir al juego</p>
+        <h1>Brazil</h1>
+        <p>Descripcion</p>
+      </div>
+    </a>
+  </div>
 
-    <div class="carousel carousel-1">
-        <div class="carousel-caption">
-          <h2>Kenia</h2>
-          <p>UwU</p>
-        </div>
-    </div>
+  <div class="carousel slide-3">
+    <a href="/JuegosM12/Ivan/index.html">
+      <div class="carousel-caption">
+        <p class="hazClick">Haz click en cualquier parte de la pantalla para ir al juego</p>
+        <h1>Kenia</h1>
+        <p>Descripcion</p>
+      </div>
+    </a>
+  </div>
 
-    <div class="carousel carousel-1">
-        <div class="carousel-caption">
-          <h2>India</h2>
-          <p>UwU</p>
-        </div>
-    </div>
+  <div class="carousel slide-4">
+    <a href="/JuegosM12/Jordi/Quiz/quiz.html">
+      <div class="carousel-caption">
+        <p class="hazClick">Haz click en cualquier parte de la pantalla para ir al juego</p>
+        <h1>India</h1>
+        <p>Descripcion</p>
+      </div>
+    </a>
+  </div>
 
-    <div class="flechaDerechaCarousel">
-      <img src="images/rightArrow.png" alt="flecha derecha">
-    </div>
+  <div class="flecha derecha" onclick="next()">
+    <img src="images/rightArrow.png" alt="flecha derecha">
+  </div>
 </div>
 
+<script>
+  let carousel = document.querySelectorAll('.carousel');
+  let leftArrow = document.querySelector('.flecha.izquierda');
+  let rightArrow = document.querySelector('.flecha.derecha');
+  var current = localStorage.getItem('carouselPosition') || 0;
+
+  function cls(){
+    for (let i = 0; i < carousel.length; i++) {
+      carousel[i].style.display = 'none';
+    }
+  }
+
+  function updateArrowsVisibility() {
+    leftArrow.style.display = current == 0 ? 'none' : 'block';
+    rightArrow.style.display = current == carousel.length - 1 ? 'none' : 'block';
+  }
+
+  function next() {
+    if (current < carousel.length - 1) {
+      current++;
+      cls();
+      carousel[current].style.display = 'block';
+    }
+    updateArrowsVisibility();
+    localStorage.setItem('carouselPosition', current);
+  }
+
+  function prev() {
+    if (current > 0) {
+      current--;
+      cls();
+      carousel[current].style.display = 'block';
+    }
+    updateArrowsVisibility();
+    localStorage.setItem('carouselPosition', current);
+  }
+
+  function start(){
+    cls();
+    carousel[current].style.display = 'block';
+    updateArrowsVisibility();
+  }
+
+  start();
+</script>
 </body>
 </html>

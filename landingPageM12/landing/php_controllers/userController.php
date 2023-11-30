@@ -65,4 +65,19 @@ if (isset($_POST['singUp']))
     };
 };
 
+if (isset($_POST['update']))
+{
+    if ($_POST['user_name'] != "" && $_POST['user_password'] != "")
+    {
+        updateAll($_POST['id_user'], $_POST['user_name'], $_POST['user_password'], $_POST['id_rol']);
+        header('Location: ../administration.php');
+    }
+
+    if (isset($_SESSION['error']))
+    {
+        header('Location: ../administration.php');
+        exit();
+    };
+};
+
 ?>

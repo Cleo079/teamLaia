@@ -80,4 +80,20 @@ if (isset($_POST['update']))
     };
 };
 
+if (isset($_POST['delete'])) {
+        
+    deleteUser($_POST['id_user']);
+
+    if (isset($_SESSION['error']))
+    {
+        header('Location: ../administration.php');
+        exit();
+    }
+    else
+    {
+        header('Location: ../administration.php');
+        exit();
+    }
+};
+
 ?>

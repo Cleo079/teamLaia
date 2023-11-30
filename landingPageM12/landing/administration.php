@@ -53,18 +53,16 @@
                     <td>
                         <form action="./php_controllers/userController.php" method="POST">
                             <button type="submit" class="btn btn-outline-danger" name="delete">
-                                <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
+                                <input type="hidden" name="id_user" value="<?php echo $user['id_user']?>">
                                 <i class="fa-solid fa-trash-can" style="color: #d24141;"></i>
                             </button>
                         </form>
                     </td>
                     <td>
-                        <!-- <form action="./php_controllers/userController.php" method="POST"> -->
-                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $user['id_user']?>">
-                                <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffc21a;"></i>
-                            </button>
-                        <!-- </form> -->
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $user['id_user']?>">
+                            <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
+                            <i class="fa-solid fa-pen-to-square" style="color: #ffc21a;"></i>
+                        </button>
                     </td>
                 </tr>
 

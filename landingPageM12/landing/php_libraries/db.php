@@ -249,6 +249,24 @@ function updateAll($id_user,$user_name, $user_password, $userRol)
     $connection = closeDb();
 }
 
+function deleteUser($id_user) {
 
+    try 
+    {
+        $connection = openDb();
+
+        $statementTxt = "DELETE FROM users WHERE (id_user = :id_user);";
+        $statement = $connection->prepare($statementTxt);
+        $statement->bindParam(':id_user', $id_user);
+        $statement->execute();
+
+    }
+    catch (PDOException $e) 
+    {
+        $_SESSION['error'] = errorMessage($e);
+    }
+
+    $connection = closeDb();
+}
 
 ?>

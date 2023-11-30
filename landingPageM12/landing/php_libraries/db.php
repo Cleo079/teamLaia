@@ -166,6 +166,27 @@ function selectPlayers()
     return $result;
 }
 
+function selectRols() {
+
+    $connection = openDb();
+
+    $statementTxt = "SELECT *
+                     FROM rols
+                     WHERE name_rol <> 'superAdmin';
+                    ";
+
+    $statement = $connection->prepare($statementTxt);
+    $statement->execute();
+
+    // fetchAll return me an associative array (data table)
+    $result = $statement->fetchAll();
+
+    $connection = closeDb();
+
+    return $result;
+}
+
+
 function insertUser($user_name, $user_password)
 {
     $userRol = 1;
@@ -188,6 +209,39 @@ function insertUser($user_name, $user_password)
         $_SESSION['error'] = errorMessage($e);
         $user['user_name'] = $user_name;
         $user['user_password'] = $user_password;
+        //I saved this varible session to hold data that user inserted
+        $_SESSION['user'] = $user;
+    }
+
+    $connection = closeDb();
+}
+
+function updateAll($id_user,$user_name, $user_password, $userRol)
+{
+    try 
+    {
+        $connection = openDb();
+
+        $statementTxt = "
+                        UPDATE users
+                        SET user_name = :user_name, user_password = :user_password, userRol = :userRol
+                        WHERE id_user = :id_user;
+                        ";
+        $statement = $connection->prepare($statementTxt);
+        $statement->bindParam(':id_user', $id_user);
+        $statement->bindParam(':user_name', $user_name);
+        $statement->bindParam(':user_password', $user_password);
+        $statement->bindParam(':userRol', $userRol);
+        $statement->execute();
+
+        // $_SESSION['message'] = 'Record inserted succesfully';
+    }
+    catch (PDOException $e) 
+    {
+        $_SESSION['error'] = errorMessage($e);
+        $user['user_name'] = $user_name;
+        $user['user_password'] = $user_password;
+        $user['userRol'] = $userRol;
         //I saved this varible session to hold data that user inserted
         $_SESSION['user'] = $user;
     }

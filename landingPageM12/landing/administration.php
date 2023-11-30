@@ -4,6 +4,8 @@
 
     $userSession = $_SESSION['user'];
 
+    $rols = selectRols();
+
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +40,8 @@
                 <th>Name</th>
                 <th>Password</th>
                 <th>Rol</th>
+                <th>#</th>
+                <th>#</th>
             </tr>
 
             <?php foreach($users as $user) { ?>
@@ -46,11 +50,87 @@
                     <td><?php echo $user['user_name']; ?></td>
                     <td><?php echo $user['user_password']; ?></td>
                     <td><?php echo $user['userRol']; ?></td>
+                    <td>
+                        <form action="./php_controllers/userController.php" method="POST">
+                            <button type="submit" class="btn btn-outline-danger" name="delete">
+                                <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
+                                <i class="fa-solid fa-trash-can" style="color: #d24141;"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- <form action="./php_controllers/userController.php" method="POST"> -->
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $user['id_user']?>">
+                                <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffc21a;"></i>
+                            </button>
+                        <!-- </form> -->
+                    </td>
                 </tr>
+
+                <div class="modal fade" id="Modal<?php echo $user['id_user']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                    Update user <?php echo $user['id_user']?>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="./php_controllers/userController.php" method="POST">
+
+                                    <input type="hidden" name="id_user" value="<?php echo $user['id_user']?>">
+
+                                    <div class="form-group row p-3">
+                                        <label for="name" class="col-sm 2 col-form-label">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="name" name="user_name" value="<?php echo $user['user_name']?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row p-3">
+                                        <label for="password" class="col-sm 2 col-form-label">Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="password" name="user_password" value="<?php echo $user['user_password']?>">
+                                        </div>
+                                    </div>
+
+                                    <?php if ($userSession['userRol'] == 3) { ?>
+
+                                        <div class="form-group row p-3">
+                                            <label for="rols" class="col-sm 2 col-form-label">Rols</label>
+                                            <div class="col-sm-9">
+                                                <?php foreach($rols as $rol) { ?>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="id_rol" id="inlineRadio1" value="<?php echo $rol['id_rol']?>">
+                                                        <label class="form-check-label" for="inlineRadio1"><?php echo $rol['name_rol']?></label>
+
+                                                        <?php if ($user['userRol'] == $rol['name_rol']) {?>
+                                                            <input class="form-check-input" type="radio" name="id_rol" id="inlineRadio1" value="<?php echo $rol['id_rol']?>" checked>
+                                                            <label class="form-check-label" for="inlineRadio1"></label>
+                                                        <?php } ?>
+                                                    </div>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+
+                                    <?php } ?>
+                                
+                                
+                                
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" name="update" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <?php } ?>
-
         </table>
-
     </div>
+
 </body>
 </html>

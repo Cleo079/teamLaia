@@ -4,7 +4,6 @@
 
   $user = $_SESSION['user'];
  
-
 ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">

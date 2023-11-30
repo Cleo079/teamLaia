@@ -22,7 +22,7 @@ if (isset($_POST['logIn']))
         }
         else
         {
-            header('Location: ../../inicio/index.php');
+            header('Location: ../../gameInterface/mainPage.php');
         }
         exit();
 
@@ -35,7 +35,7 @@ if (isset($_POST['logIn']))
 
     if (isset($_SESSION['userExist']))
     {
-        header('Location: ../index.php');
+        header('Location: ../mainPage.php');
         exit();
     };
 };
@@ -50,7 +50,7 @@ if (isset($_POST['singUp']))
         $user = selectUserbyName($_POST['user_name']);
         $_SESSION['user'] = $user;
         
-        header('Location: ../../inicio/index.php');
+        header('Location: ../../gameInterface/mainPage.php');
     }
     else
     {
@@ -60,7 +60,7 @@ if (isset($_POST['singUp']))
 
     if (isset($_SESSION['error']))
     {
-        header('Location: ../index.php');
+        header('Location: ../mainPage.php');
         exit();
     };
 };

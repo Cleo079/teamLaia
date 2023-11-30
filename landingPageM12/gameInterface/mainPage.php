@@ -39,14 +39,14 @@
                     <a href="./containerJuegos.html"><p>Nuevo Juego</p></a>
                 </li>
                 <li>
-                    <a href="../sesiones/ranking.php"><p>Ranking</p></a>
+                    <a href="../landing/ranking.php"><p>Ranking</p></a>
                 </li>
                 <li>
                     <a href="./containerJuegos.html"><p>Creditos</p></a>
                 </li>
                 <?php if ($areUser == false) { ?>
                     <li>
-                    <a href="../sesiones/administration.php"><p>Administration</p></a>
+                    <a href="../landing/administration.php"><p>Administration</p></a>
                     </li>
                 <?php } ?>
 

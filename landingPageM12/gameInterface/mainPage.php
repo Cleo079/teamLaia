@@ -35,10 +35,10 @@
             <h1>Laia Ferrer¿nos iluminas?</h1>
             <ol class="ol">
                 <li>
-                    <a class="li_a" href="./containerJuegos.html"><p class="borderBottom">Jugar</p></a>
+                    <a class="li_a" href="./carrouselJuegos.html"><p class="borderBottom">Jugar</p></a>
                 </li>
                 <li>
-                    <a class="li_a" href="./containerJuegos.html"><p>Nuevo Juego</p></a>
+                    <a class="li_a" href="./carrouselJuegos.html"><p>Nuevo Juego</p></a>
                 </li>
                 <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalStats">

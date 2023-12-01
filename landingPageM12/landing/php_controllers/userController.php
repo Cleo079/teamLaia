@@ -96,4 +96,32 @@ if (isset($_POST['delete'])) {
     }
 };
 
+if (isset($_POST['insert']))
+{
+    $userSession = $_SESSION['user'];
+
+    if ($userSession['userRol'] == 3)
+    {
+        if ($_POST['user_name'] != "" && $_POST['user_password'] != "" && $_POST['id_rol'] != "")
+        {
+            insertUserByAdmin($_POST['user_name'], $_POST['user_password'], $_POST['id_rol']);
+        }
+        header('Location: ../administration.php');
+    }
+    elseif ($userSession['userRol'] == 2)
+    {
+        if ($_POST['user_name'] != "" && $_POST['user_password'] != "")
+        {
+            insertUser($_POST['user_name'], $_POST['user_password']);
+        }
+        header('Location: ../administration.php');
+    }
+
+    if (isset($_SESSION['error']))
+    {
+        header('Location: ../administration.php');
+        exit();
+    };
+};
+
 ?>

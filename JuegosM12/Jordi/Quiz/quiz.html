@@ -12,12 +12,19 @@
 <body>
     <div class="quiz-container">
         <div class="instrucciones" id="instrucciones">
-           <h2>Bienvenido a la India</h2>
-            <p>Bienvenido a la India, en esta prueba tendrás que responder correctamente
-                a seis pruebas para poder conseguir las bombillas necesarias. Ojo! el tiempo vuela,
-                tendrás que ser rápida
-            </p>
-            <button onclick="empezarQuiz()">¡Empezar!</button>
+           <div class="textoInstrucciones">
+           
+            <h2>Bienvenido a la India</h2>
+        
+             
+                <p  class="bienvenida">Bienvenido a la India, en esta prueba tendrás que responder correctamente
+                a seis preguntas <br> para poder conseguir las bombillas necesarias. Ojo! el tiempo vuela,
+                tendrás que ser rápida. </p>  
+            </div>
+            
+           
+            
+            <button class="botonEmpezar" onclick="empezarQuiz()">¡Empezar!</button>
         </div>
         <div class="question">
             <img src="./imagenes/arbol.jpg" alt="Pregunta" class="img-preguntas">
@@ -30,14 +37,11 @@
                 <img src="./imagenes/bombilla apagada.png">
                 <img src="./imagenes/bombilla apagada.png">
                 <img src="./imagenes/bombilla apagada.png">
+                
             </div>
            
           <p class="enunciado" id="enunciado"></p>
         <div class="options">
-            <button class="option">Opción 1</button>
-            <button class="option">Opción 2</button>
-            <button class="option">Opción 3</button>
-            <button class="option">Opción 4</button>
         </div>
         </div>
     </div>

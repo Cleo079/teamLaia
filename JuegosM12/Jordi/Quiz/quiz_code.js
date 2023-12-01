@@ -45,9 +45,12 @@ let preguntas = [
 ];
 
 
+
 // Variables para llevar el control del quiz
 let preguntaActual = 0;
 let puntaje = 0;
+
+
 
 // Función para reproducir el sonido según la respuesta
 function reproducirSonido(respuestaCorrecta) {

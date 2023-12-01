@@ -217,7 +217,7 @@ function compareMatrix(){
     matrix.forEach((row, indexRow) => {
         row.forEach((element, indexColumn) => {
             if(element == finalMatrix[indexRow][indexColumn]){
-                counter--;
+                counter++;
             }
         })
     })

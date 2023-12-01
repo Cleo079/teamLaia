@@ -80,7 +80,9 @@ function selectAll()
                     FROM
                         users u
                     JOIN
-                        rols r ON u.userRol = r.id_rol;
+                        rols r ON u.userRol = r.id_rol
+                    WHERE
+	                    name_rol <> 'superAdmin';
                      ";
 
     $statement = $connection->prepare($statementTxt);
@@ -216,6 +218,34 @@ function insertUser($user_name, $user_password)
     $connection = closeDb();
 }
 
+function insertUserByAdmin($user_name, $user_password, $userRol)
+{
+    try 
+    {
+        $connection = openDb();
+
+        $statementTxt = "insert into users (user_name, user_password, userRol) values (:user_name, :user_password, :userRol);";
+        $statement = $connection->prepare($statementTxt);
+        $statement->bindParam(':user_name', $user_name);
+        $statement->bindParam(':user_password', $user_password);
+        $statement->bindParam(':userRol', $userRol);
+        $statement->execute();
+
+        // $_SESSION['message'] = 'Record inserted succesfully';
+    }
+    catch (PDOException $e) 
+    {
+        $_SESSION['error'] = errorMessage($e);
+        $user['user_name'] = $user_name;
+        $user['user_password'] = $user_password;
+        $user['userRol'] = $userRol;
+        //I saved this varible session to hold data that user inserted
+        $_SESSION['user'] = $user;
+    }
+
+    $connection = closeDb();
+}
+
 function updateAll($id_user,$user_name, $user_password, $userRol)
 {
     try 
@@ -268,5 +298,6 @@ function deleteUser($id_user) {
 
     $connection = closeDb();
 }
+
 
 ?>

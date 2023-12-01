@@ -172,7 +172,7 @@ p{
     color: #FFF;
     text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
     font-family: Belleza;
-    font-size: 128px;
+    font-size: 96px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -184,13 +184,14 @@ p{
     text-align: center;
     text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
     font-family: Belleza;
-    font-size: 48px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
 .hazClick {
+    color: #FFF;
     text-align: center;
     font-size: 18px;
     margin-top: 0;

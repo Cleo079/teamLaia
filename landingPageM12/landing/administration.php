@@ -19,7 +19,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include_once ('./php_partials/menu.php') ?>
+    
 
     <!-- Here i kown what rol has the user and what he can will see -->
     <?php
@@ -31,10 +31,71 @@
         {
             $users = selectPlayers();
         };
+
     ?>
     
-    <div class="container">
-        <table class="table table-dark table-striped">
+    <div class="container pt-5">
+
+        <div class="card-body">
+            <!-- Button New User modal -->
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addUser">
+                <i class="fa-solid fa-user-plus" style="color: #58d070;"></i>
+            </button>
+        </div>
+
+        <!-- Modal New User-->
+        <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">New User</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Aquí poner values con una variable $user por si hay algún error, que los datos se queden guardados :) -->
+                    <div class="modal-body">
+                        <form action="./php_controllers/userController.php" method="POST">
+                            <div class="form-group row p-3">
+                                <label for="name" class="col-sm 2 col-form-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" name="user_name" placeholder="Juan">
+                                </div>
+                            </div>
+
+                            <div class="form-group row p-3">
+                                <label for="password" class="col-sm 2 col-form-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="password" name="user_password" placeholder="jik@asdf-.seflih">
+                                </div>
+                            </div>
+
+                            <?php if ($userSession['userRol'] == 3) { ?>
+
+                                <div class="form-group row p-3">
+                                    <label for="rols" class="col-sm 2 col-form-label">Rols</label>
+                                    <div class="col-sm-9">
+                                        <?php foreach($rols as $rol) { ?>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="id_rol" id="inlineRadio1" value="<?php echo $rol['id_rol']?>">
+                                                <label class="form-check-label" for="inlineRadio1"><?php echo $rol['name_rol']?></label>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </form>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add User</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-dark table-striped mt-3">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -59,13 +120,15 @@
                         </form>
                     </td>
                     <td>
+                        <!-- Button Update User modal -->
                         <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $user['id_user']?>">
                             <input type="hidden" name="id_user" value="<?php echo $userSession['id_user']?>">
                             <i class="fa-solid fa-pen-to-square" style="color: #ffc21a;"></i>
                         </button>
                     </td>
                 </tr>
-
+                
+                <!-- Modal Update User-->
                 <div class="modal fade" id="Modal<?php echo $user['id_user']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">

@@ -107,7 +107,7 @@
                                 </div>
 
                                 <div class="botonRegistrarse">
-                                    <button type="submit" name="singUp" class="textoRegistrarse">Registrarse</p>
+                                    <button type="submit" name="singUp" class="textoRegistrarse">Registrarse</button>
                                 </div>
                             </div>
                         </form>

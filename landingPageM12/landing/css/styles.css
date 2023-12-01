@@ -11,6 +11,11 @@ body {
     background: #000;
 }
 
+button{
+    border: none;
+    background: none;
+}
+
 /* total width */
 body::-webkit-scrollbar {
     background-color: #fff;

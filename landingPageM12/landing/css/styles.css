@@ -39,6 +39,26 @@ body::-webkit-scrollbar-button {
     display:none;
 }
 
+/* Estilo para las banderas */
+.banderas {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000; /* Ajusta este valor según sea necesario para asegurarte de que estén por encima de otros elementos */
+}
+
+
+/* Estilo para cada bandera individual */
+.banderas img {
+    width: 31px; /* Ajusta el tamaño según sea necesario */
+    margin-right: 5px; /* Espacio entre las banderas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre las banderas */
+}
+
+
+
 
 .js-cont {
 	position: relative;

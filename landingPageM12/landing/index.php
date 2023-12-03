@@ -14,9 +14,19 @@
 </head>
 
 <body>
+      
+
+
 <!-- Comento estas lineas que son las que hacen el scroll suave porque sino no funiona el modal -->
 <!-- <div class="js-cont">
 	<div class="js-scroll"> -->
+
+    <!--banderas-->
+<div class="banderas" id="languageButtons">
+        <img src="./images/es.png" alt="Español" onclick="cambiarIdioma('es')">
+        <img src="images/en.png" alt="English" onclick="cambiarIdioma('en')">
+        <img src="images/cat.png" alt="Català" onclick="cambiarIdioma('cat')">
+    </div>
 
     <img src="images/fondo.webp" class="imagenFondo" alt="fondo">
 
@@ -40,10 +50,12 @@
 
     <div class="divIdentificacionUsuario">
         <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="divIniciarSesionMinimizado">
-            <p class="iniciarSesionTextoDivMinimizado">Iniciar Sesion</p>
+            <p class="iniciarSesionTextoDivMinimizado"
+            data-section= "registrarse" data-value="iniciar">Iniciar Sesion</p>
         </button>
         <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" id="divRegistrarseMinimizado">
-            <p class="registrarseTextoDivMinimizado">Registrarse</p>
+            <p class="registrarseTextoDivMinimizado"
+            data-section= "registrarse" data-value="registrar">Registrarse</p>
         </button>
     </div>
 
@@ -56,24 +68,29 @@
                     </div>
                     <div class="divFormularioIniciarSesion">
                         <form action="./php_controllers/userController.php" method="POST">
-                            <label for="labelNombreUsuarioIniciarSesion" id="labelNombreUsuarioIniciarSesion">Nombre de
+                            <label for="labelNombreUsuarioIniciarSesion" id="labelNombreUsuarioIniciarSesion"
+                            data-section= "registrarse" data-value="nombre">Nombre de
                                 Usuario</label>
                             <input type="text" name="user_name"
                                 id="inputNombreUsuarioIniciarSesion" value="<?php echo $user['user_name']?>" />
 
                             <label for="labelContrasenaIniciarSesion"
-                                id="labelContrasenaIniciarSesion">Contraseña</label>
+                                id="labelContrasenaIniciarSesion"
+                                data-section= "registrarse" data-value="contraseña">Contraseña</label>
                             <input type="password" name="user_password"
                                 id="inputContrasenaIniciarSesion" value="<?php echo $user['user_password']?>" />
 
-                            <label for="labelNoTienesCuenta" class="labelNoTienesCuenta">No tienes cuenta?</label>
+                            <label for="labelNoTienesCuenta" class="labelNoTienesCuenta"
+                            data-section= "registrarse" data-value="cuenta">No tienes cuenta?</label>
                             <div class="contenedorBotones">
                                 <div class="botonRegistrarseNoTienesCuenta">
-                                    <p class="textoRegistrarseNoTienesCuenta">Registrarse</p>
+                                    <p class="textoRegistrarseNoTienesCuenta"
+                                    data-section= "registrarse" data-value="registrar">Registrarse</p>
                                 </div>
 
                                 <div class="botonEntrar">
-                                    <button type="submit" name="logIn" class="textoEntrar">Entrar</button>
+                                    <button type="submit" name="logIn" class="textoEntrar"
+                                    data-section= "registrarse" data-value="entrar">Entrar</button>
                                 </div>
                             </div>
                         </form>
@@ -88,26 +105,32 @@
             <div class="modal-content">
                 <div class="ventanaRegistrarse">
                     <div class="divNuevoUsuarioVentanaRegistrarse">
-                        <p class="textoNuevoUsuarioVentanaRegistrarse">Nuevo Usuario</p>
+                        <p class="textoNuevoUsuarioVentanaRegistrarse"
+                        data-section= "registrarse2" data-value="nuevo">Nuevo Usuario</p>
                     </div>
                     <div class="divFormularioRegistrarse">
                         <form action="./php_controllers/userController.php" method="POST">
-                            <label for="labelNombreUsuarioRegistrarse" id="labelNombreUsuarioRegistrarse">Nombre de
+                            <label for="labelNombreUsuarioRegistrarse" id="labelNombreUsuarioRegistrarse"
+                            data-section= "registrarse2" data-value="nombre2">Nombre de
                                 Usuario</label>
                             <input type="text" name="user_name"
                                 id="inputNombreUsuarioRegistrarse" value="<?php echo $user['user_name']?>" />
 
-                            <label for="labelContrasenaRegistrarse" id="labelContrasenaRegistrarse">Contraseña</label>
+                            <label for="labelContrasenaRegistrarse" id="labelContrasenaRegistrarse"
+                            data-section= "registrarse2" data-value="contraseña2">Contraseña</label>
                             <input type="password" name="user_password" id="inputContrasenaRegistrarse" value="<?php echo $user['user_password']?>" />
 
-                            <label for="labelTienesCuenta" class="labelTienesCuenta">Ya tienes cuenta?</label>
+                            <label for="labelTienesCuenta" class="labelTienesCuenta"
+                            data-section= "registrarse2" data-value="cuenta2">Ya tienes cuenta?</label>
                             <div class="contenedorBotones">
                                 <div class="botonEntrarTienesCuenta">
-                                    <p class="textoEntrarTienesCuenta">Entrar</p>
+                                    <p class="textoEntrarTienesCuenta"
+                                    data-section= "registrarse2" data-value="entrar2">Entrar</p>
                                 </div>
 
                                 <div class="botonRegistrarse">
-                                    <button type="submit" name="singUp" class="textoRegistrarse">Registrarse</button>
+                                    <button type="submit" name="singUp" class="textoRegistrarse"
+                                    data-section= "registrarse2" data-value="registrarse2">Registrarse</button>
                                 </div>
                             </div>
                         </form>
@@ -121,11 +144,13 @@
         <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"><br> iluminándolo </mark></h1>
 
         <button id="botonJuegaAhora" class="botonJuegaAhora">
-            <p class="textoJuega">Juega ahora!</p>
+            <p class="textoJuega"
+            data-section= "titulo" data-value="juega">Juega ahora!</p>
         </button>
 
         <div class="averiguaMas">
-            <p id="textoAveriguaMas">Averigua Más</p>
+            <p id="textoAveriguaMas"
+            data-section= "titulo" data-value="mas">Averigua Más</p>
             <img id="imagenFlechaAbajo" src="images/iconamoonArrowDown2Bold.png" alt="flecha">
         </div>
         
@@ -146,7 +171,8 @@
     </div>
 
     <button id="botonJuegaAhoraFondo" class="botonJuegaAhoraFondo">
-        <p class="textoJuega">Juega ahora!</p>
+        <p class="textoJuega"
+        data-section= "titulo" data-value="juega">Juega ahora!</p>
     </button>
     <br>
 
@@ -169,6 +195,8 @@
 
     <!-- </div>
 </div> -->
+
+<script src="./js/script.js"></script>
 </body>
 
 </html>

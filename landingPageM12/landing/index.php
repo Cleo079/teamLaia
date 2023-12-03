@@ -119,9 +119,10 @@
 
     <div class="tituloPrincipal">
         <h1 class="textoTituloPrincipal">Mejora el mundo,<mark class="textoTituloPrincipalIluminandolo"><br> iluminándolo </mark></h1>
-        <div class="botonJuegaAhora">
+
+        <button id="botonJuegaAhora" class="botonJuegaAhora">
             <p class="textoJuega">Juega ahora!</p>
-        </div>
+        </button>
 
         <div class="averiguaMas">
             <p id="textoAveriguaMas">Averigua Más</p>
@@ -144,10 +145,20 @@
         </p>
     </div>
 
-    <div class="botonJuegaAhoraFondo">
+    <button id="botonJuegaAhoraFondo" class="botonJuegaAhoraFondo">
         <p class="textoJuega">Juega ahora!</p>
-    </div>
+    </button>
     <br>
+
+    <script>
+        document.getElementById("botonJuegaAhora").addEventListener("click", function() {
+        window.location.href = '../gameInterface/mainPage.php';
+        });
+
+        document.getElementById("botonJuegaAhoraFondo").addEventListener("click", function() {
+        window.location.href = '../gameInterface/mainPage.php';
+        });
+    </script>
 
     <!-- jQuery y Popper.js (Reemplaza la versión con la que estás usando) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

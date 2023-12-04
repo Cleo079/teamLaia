@@ -46,7 +46,6 @@ function errorMessage($e)
 
 
 
-
 function openDb()
 {
     $servername = "localhost";

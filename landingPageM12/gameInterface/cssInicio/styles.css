@@ -181,29 +181,6 @@ p{
     transform: translateY(-50%);
 }
 
-.titulo {
-    text-align: center;
-    color: #FFF;
-    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
-    font-family: Belleza;
-    font-size: 96px;
-    font-style: normal;
-    line-height: normal;
-    top: 50%;
-    transform: translateY(50%);
-}
-
-.descripcion {
-    font-family: 'Belleza', sans-serif;
-    color: #FFF;
-    text-align: center;
-    font-size: 18px;
-    margin: auto 0;
-    clear: left;
-    height: auto;
-    z-index: 0;
-}
-
 .hazClick {
     font-family: 'Belleza', sans-serif;
     color: #FFF;
@@ -211,6 +188,29 @@ p{
     font-size: 18px;
     margin: 0 auto;
     margin-top: 2%;
+    clear: left;
+    height: auto;
+    z-index: 0;
+}
+
+.tituloCarousel {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+    font-family: Belleza;
+    font-size: 50px;
+    font-style: normal;
+    line-height: normal;
+    top: 50%;
+    transform: translateY(65%);
+}
+
+.descripcion {
+    font-family: 'Belleza', sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
     clear: left;
     height: auto;
     z-index: 0;

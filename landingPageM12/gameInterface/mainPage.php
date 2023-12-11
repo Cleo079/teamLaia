@@ -79,7 +79,6 @@
                         </svg>
                     </li>
                 <?php } ?>
-
             </ol>
         </div>
         <!-- Modal Ranking -->

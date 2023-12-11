@@ -116,6 +116,7 @@ h2{
 .txt{
     font-size: 37px;
     color: var(--textColorWhite);
+    font-family: Belleza;
 }
 .carousel-indicators .active{
     background-color: var(--textColorWhite);

@@ -89,7 +89,7 @@ body {
     font-size: 27px;
     color: var(--textColorWhite);
     text-shadow: var(--textShadow);
-    font-family: Belleza;
+    font-family: Belleza, sans-serif;
 }
 .divContenedor{
     margin-left: 4px;

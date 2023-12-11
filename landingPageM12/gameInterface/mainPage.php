@@ -33,6 +33,7 @@
     <div>   
         <div class="centrado">
             <h1 id="titulo">Laia Ferrer ¿nos iluminas?</h1>
+            <br>
             <ol class="ol">
                 <li>
                     <a class="li_a" href="./carrouselJuegos.html">

@@ -20,7 +20,7 @@ body {
     color: var(--textColorWhite);
     text-shadow: var(--textShadow);
 }
-h1{
+#titulo{
     font-size: 50px;
     color: var(--textColorWhite);
     text-shadow: #5F4A43;
@@ -32,6 +32,16 @@ h1{
     text-decoration: none;
     /* color: var(--textColor); */
     color: violet;
+    font-family: Belleza;
+}
+.separator{
+    text-align: center;
+    margin-left: 43%;
+}
+.line{
+    width: 200px;
+    height: 0px;
+    border: 1px #E0D3C6 solid;
 }
 .bordeBajo{
     color: var(--textColorWhite);
@@ -61,7 +71,7 @@ h1{
 .btn-close{
     padding: calc(var(--bs-modal-header-padding-y) * .5) calc(var(--bs-modal-header-padding-x) * .5);
     filter: var(--bs-btn-close-white-filter);
-    margin: -20px;
+    margin: -22px;
 }
 .modal-content{
     width: 100%;
@@ -75,6 +85,7 @@ h1{
     font-size: 37px;
     color: var(--textColorWhite);
     text-shadow: var(--textShadow);
+    font-family: Belleza;
 }
 .divContenedor{
     margin-left: 4px;

@@ -32,27 +32,50 @@
 <body class="bodyBg">
     <div>   
         <div class="centrado">
-            <h1>Laia Ferrer¿nos iluminas?</h1>
+            <h1 id="titulo">Laia Ferrer ¿nos iluminas?</h1>
             <ol class="ol">
                 <li>
-                    <a class="li_a" href="./carrouselJuegos.html"><p class="borderBottom">Jugar</p></a>
+                    <a class="li_a" href="./carrouselJuegos.html">
+                        <p class="borderBottom">Jugar</p>
+                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                        <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
+                    </svg>
                 </li>
                 <li>
-                    <a class="li_a" href="./carrouselJuegos.html"><p>Nuevo Juego</p></a>
+                    <a class="li_a" href="./carrouselJuegos.html">
+                        <p>Nuevo Juego</p>
+                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                        <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
+                    </svg>
                 </li>
                 <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalStats">
                         Ranking
                     </button>
+                    <br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                        <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
+                    </svg>
                 </li>
                 <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCredits">
                         Creditos
                     </button>
+                    <br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                        <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
+                    </svg>
                 </li>
                 <?php if ($areUser == false) { ?>
                     <li>
-                    <a class="li_a" href="../landing/administration.php"><p>Administration</p></a>
+                        <a class="li_a" href="../landing/administration.php">
+                            <p>Administration</p>
+                        </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                            <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
+                        </svg>
                     </li>
                 <?php } ?>
 

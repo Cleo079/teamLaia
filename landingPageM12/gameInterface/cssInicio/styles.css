@@ -199,15 +199,14 @@ h2{
 }
 
 .tituloCarousel {
-    text-align: center;
+    font-family: 'Belleza', sans-serif;
     color: #FFF;
+    text-align: center;
     text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
-    font-family: Belleza;
-    font-size: 50px;
+    font-size: 96px;
     font-style: normal;
     line-height: normal;
     top: 50%;
-    transform: translateY(65%);
 }
 
 .descripcion {
@@ -216,6 +215,7 @@ h2{
     text-align: center;
     font-size: 18px;
     margin: 0 auto;
+    margin-bottom: 2%;
     clear: left;
     height: auto;
     z-index: 0;

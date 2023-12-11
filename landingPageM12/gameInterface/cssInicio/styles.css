@@ -21,7 +21,7 @@ body {
     text-shadow: var(--textShadow);
 }
 #titulo{
-    font-size: 50px;
+    font-size: 96px;
     color: var(--textColorWhite);
     text-shadow: #5F4A43;
     font-family: Belleza;

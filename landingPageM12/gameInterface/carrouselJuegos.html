@@ -8,11 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cssInicio/styles.css">
-  <style>
-    .hidden {
-      display: none;
-    }
-  </style>
 </head>
 <body class="carouselBody">
 
@@ -27,8 +22,11 @@
   <div class="carousel slide-1">
       <div class="carousel-caption">
         <div class="hazClick">Haz click en cualquier parte de la pantalla para ir al juego</div>
-        <h1>Barcelona</h1>
-        <p>Descripcion</p>
+        <div class="tituloCarousel">
+          <h1>Barcelona</h1>
+        </div>
+        <div class="descripcion"></div>
+          <p>Descripcion</p>
       </div>
   </div>
 </a>
@@ -67,50 +65,6 @@
     <img src="images/rightArrow.png" alt="flecha derecha">
   </div>
 </div>
-<script>
-  let carousel = document.querySelectorAll('.carousel');
-  let leftArrow = document.querySelector('.flecha.izquierda');
-  let rightArrow = document.querySelector('.flecha.derecha');
-  var current = localStorage.getItem('carouselPosition') || 0;
-
-  function cls(){
-    for (let i = 0; i < carousel.length; i++) {
-      carousel[i].style.display = 'none';
-    }
-  }
-
-  function updateArrowsVisibility() {
-    leftArrow.style.display = current == 0 ? 'none' : 'block';
-    rightArrow.style.display = current == carousel.length - 1 ? 'none' : 'block';
-  }
-
-  function next() {
-    if (current < carousel.length - 1) {
-      current++;
-      cls();
-      carousel[current].style.display = 'block';
-    }
-    updateArrowsVisibility();
-    localStorage.setItem('carouselPosition', current);
-  }
-
-  function prev() {
-    if (current > 0) {
-      current--;
-      cls();
-      carousel[current].style.display = 'block';
-    }
-    updateArrowsVisibility();
-    localStorage.setItem('carouselPosition', current);
-  }
-
-  function start(){
-    cls();
-    carousel[current].style.display = 'block';
-    updateArrowsVisibility();
-  }
-
-  start();
-</script>
+<script src="carrousel.js"></script>
 </body>
 </html>

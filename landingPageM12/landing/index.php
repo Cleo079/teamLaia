@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cat">
+<html lang="esp">
 
 <head>
     <meta charset="UTF-8" />
@@ -22,11 +22,6 @@
 	<div class="js-scroll"> -->
 
     <!--banderas-->
-<div class="banderas" id="languageButtons">
-        <img src="./images/es.png" alt="Español" onclick="cambiarIdioma('es')">
-        <img src="images/en.png" alt="English" onclick="cambiarIdioma('en')">
-        <img src="images/cat.png" alt="Català" onclick="cambiarIdioma('cat')">
-    </div>
 
     <img src="images/fondo.webp" class="imagenFondo" alt="fondo">
 
@@ -59,6 +54,24 @@
         </button>
     </div>
 
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <div class="banderas" id="languageButtons">
+        <img src="./images/es.png" alt="Español" onclick="cambiarIdioma('es')">
+        <img src="images/en.png" alt="English" onclick="cambiarIdioma('en')">
+        <img src="images/cat.png" alt="Català" onclick="cambiarIdioma('cat')">
+    </div>
+
     <div class="modal fade" id="loginModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -84,8 +97,8 @@
                             data-section= "registrarse" data-value="cuenta">No tienes cuenta?</label>
                             <div class="contenedorBotones">
                                 <div class="botonRegistrarseNoTienesCuenta">
-                                    <p class="textoRegistrarseNoTienesCuenta"
-                                    data-section= "registrarse" data-value="registrar">Registrarse</p>
+                                    <button class="textoRegistrarseNoTienesCuenta" id="btnRegistrarse" data-bs-target="#registerModal" data-bs-toggle="modal"
+                                    data-section= "registrarse" data-value="registrar">Registrarse</button>
                                 </div>
 
                                 <div class="botonEntrar">
@@ -124,8 +137,8 @@
                             data-section= "registrarse2" data-value="cuenta2">Ya tienes cuenta?</label>
                             <div class="contenedorBotones">
                                 <div class="botonEntrarTienesCuenta">
-                                    <p class="textoEntrarTienesCuenta"
-                                    data-section= "registrarse2" data-value="entrar2">Entrar</p>
+                                    <button class="textoEntrarTienesCuenta" id="btnIniciarSesion" data-bs-target="#loginModal" data-bs-toggle="modal"
+                                    data-section= "registrarse2" data-value="entrar2">Entrar</button>
                                 </div>
 
                                 <div class="botonRegistrarse">
@@ -196,7 +209,8 @@
     <!-- </div>
 </div> -->
 
-<script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/scriptModal"></script>
 </body>
 
 </html>

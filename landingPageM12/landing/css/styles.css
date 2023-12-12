@@ -172,7 +172,7 @@ body::-webkit-scrollbar-button {
     height: 442px;
     flex-shrink: 0;
     border-radius: 41px;
-    background: #67A8D7;
+    background: #1A1A1A;
 
     /* Centrado horizontal */
     position: absolute;
@@ -276,8 +276,6 @@ form {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     cursor: pointer;
-
-
 }
 
 .textoRegistrarseNoTienesCuenta {
@@ -338,17 +336,17 @@ form {
     height: 57px;
     margin-bottom: 7%;
     border-radius: 16px;
-    background: #E0D3C6;
+    background: #393939;
     border: none;
     outline: none; /* Para quitar el contorno predeterminado del enfoque */
 
     /* Establecer el estilo del borde cuando está enfocado */
     border: 2px solid transparent; /* Puedes ajustar el grosor del borde según tus preferencias */
     transition: border-color 1s ease;
-    caret-color: #292929; /* Cambia el color del cursor */
+    caret-color: #E0D3C6; /* Cambia el color del cursor */
     padding: 10px;
 
-    color: #292929;
+    color: #E0D3C6;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -361,7 +359,7 @@ form {
 
 #inputNombreUsuarioRegistrarse:focus,
 #inputContrasenaRegistrarse:focus {
-    border-color: #2174B0; /* Cambia "YourColor" al color que desees */
+    border-color: #E0D3C6; 
     border-width: 3px;
 }
 
@@ -406,7 +404,7 @@ form {
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 10%;
-    background: #2174B0;
+    background: #E0D3C6;
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
@@ -417,7 +415,7 @@ form {
 }
 
 .textoRegistrarse {
-    color: #E0D3C6;
+    color: #493F40;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

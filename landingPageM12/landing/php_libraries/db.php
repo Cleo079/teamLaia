@@ -51,8 +51,8 @@ function openDb()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "root";
-    // ISAAC $password = "mysql";
+    // $password = "root";
+    $password = "mysql";
 
     $connection = new PDO("mysql:host=$servername;dbname=laiaProject", $username, $password);
     // set the PDO error mode to exception

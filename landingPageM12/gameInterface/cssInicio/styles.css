@@ -32,6 +32,9 @@ body {
 .ol{
     list-style-type: none;
 }
+.lily{
+    padding: 0px;
+}
 .li_a{
     text-decoration: none;
     /* color: var(--textColor); */

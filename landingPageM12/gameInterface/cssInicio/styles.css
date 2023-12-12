@@ -1,9 +1,9 @@
 body {
-    font-family: 'Belleza', sans-serif;
+    font-family: Belleza, sans-serif;
 }
 
 :root{
-    /* --textFamily: 'Pixelify Sans'; */
+    --textFamily: 'Belleza';
     --textColorWhite: #E0D3C6;
     --textShadow: 2px 2px 5px #5F4A43;
     --backgroundImage: url("../images/fondo.webp");
@@ -31,6 +31,10 @@ body {
 }
 .ol{
     list-style-type: none;
+}
+.lily{
+    /*Espaciado entre el texto y los rombos injertados*/
+    margin-top: -45px;
 }
 .li_a{
     text-decoration: none;
@@ -120,6 +124,7 @@ h2{
     font-size: 27px;
     color: var(--textColorWhite);
     font-family: Belleza;
+    padding-bottom: 0px;
 }
 .carousel-indicators .active{
     background-color: var(--textColorWhite);

@@ -39,7 +39,7 @@
                     <a class="li_a" href="./carrouselJuegos.html">
                         <p class="txt borderBottom">Jugar</p>
                     </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                    <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
                 </li>
@@ -47,7 +47,7 @@
                     <a class="li_a" href="./carrouselJuegos.html">
                         <p class="txt">Nuevo Juego</p>
                     </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                    <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
                 </li>
@@ -56,7 +56,7 @@
                         Ranking
                     </button>
                     <br>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                    <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
                 </li>
@@ -65,7 +65,7 @@
                         Creditos
                     </button>
                     <br>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                    <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
                 </li>
@@ -74,7 +74,7 @@
                         <a class="li_a" href="../landing/administration.php">
                             <p class="txt">Administration</p>
                         </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
+                        <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                             <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                         </svg>
                     </li>

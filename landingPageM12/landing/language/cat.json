@@ -23,6 +23,13 @@
         "juega": "Juga ara!",
         "mas": "Descobreix més",
         "lore": ""
+    },
+    "mainPage":{
+        "laia": "Laia Ferrer, ens il·lumines?",
+        "jugar": "Jugar",
+        "nuevo": "Joc nou",
+        "cred": "Crèdits",
+        "admin": "Administració"
     }
 }
 

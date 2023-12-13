@@ -24,6 +24,15 @@
     "juega":"juega ahora!",
     "mas": "Averigua más",
     "lore":""
+  },
+  "mainPage":{
+    "laia": "Laia Ferrer ¿nos iluminas?",
+    "jugar": "Jugar",
+    "nuevo": "Nuevo juego",
+    "cred": "creditos",
+    "admin": "Administración"
   }
   
 }    
+
+ 

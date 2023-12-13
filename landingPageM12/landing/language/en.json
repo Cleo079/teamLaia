@@ -23,5 +23,12 @@
         "juega": "Play now!",
         "mas": "Find out more",
         "lore": ""
+    },
+    "mainPage":{
+        "laia": "Laia Ferrer, can you enlighten us?",
+        "jugar": "Play",
+        "nuevo": "New game",
+        "cred": "Credits",
+        "admin": "Administration"
     }
 }

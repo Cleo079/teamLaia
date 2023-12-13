@@ -44,33 +44,32 @@
 
 
     <div class="divIdentificacionUsuario">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="divIniciarSesionMinimizado">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id="divIniciarSesionMinimizado">
             <p class="iniciarSesionTextoDivMinimizado"
             data-section= "registrarse" data-value="iniciar">Iniciar Sesion</p>
         </button>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" id="divRegistrarseMinimizado">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal" id="divRegistrarseMinimizado">
             <p class="registrarseTextoDivMinimizado"
             data-section= "registrarse" data-value="registrar">Registrarse</p>
         </button>
     </div>
 
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
+
+        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="imagenCambioIdioma" src="./images/worldCambiarIdioma.png" alt="lang">
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" onclick="cambiarIdioma('es')">Español</a></li>
+                <svg class="lineaSeparadoraDropdown" xmlns="http://www.w3.org/2000/svg" width="106" height="7" viewBox="0 0 106 7" fill="none">
+                    <path d="M0.113252 3.15071L3.00423 6.03323L5.88675 3.14226L2.99577 0.259736L0.113252 3.15071ZM105.887 2.99585L102.996 0.113323L100.113 3.0043L103.004 5.88682L105.887 2.99585ZM3.00073 3.64648L103.001 3.50007L102.999 2.50007L2.99927 2.64648L3.00073 3.64648Z" fill="#E0D3C6"/>
+                </svg>
+            <li><a class="dropdown-item" onclick="cambiarIdioma('en')">English</a></li>
+                <svg class="lineaSeparadoraDropdown" xmlns="http://www.w3.org/2000/svg" width="106" height="7" viewBox="0 0 106 7" fill="none">
+                    <path d="M0.113252 3.15071L3.00423 6.03323L5.88675 3.14226L2.99577 0.259736L0.113252 3.15071ZM105.887 2.99585L102.996 0.113323L100.113 3.0043L103.004 5.88682L105.887 2.99585ZM3.00073 3.64648L103.001 3.50007L102.999 2.50007L2.99927 2.64648L3.00073 3.64648Z" fill="#E0D3C6"/>
+                </svg>
+            <li><a class="dropdown-item" onclick="cambiarIdioma('cat')">Català</a></li>
         </ul>
-    </div>
-
-    <div class="banderas" id="languageButtons">
-        <img src="./images/es.png" alt="Español" onclick="cambiarIdioma('es')">
-        <img src="images/en.png" alt="English" onclick="cambiarIdioma('en')">
-        <img src="images/cat.png" alt="Català" onclick="cambiarIdioma('cat')">
-    </div>
 
     <div class="modal fade" id="loginModal">
         <div class="modal-dialog">
@@ -93,13 +92,10 @@
                             <input type="password" name="user_password"
                                 id="inputContrasenaIniciarSesion" value="<?php echo $user['user_password']?>" />
 
-                            <label for="labelNoTienesCuenta" class="labelNoTienesCuenta"
-                            data-section= "registrarse" data-value="cuenta">No tienes cuenta?</label>
                             <div class="contenedorBotones">
-                                <div class="botonRegistrarseNoTienesCuenta">
-                                    <button class="textoRegistrarseNoTienesCuenta" id="btnRegistrarse" data-bs-target="#registerModal" data-bs-toggle="modal"
-                                    data-section= "registrarse" data-value="registrar">Registrarse</button>
-                                </div>
+                                <button class="botonCerrar" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                    Close
+                                </button>
 
                                 <div class="botonEntrar">
                                     <button type="submit" name="logIn" class="textoEntrar"
@@ -133,13 +129,10 @@
                             data-section= "registrarse2" data-value="contraseña2">Contraseña</label>
                             <input type="password" name="user_password" id="inputContrasenaRegistrarse" value="<?php echo $user['user_password']?>" />
 
-                            <label for="labelTienesCuenta" class="labelTienesCuenta"
-                            data-section= "registrarse2" data-value="cuenta2">Ya tienes cuenta?</label>
                             <div class="contenedorBotones">
-                                <div class="botonEntrarTienesCuenta">
-                                    <button class="textoEntrarTienesCuenta" id="btnIniciarSesion" data-bs-target="#loginModal" data-bs-toggle="modal"
-                                    data-section= "registrarse2" data-value="entrar2">Entrar</button>
-                                </div>
+                                <button class="botonCerrar" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                    Close
+                                </button>
 
                                 <div class="botonRegistrarse">
                                     <button type="submit" name="singUp" class="textoRegistrarse"
@@ -189,16 +182,6 @@
     </button>
     <br>
 
-    <script>
-        document.getElementById("botonJuegaAhora").addEventListener("click", function() {
-        window.location.href = '../gameInterface/mainPage.php';
-        });
-
-        document.getElementById("botonJuegaAhoraFondo").addEventListener("click", function() {
-        window.location.href = '../gameInterface/mainPage.php';
-        });
-    </script>
-
     <!-- jQuery y Popper.js (Reemplaza la versión con la que estás usando) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
@@ -210,7 +193,6 @@
 </div> -->
 
     <script src="./js/script.js"></script>
-    <script src="./js/scriptModal"></script>
 </body>
 
 </html>

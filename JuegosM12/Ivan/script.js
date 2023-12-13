@@ -9,6 +9,7 @@ let board = document.querySelector('.board');
 let startBtn = document.querySelector('#start');
 let firstScreen = document.querySelector('.first-screen');
 let startBtnContainer = document.querySelector('.startBtn-container');
+let backBtn = document.querySelector('.backBtn');
 let counterElement = document.querySelector('.counter');
 let pistaElement = document.querySelector('.pista');
 let pauseElement = document.querySelector('.pause');

@@ -30,7 +30,7 @@
     <title>Home</title>
 </head>
 <body class="bodyBg">
-    <div>   
+    <div class="void">   
         <div class="centrado">
             <h1 id="titulo">Laia Ferrer ¿nos iluminas?</h1>
             <br>

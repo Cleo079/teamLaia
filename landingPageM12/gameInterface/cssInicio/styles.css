@@ -15,6 +15,9 @@ body {
     background-image: var(--backgroundImage);
     background-size: cover;
 }
+.void{
+    padding-top: 180px;
+}
 .centrado{
     text-align: center;
     color: var(--textColorWhite);

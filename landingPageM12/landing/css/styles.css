@@ -39,26 +39,54 @@ body::-webkit-scrollbar-button {
     display:none;
 }
 
-/* Estilo para las banderas */
-.banderas {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: row;
-    z-index: 1000; /* Ajusta este valor según sea necesario para asegurarte de que estén por encima de otros elementos */
+.imagenCambioIdioma {
+    height: 70%;
 }
 
-
-/* Estilo para cada bandera individual */
-.banderas img {
-    width: 31px; /* Ajusta el tamaño según sea necesario */
-    margin-right: 5px; /* Espacio entre las banderas */
-    cursor: pointer; /* Cambia el cursor al pasar sobre las banderas */
+.btn-secondary {
+    width: 70px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(73, 63, 64, 0.62);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 30px;
 }
 
+.btn-secondary.show {
+    background: rgba(73, 63, 64, 0.62);
+}
 
+.dropdown-menu.show {
+    width: 155px;
+    height: 162px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(73, 63, 64, 0.62);
+    inset: 28px 0px auto auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+.dropdown-item {
+    color: #E0D3C6;
+    font-family: Belleza;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -5px;
+}
+
+.lineaSeparadoraDropdown {
+    margin-left: 15px;
+    margin-top: -10px;
+}
 
 .js-cont {
 	position: relative;
@@ -149,7 +177,7 @@ body::-webkit-scrollbar-button {
 
 .ventanaIniciarSesion {
     width: 830px;
-    height: 442px;
+    height: 400px;
     flex-shrink: 0;
     border-radius: 41px;
     background: #1A1A1A;
@@ -169,7 +197,7 @@ body::-webkit-scrollbar-button {
 
 .ventanaRegistrarse {
     width: 830px;
-    height: 442px;
+    height: 400px;
     flex-shrink: 0;
     border-radius: 41px;
     background: #1A1A1A;
@@ -375,7 +403,7 @@ form {
     line-height: normal;
 }
 
-.botonEntrarTienesCuenta {
+.botonCerrar {
     width: 179px;
     height: 60px;
     border-radius: 15px;
@@ -386,6 +414,9 @@ form {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     cursor: pointer;
+    color: #292929;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .textoEntrarTienesCuenta {
@@ -443,15 +474,43 @@ form {
 }
 
 .textoTituloPrincipalIluminandolo {
-    background: conic-gradient(from -6deg at 75.33% 3.87%, #FFF 122.95176386833191deg, #9BB8C5 135.57978630065918deg, #4B8199 161.7327082157135deg, #4894b8 197.0856499671936deg);    
+    --bg-size: 400%;
+    --color-one: #FFF;
+    --color-two: #9BB8C5;
+    --color-three: #4B8199;
+    --color-four: #196182;
+
+    /* --color-one: #FFF 122.95176386833191deg;
+    --color-two: #9BB8C5 135.57978630065918deg;
+    --color-three: #4B8199 161.7327082157135deg;
+    --color-four: #196182 197.0856499671936deg; */
+    
+    background: linear-gradient(
+        45deg,
+        /* from -6deg at 15.33% 13.87%, */
+        var(--color-one),
+        var(--color-two),
+        var(--color-three),
+        var(--color-four),
+        var(--color-three),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .textoTituloPrincipalIluminandolo {
+      animation: move-bg 20s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
 
 .botonJuegaAhora {
     display: flex;
@@ -531,6 +590,7 @@ form {
     text-align: center;
 }
 
+
 @media (max-width: 767px) {
     .divTextoLore {
         top: 20%;
@@ -575,7 +635,7 @@ form {
 
     .botonEntrar,
     .botonRegistrarse,
-    .botonEntrarTienesCuenta {
+    .botonCerrar {
         width: 100%;
         margin-bottom: 10px;
     }

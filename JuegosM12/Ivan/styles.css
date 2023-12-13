@@ -6,6 +6,7 @@
 
 :root{
     --tokens: #f3ea60;
+    --backBtnShadow: #a69b00;
     --tokenShadow: #b96453;
     --tokenText: #000000;
     --text: #ffffff;
@@ -22,6 +23,11 @@
     --token6Img: url("./Imagenes/Centro-Derecha.jpg");
     --token7Img: url("./Imagenes/Abajo-Izquierda.jpg");
     --token8Img: url("./Imagenes/Abajo-Centro.jpg");
+}
+
+a{
+    text-decoration: none;
+    color: var(--tokenShadow);
 }
 
 body{
@@ -208,6 +214,28 @@ img{
     position: absolute;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
+}
+.back-btn{
+    width: 280px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--tokens);
+    color: var(--tokenShadow);
+    border: none;
+    position: absolute;
+    top: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.back-btn-shadow{
+    width: 280px;
+    height: 60px;
+    background-color: var(--backBtnShadow);
+    border-radius: 8px;
+    position: absolute;
+    top: 4px;
+    z-index: -1;
 }
 .btn-shadow{
     width: 280px;

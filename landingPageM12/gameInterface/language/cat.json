@@ -1,0 +1,38 @@
+{
+    "registrarse": {
+        "iniciar": "Inicia sessió",
+        "registrar": "Registrar-se",
+        "nombre": "Nom d'usuari",
+        "contraseña": "Contrasenya",
+        "cuenta": "No tens compte?",
+        "regustrarse2": "Registrar-se",
+        "entrar": "Entrar"
+    },
+
+    "registrarse2": {
+        "nombre2": "Nom d'usuari",
+        "contraseña2": "Contrasenya",
+        "cuenta2": "Ja tens compte?",
+        "entrar2": "Entrar",
+        "registrarse2": "Registrar-se"
+    },
+
+    "titulo": {
+        "titulo": "Millora el món",
+        "ilumina": "il·luminant-lo",
+        "juega": "Juga ara!",
+        "mas": "Descobreix més",
+        "lore": ""
+    },
+    "mainPage":{
+        "laia": "Laia Ferrer, ens il·lumines?",
+        "jugar": "Jugar",
+        "nuevo": "Joc nou",
+        "cred": "Crèdits",
+        "admin": "Administració"
+    }
+}
+
+
+
+

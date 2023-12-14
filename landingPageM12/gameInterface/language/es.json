@@ -1,0 +1,38 @@
+{
+    "registrarse":{
+        "iniciar":"Iniciar sesión",
+        "registrar":"Registrarse",
+        "nombre":"Nombre de usuario",
+        "contraseña":"Contraseña",
+        "cuenta":"¿No tienes cuenta?",
+        "regustrarse2": "Registrarse",
+        "entrar": "Entrar"
+  },
+
+  "registrarse2":{
+    "nuevo":"Nuevo usuario",
+    "nombre2":"Nombre de usuario",
+    "contraseña2":"Contraseña",
+    "cuenta2": "¿Ya tienes cuenta?",
+    "entrar2": "Entrar",
+    "registrarse2": "Registrarse" 
+  },
+
+  "titulo":{
+    "titulo": "Mejora el mundo ",
+    "ilumina":"iluminándolo",
+    "juega":"juega ahora!",
+    "mas": "Averigua más",
+    "lore":""
+  },
+  "mainPage":{
+    "laia": "Laia Ferrer ¿nos iluminas?",
+    "jugar": "Jugar",
+    "nuevo": "Nuevo juego",
+    "cred": "creditos",
+    "admin": "Administración"
+  }
+  
+}    
+
+ 

@@ -94,7 +94,7 @@
 
                             <div class="contenedorBotones">
                                 <button class="botonCerrar" type="button" data-bs-dismiss="modal" aria-label="Close">
-                                    Close
+                                    Cerrar
                                 </button>
 
                                 <div class="botonEntrar">
@@ -131,7 +131,7 @@
 
                             <div class="contenedorBotones">
                                 <button class="botonCerrar" type="button" data-bs-dismiss="modal" aria-label="Close">
-                                    Close
+                                    Cerrar
                                 </button>
 
                                 <div class="botonRegistrarse">

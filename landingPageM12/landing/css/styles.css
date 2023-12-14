@@ -85,6 +85,13 @@ body::-webkit-scrollbar-button {
     margin-top: -5px;
 }
 
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.085);
+    color: #E0D3C6;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .lineaSeparadoraDropdown {
     margin-left: 15px;
     margin-top: -10px;

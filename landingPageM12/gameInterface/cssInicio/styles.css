@@ -1,5 +1,5 @@
 body {
-    font-family: Belleza, sans-serif;
+    font-family: var(--textFamily);
 }
 
 /* Estilo para las banderas */
@@ -21,21 +21,38 @@ body {
 }
 
 :root{
-    --textFamily: 'Belleza';
+    --textFamily: 'Belleza', sans-serif;
     --textColorWhite: #E0D3C6;
     --textShadow: 2px 2px 5px #5F4A43;
-    --backgroundImage: url("../images/fondo.webp");
+    --backgroundImage: url("../images/fondo.png");
+    --backgroundBlur: blur(0px);
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
 }
 /*index.html*/
-.bodyBg{
-    font-family: sans-serif;
+/* .bodyBg{
+    font-family: var(--textFamily);
     background-image: var(--backgroundImage);
     background-size: cover;
+} */
+.bodyBg {
+    font-family: var(--textFamily);
 }
-.void{
+
+.bodyBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    filter: blur(2px); /* Ajusta el valor según el nivel de desenfoque deseado */
+    z-index: -1;
+}
+/* .void{
     padding-top: 180px;
-}
+} */
 .centrado{
     text-align: center;
     color: var(--textColorWhite);
@@ -45,13 +62,16 @@ body {
     font-size: 96px;
     color: var(--textColorWhite);
     text-shadow: #5F4A43;
-    font-family: Belleza;
+    font-family: var(--textFamily);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 10%;
 }
 .ol{
     list-style-type: none;
+    padding-top: 101px;
+    margin-bottom: -5%;
 }
 .lily{
     /*Espaciado entre el texto y los rombos injertados*/
@@ -61,7 +81,7 @@ body {
     text-decoration: none;
     /* color: var(--textColor); */
     color: violet;
-    font-family: Belleza;
+    font-family: var(--textFamily);
 }
 .separator{
     text-align: center;
@@ -111,10 +131,10 @@ body {
     padding: 0px;
 }
 .btn{
-    font-size: 27px;
+    font-size: 29px;
     color: var(--textColorWhite);
     text-shadow: var(--textShadow);
-    font-family: Belleza, sans-serif;
+    font-family: var(--textFamily);
 }
 .divContenedor{
     margin-left: 4px;
@@ -142,9 +162,9 @@ h2{
     color: var(--textColorWhite);
 }
 .txt{
-    font-size: 27px;
+    font-size: 29px;
     color: var(--textColorWhite);
-    font-family: Belleza;
+    font-family: var(--textFamily);
     padding-bottom: 0px;
 }
 .carousel-indicators .active{
@@ -213,7 +233,7 @@ h2{
 }
 
 .hazClick {
-    font-family: 'Belleza', sans-serif;
+    font-family: var(--textFamily);
     color: #FFF;
     text-align: center;
     font-size: 18px;
@@ -225,7 +245,7 @@ h2{
 }
 
 .tituloCarousel {
-    font-family: 'Belleza', sans-serif;
+    font-family: var(--textFamily);
     color: #FFF;
     text-align: center;
     text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
@@ -236,7 +256,7 @@ h2{
 }
 
 .descripcion {
-    font-family: 'Belleza', sans-serif;
+    font-family: var(--textFamily);
     color: #FFF;
     text-align: center;
     font-size: 18px;

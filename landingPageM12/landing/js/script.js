@@ -4,7 +4,7 @@ let translations;
 // Función para cargar el archivo JSON según el idioma
 function cargarTraducciones(idioma) {
     // Utiliza el idioma proporcionado para construir la ruta al archivo JSON
-    const rutaJSON = `language/${idioma}.json`;
+    const rutaJSON = `/teamLaia/landingPageM12/landing/language/${idioma}.json`;
 
     // Realiza una solicitud AJAX para cargar el JSON
     const xhr = new XMLHttpRequest();

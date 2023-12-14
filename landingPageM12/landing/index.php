@@ -54,8 +54,7 @@
         </button>
     </div>
 
-
-
+    <div class="dropdown">
         <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img class="imagenCambioIdioma" src="./images/worldCambiarIdioma.png" alt="lang">
         </button>
@@ -70,7 +69,7 @@
                 </svg>
             <li><a class="dropdown-item" onclick="cambiarIdioma('cat')">Català</a></li>
         </ul>
-
+    </div>
     <div class="modal fade" id="loginModal">
         <div class="modal-dialog">
             <div class="modal-content">

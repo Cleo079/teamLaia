@@ -1,0 +1,34 @@
+{
+    "registrarse": {
+        "iniciar": "Log in",
+        "registrar": "Register",
+        "nombre": "Username",
+        "contraseña": "Password",
+        "cuenta": "Don't have an account?",
+        "regustrarse2": "Register",
+        "entrar": "Log in"
+    },
+
+    "registrarse2": {
+        "nombre2": "Username",
+        "contraseña2": "Password",
+        "cuenta2": "Already have an account?",
+        "entrar2": "Log in",
+        "registrarse2": "Register"
+    },
+
+    "titulo": {
+        "titulo": "Improve the world",
+        "ilumina": "by illuminating it",
+        "juega": "Play now!",
+        "mas": "Find out more",
+        "lore": ""
+    },
+    "mainPage":{
+        "laia": "Laia Ferrer, can you enlighten us?",
+        "jugar": "Play",
+        "nuevo": "New game",
+        "cred": "Credits",
+        "admin": "Administration"
+    }
+}

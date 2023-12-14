@@ -27,17 +27,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./cssInicio/styles.css">
-    <title>Home</title>
+    <title >Home</title>
 </head>
 <body class="bodyBg">
+
+<div class="banderas" id="languageButtons">
+        <img src="./images/es.png" alt="Español" onclick="cambiarIdioma('es')">
+        <img src="images/en.png" alt="English" onclick="cambiarIdioma('en')">
+        <img src="images/cat.png" alt="Català" onclick="cambiarIdioma('cat')">
+    </div>
+
     <div class="void">   
+        
         <div class="centrado">
-            <h1 id="titulo">Laia Ferrer ¿nos iluminas?</h1>
+            <h1 id="titulo" data-section= "mainPage" data-value="laia">Laia Ferrer ¿nos iluminas?</h1>
             <br>
             <ol class="ol">
                 <li>
                     <a class="li_a" href="./carrouselJuegos.html">
-                        <p class="txt borderBottom">Jugar</p>
+                        <p class="txt borderBottom" data-section= "mainPage" data-value="jugar">Jugar</p>
                     </a>
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
@@ -45,7 +53,7 @@
                 </li>
                 <li>
                     <a class="li_a" href="./carrouselJuegos.html">
-                        <p class="txt">Nuevo Juego</p>
+                        <p class="txt" data-section= "mainPage" data-value="nuevo">Nuevo Juego</p>
                     </a>
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
@@ -61,7 +69,8 @@
                     </svg>
                 </li>
                 <li>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCredits">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCredits"
+                    data-section= "mainPage" data-value="cred">
                         Creditos
                     </button>
                     <br>
@@ -72,7 +81,7 @@
                 <?php if ($areUser == false) { ?>
                     <li>
                         <a class="li_a" href="../landing/administration.php">
-                            <p class="txt">Administration</p>
+                            <p class="txt" data-section= "mainPage" data-value="admin">Administración</p>
                         </a>
                         <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                             <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
@@ -174,6 +183,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>

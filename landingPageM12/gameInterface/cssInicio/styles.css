@@ -125,9 +125,9 @@ body {
     width: 300px;
     height: 207px;
 }
-.modal-dialog-scrollable{
+/* .modal-dialog-scrollable{
     overflow-y: auto;
-}
+} */
 .textbg{
     margin: 2%;
     font-size: 37px;

@@ -3,11 +3,6 @@
 session_start();
 
 require_once('../php_libraries/db.php');
-if (isset($_POST['nextGameButtonBarcelona'])) {
-    insertBarcelonaData($_POST ['id_user'], $_POST ['scoreDataCollect']);
-    header('Location: ../index.php');
-    exit();
-}
 
 if (isset($_POST['logIn']))
 {
@@ -129,6 +124,10 @@ if (isset($_POST['insert']))
     };
 };
 
-
+if (isset($_POST['nextGameButtonBarcelona'])) {
+    insertBarcelonaData($_POST ['id_user'], $_POST ['scoreDataCollect']);
+    header('Location: ../index.php');
+    exit();
+}
 
 ?>

@@ -49,7 +49,8 @@
         <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
         <input type="submit" class="nextGameButton" name="nextGameButtonBarcelona">
     </form>    
-    Restart</div>
+    Restart
+    </div>
 
     
 

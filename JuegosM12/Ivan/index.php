@@ -41,15 +41,17 @@
         </div>
     </section>
 
-    <section class="backBtn-container">
-        <a href="../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">Back</button></a>
-        <div class="back-btn-shadow"></div>
-    </section>
-    
-    <section class="startBtn-container">
-        <button class="play-btn" id="start">Start</button>
-        <div class="btn-shadow"></div>
-    </section>
+    <div class="contenedorBotones">
+        <section class="backBtn-container">
+            <a href="../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">Back</button></a>
+            <div class="back-btn-shadow"></div>
+        </section>
+        
+        <section class="startBtn-container">
+            <button class="play-btn" id="start">Start</button>
+            <div class="btn-shadow"></div>
+        </section>
+    </div>
 
     <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
     <div class="restartButton">

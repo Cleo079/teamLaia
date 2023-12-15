@@ -33,7 +33,7 @@ let preguntas = [
         imagen: "./imagenes/Brote.jpg",
         opciones: ["El templo", "El brote rojo", "La montaña", "El pájaro en el árbol"],
         respuesta: 1,
-        explicacion: "El brote rojo no es típico de un paisaje tradicional indio y podría ser una adición artística o fuera de contexto."
+        explicacion: "El brzote rojo no es típico de un paisaje tradicional indio y podría ser una adición artística o fuera de contexto."
     },
     {
         pregunta: "¿Qué elemento del paisaje podría sugerir que la imagen está representando una región específica de la India?",

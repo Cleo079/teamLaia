@@ -6,10 +6,13 @@ let matrix = shuffleMatrix();
 // ];
 
 let board = document.querySelector('.board');
+let body = document.body;
 let startBtn = document.querySelector('#start');
+let backBtn = document.querySelector('#back');
 let firstScreen = document.querySelector('.first-screen');
 let startBtnContainer = document.querySelector('.startBtn-container');
-let backBtn = document.querySelector('.backBtn');
+let backBtnContainer = document.querySelector('.backBtn-container');
+// let backBtn = document.querySelector('.backBtn');
 let counterElement = document.querySelector('.counter');
 let pistaElement = document.querySelector('.pista');
 let pauseElement = document.querySelector('.pause');
@@ -24,6 +27,18 @@ startBtn.addEventListener('mousedown', ()=> {
 startBtn.addEventListener('mouseup', ()=> {
     startBtn.style.top = '0px';
 });
+
+backBtn.addEventListener('mousedown', ()=> {
+    backBtn.style.top = '4px';
+});
+
+backBtn.addEventListener('mouseup', ()=> {
+    backBtn.style.top = '0px';
+});
+/*Cambio de Imagenes del Fondo de la etiqueta body*/
+startBtn.addEventListener('click', function () {
+    body.style.backgroundImage = "url('./Imagenes/kenya.png')";
+  });
 
 
 
@@ -230,6 +245,7 @@ function compareMatrix(){
 }
 
 // Contador
+let tiempo = 240;
 function startCounter(){
     counterElement.innerText = counter;
     let counterId = setInterval(()=>{
@@ -247,6 +263,8 @@ function startCounter(){
         }
     
         if(playerWin == true){
+            let puntuacion = tiempo - counter;
+            board.innerHTML = `<p class="game-over">Has ganado con una puntuación de ${puntuacion} puntos!</p>`;
             clearInterval(counterId);
         }
         

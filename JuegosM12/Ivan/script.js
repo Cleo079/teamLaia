@@ -264,7 +264,7 @@ function startCounter(){
     
         if(playerWin == true){
             let puntuacion = tiempo - counter;
-            board.innerHTML = `<p class="game-over">Has ganado con una puntuación de ${puntuacion} puntos!</p>`;
+            board.innerHTML = `<p class="game-over">Has ganado con ${puntuacion} puntos!</p>`;
             clearInterval(counterId);
         }
         

@@ -14,6 +14,7 @@
     --btnBackground: #3edaf1;
     --btnShadow: #0885da;
     --btnText: #135fb5;
+    --backgroundImgStart: url("./Imagenes/marmol-negro.png");
     --backgroundImg: url("./Imagenes/kenya.png");
     --token1Img: url("./Imagenes/Arriba-Izquierda.jpg");
     --token2Img: url("./Imagenes/Arriba-Centro.jpg");
@@ -27,13 +28,13 @@
 
 a{
     text-decoration: none;
-    color: var(--tokenShadow);
+    color: #ffffff;
 }
 
 body{
     font-family: 'Pixelify Sans', sans-serif;
     /* background-color: var(--background); */
-    background-image: var(--backgroundImg);
+    background-image: var(--backgroundImgStart);
     background-size: cover;
     color: var(--text);
 }
@@ -190,10 +191,15 @@ img{
 .first-screen p{
     font-weight: bold;
     font-size: 32px;
+    margin: 30px 0px;
+    padding: 50px 0px;
 }
 
 .first-screen img{
     width: 300px;
+}
+.textoLoreKenya{
+    border: 1px solid #ffffff;
 }
 
 /*BOTONES*/
@@ -208,9 +214,12 @@ img{
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: var(--btnBackground);
-    color: var(--btnText);
-    border: none;
+    /* background-color: var(--btnBackground); */
+    /* background: rgba(224, 211, 198, 0.08); */
+    background-color: rgb(51, 45, 45);
+    /* color: var(--btnText); */
+    color: #ffffff;
+    border: 1px solid #ffffff;
     position: absolute;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -221,9 +230,11 @@ img{
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: var(--tokens);
-    color: var(--tokenShadow);
-    border: none;
+    /* background-color: var(--tokens); */
+    background-color: rgb(51, 45, 45);
+    /* color: var(--tokenShadow); */
+    color: #ffffff;
+    border: 1px solid #ffffff;
     position: absolute;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -231,7 +242,8 @@ img{
 .back-btn-shadow{
     width: 280px;
     height: 60px;
-    background-color: var(--backBtnShadow);
+    /* background-color: var(--backBtnShadow); */
+    background-color: rgb(23, 20, 20);
     border-radius: 8px;
     position: absolute;
     top: 4px;
@@ -240,7 +252,8 @@ img{
 .btn-shadow{
     width: 280px;
     height: 60px;
-    background-color: var(--btnShadow);
+    /* background-color: var(--btnShadow); */
+    background-color: rgb(23, 20, 20);
     border-radius: 8px;
     position: absolute;
     top: 4px;

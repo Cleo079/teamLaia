@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/path-to/pixel-borders.scss">
     <title>Document</title>
 </head>
 <body>
@@ -27,11 +28,13 @@
 
     <section class="first-screen">
         <h2>Completa el puzzle</h2>
-        <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
-            su visita vió muchos animales</br>
-            que de entre ellos uno destacó</br>
-            más que el resto
-        </p>
+        <div class="textContainer">
+            <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
+                su visita vió muchos animales</br>
+                que de entre ellos uno destacó</br>
+                más que el resto
+            </p>
+        </div>
     </section>
 
     <section class="backBtn-container">

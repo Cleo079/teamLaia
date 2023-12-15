@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@
     --tokenShadow: #b96453;
     --tokenText: #000000;
     --text: #ffffff;
+    --colorWhite: #E0D3C6;
     --background: #da7ff2;
     --btnBackground: #3edaf1;
     --btnShadow: #0885da;
@@ -28,7 +30,7 @@
 
 a{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--colorWhite);
 }
 
 body{
@@ -36,7 +38,7 @@ body{
     /* background-color: var(--background); */
     background-image: var(--backgroundImgStart);
     background-size: cover;
-    color: var(--text);
+    color: var(--colorWhite);
 }
 img{
     border-radius: 4px;
@@ -191,15 +193,21 @@ img{
 .first-screen p{
     font-weight: bold;
     font-size: 32px;
-    margin: 30px 0px;
-    padding: 50px 0px;
+    /* margin: 30px 0px; */
+    padding: 20px;
+    color: greenyellow;
 }
 
 .first-screen img{
     width: 300px;
 }
+.textContainer{
+    border: 1px solid var(--colorWhite);
+    margin: 90px 450px 90px 450px;
+}
 .textoLoreKenya{
-    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 0px;
 }
 
 /*BOTONES*/
@@ -218,8 +226,8 @@ img{
     /* background: rgba(224, 211, 198, 0.08); */
     background-color: rgb(51, 45, 45);
     /* color: var(--btnText); */
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: var(--colorWhite);
+    border: 1px solid #E0D3C6;
     position: absolute;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -233,8 +241,8 @@ img{
     /* background-color: var(--tokens); */
     background-color: rgb(51, 45, 45);
     /* color: var(--tokenShadow); */
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: var(--colorWhite);
+    border: 1px solid #E0D3C6;
     position: absolute;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -272,7 +280,7 @@ img{
 .pista{
     width: 50px;
     height: 50px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--colorWhite);
     margin: 5px;
     display: none;
     border-radius: 4px;
@@ -282,7 +290,7 @@ img{
     display: none;
     position: absolute;
     border: 1px solid #000;
-    background-color: #fff;
+    background-color: var(--colorWhite);
     padding: 10px;
     z-index: 1;
     width: 400px;

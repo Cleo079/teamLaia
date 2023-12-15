@@ -35,7 +35,7 @@
         <div class="textContainer">
             <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
                 su visita vió muchos animales</br>
-                que de entre ellos uno destacó</br>
+                que de entre ellos uno destacó,</br>
                 más que el resto
             </p>
         </div>

@@ -4,43 +4,43 @@ let preguntas = [
         pregunta: "¿Qué tipo de árboles se pueden ver a ambos lados del río?",
         imagen: "./imagenes/arbol.jpg",
         opciones: ["Robles", "Banyan (Árbol sagrado de la India)", "Pinos", "Palmeras"],
-        respuesta: 1
-        //banya
+        respuesta: 1,
+        explicacion: "El Banyan es un árbol sagrado en la India, conocido por su simbolismo espiritual y su amplia sombra."
     },
     {
         pregunta: "¿Qué elemento del paisaje indica que la imagen podría estar representando una región costera de la India?",
         imagen: "./imagenes/Palmera.jpg",
         opciones: ["El río", "Las montañas", "Las palmeras", "El bote"],
-        respuesta: 2
-        //palmera
+        respuesta: 2,
+        explicacion: "Las palmeras son típicas de las regiones costeras de la India, ya que prosperan en climas cálidos y húmedos."
     },
     {
         pregunta: "¿Qué estilo arquitectónico sugiere el diseño del templo?",
         imagen: "./imagenes/Templo.jpg",
         opciones: ["Estilo Nagara", "Estilo Dravida", "Estilo Vesara", "Estilo Gupta"],
-        respuesta: 0
-        //nagara
+        respuesta: 0,
+        explicacion: "El diseño del templo sugiere el estilo arquitectónico Nagara, caracterizado por su torre en forma de montaña escalonada."
     },
     {
         pregunta: "¿Cómo se llama el estilo de decoración que se observa?",
         imagen: "./imagenes/arquitectura.jpg",
         opciones: ["Estilo Mughal", "Estilo Rajasthani", "Estilo Gupta", "Estilo Drávida"],
-        respuesta: 2
-        //gupta
+        respuesta: 2,
+        explicacion: "La decoración del edificio refleja el estilo Gupta, conocido por su elegancia y detalles artísticos."
     },
     {
         pregunta: "¿Qué elemento no es típico de un paisaje tradicional indio?",
         imagen: "./imagenes/Brote.jpg",
-        opciones: ["El templo", "El bote rojo", "La montaña", "El pájaro en el árbol"],
-        respuesta: 1
-        //brote rojo
+        opciones: ["El templo", "El brote rojo", "La montaña", "El pájaro en el árbol"],
+        respuesta: 1,
+        explicacion: "El brote rojo no es típico de un paisaje tradicional indio y podría ser una adición artística o fuera de contexto."
     },
     {
         pregunta: "¿Qué elemento del paisaje podría sugerir que la imagen está representando una región específica de la India?",
         imagen: "./imagenes/Region.jpg",
         opciones: ["El río sugiere que es la región de Kerala.", "Las montañas sugieren que es la región del Himalaya.", "Los árboles verdes sugieren que es la región de Assam.", "El pájaro volando en el cielo sugiere que es la región de Rajasthan."],
-        respuesta: 1
-        //himalaya 
+        respuesta: 1,
+        explicacion: "Las montañas sugieren que la imagen podría representar la región del Himalaya, famosa por sus altas cordilleras."
     }
 ];
 
@@ -71,11 +71,17 @@ function empezarQuiz() {
 }
 
 // Función para mostrar la pregunta actual
+// ... (tu código anterior)
+
+// ... (tu código anterior)
+
 function mostrarPregunta() {
     let pregunta = preguntas[preguntaActual];
     document.querySelector(".question img").src = pregunta.imagen;
     document.querySelector("#enunciado").textContent = pregunta.pregunta;
     document.querySelector(".options").innerHTML = "";
+    document.querySelector(".options").classList.remove("explanation"); // Remover la clase de explicación
+
     for (let i = 0; i < pregunta.opciones.length; i++) {
         let boton = document.createElement("button");
         boton.textContent = pregunta.opciones[i];
@@ -83,15 +89,16 @@ function mostrarPregunta() {
         boton.onclick = function() {
             // Comprobar si la respuesta es correcta
             const respuestaCorrecta = i === pregunta.respuesta;
-            if (respuestaCorrecta) {
-                puntaje++;
-            }
-            
+
+            // Mostrar la explicación con un contador
+            mostrarExplicacion(respuestaCorrecta, pregunta.explicacion);
+
             // Reproducir el sonido según la respuesta
             reproducirSonido(respuestaCorrecta);
 
             // Actualizar la bombilla y clases CSS según la respuesta
             if (respuestaCorrecta) {
+                puntaje++;
                 boton.classList.add("correct");
                 cambiarImagenBombilla(true); // Cambiar imagen a encendida
             } else {
@@ -99,10 +106,12 @@ function mostrarPregunta() {
                 cambiarImagenBombilla(false); // Mantener la imagen apagada
             }
 
-            // Pasar a la siguiente pregunta
+            // Pasar a la siguiente pregunta después de 4 segundos
             preguntaActual++;
             if (preguntaActual < preguntas.length) {
-                setTimeout(mostrarPregunta, 1000);
+                setTimeout(function() {
+                    mostrarPregunta();
+                }, 4000);
             } else {
                 // Mostrar puntaje final
                 alert("¡Quiz terminado! Tu puntaje es: " + puntaje);
@@ -111,6 +120,32 @@ function mostrarPregunta() {
         document.querySelector(".options").appendChild(boton);
     }
 }
+
+function mostrarExplicacion(respuestaCorrecta, explanation) {
+    const explicacionElement = document.createElement("div");
+    explicacionElement.classList.add("explicacion");
+
+    if (respuestaCorrecta) {
+        explicacionElement.classList.add("correct-explanation");
+        explicacionElement.textContent = "¡Correcto! " + explanation;
+    } else {
+        explicacionElement.classList.add("incorrect-explanation");
+        explicacionElement.textContent = "Incorrecto. La respuesta correcta es: " + explanation;
+    }
+
+
+    document.querySelector(".options").appendChild(explicacionElement);
+    document.querySelector(".options").classList.add("explanation"); // Agregar la clase de explicación
+
+    // Ocultar la explicación después de 4 segundos
+    setTimeout(function() {
+        document.querySelector(".explicacion").style.display = "none";
+    }, 4000);
+}
+
+// ... (tu código posterior)
+
+
 
 // Iniciar el quiz
 mostrarPregunta();

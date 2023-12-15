@@ -1,5 +1,5 @@
 <?php
-    require_once('../../../landingPageM12/landing/php_libraries/db.php');
+    require_once('../../landingPageM12/landing/php_libraries/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
 
     <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
     <div class="restartButton">
-    <form class="scoreForm" action="../../../landingPageM12/landing/php_controllers/userController.php" method="POST">
+    <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
         <input name="id_user" type="hidden" value="$_SESSION['user']">
         <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
         <input type="submit" class="nextGameButton" name="nextGameButtonBarcelona">

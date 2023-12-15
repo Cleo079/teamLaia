@@ -126,7 +126,7 @@ if (isset($_POST['insert']))
 
 if (isset($_POST['nextGameButtonBarcelona'])) {
     insertBarcelonaData($_POST ['id_user'], $_POST ['scoreDataCollect']);
-    header('Location: ../index.php');
+    header('Location: ../../gameInterface/carrouselJuegos.html');
     exit();
 }
 

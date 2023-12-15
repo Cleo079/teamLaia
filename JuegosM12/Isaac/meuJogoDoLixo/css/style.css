@@ -211,3 +211,14 @@ body, html {
 .restartButton:hover {
     cursor: pointer;
 }
+
+.nextGameButton {
+    position: relative; /* o absolute, dependiendo de tu diseño */
+    top: 0; /* o ajusta según sea necesario */
+    left: 0; /* o ajusta según sea necesario */
+    z-index: 1; /* Asegúrate de que esté en una capa superior si es necesario */
+}
+
+.restartButton:hover {
+    cursor: pointer;
+}

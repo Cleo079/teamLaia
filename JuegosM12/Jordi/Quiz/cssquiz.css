@@ -126,3 +126,24 @@ body {
  .botonEmpezar{
     font-size: x-large;
  }
+
+ /* Agrega estilos para la explicación */
+.explicacion {
+    font-size: 130%;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilos para la explicación correcta */
+.correct-explanation {
+    background-color: #4CAF50; /* Verde claro */
+}
+
+/* Estilos para la explicación incorrecta */
+.incorrect-explanation {
+    background-color: #f44336; /* Rojo claro */
+}

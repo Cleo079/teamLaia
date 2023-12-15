@@ -300,5 +300,29 @@ function deleteUser($id_user) {
     $connection = closeDb();
 }
 
+function insertBarcelonaData($id_user, $score) {
+
+    try 
+    {
+        $connection = openDb();
+
+        $statementTxt = "INSERT INTO stats (id_user, id_game, score) VALUES (:id_user, :1, :score)";
+        // $statementTxt = "insert into users (user_name, user_password, userRol) values (:user_name, :user_password, :userRol);";
+        $statement = $connection->prepare($statementTxt);
+        $statement->bindParam(':id_user', $id_user);
+        $statement->bindParam(':score', $score);
+        $statement->execute();
+
+        // $_SESSION['message'] = 'Record inserted succesfully';
+    }
+    catch (PDOException $e) 
+    {
+        $_SESSION['error'] = errorMessage($e);
+    }
+
+    $connection = closeDb();
+    
+}
+
 
 ?>

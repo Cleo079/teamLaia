@@ -1,3 +1,7 @@
+<?php
+    require_once('../../landingPageM12/landing/php_libraries/db.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/path-to/pixel-borders.scss">
     <title>Document</title>
 </head>
 <body>
@@ -27,11 +32,13 @@
 
     <section class="first-screen">
         <h2>Completa el puzzle</h2>
-        <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
-            su visita vió muchos animales</br>
-            que de entre ellos uno destacó</br>
-            más que el resto
-        </p>
+        <div class="textContainer">
+            <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
+                su visita vió muchos animales</br>
+                que de entre ellos uno destacó</br>
+                más que el resto
+            </p>
+        </div>
     </section>
 
     <section class="backBtn-container">
@@ -43,6 +50,16 @@
         <button class="play-btn" id="start">Start</button>
         <div class="btn-shadow"></div>
     </section>
+
+    <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
+    <div class="restartButton">
+    <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
+        <input name="id_user" type="hidden" value="$_SESSION['user']">
+        <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
+        <input type="submit" class="nextGameButton" name="nextGameButtonBarcelona">
+    </form>    
+    Restart
+    </div>
 
 
     <script src="./script.js"></script>

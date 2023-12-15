@@ -1,3 +1,7 @@
+<?php
+    require_once('../../../landingPageM12/landing/php_libraries/db.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +43,16 @@
 
     <div class="youWinMessage"></div>
 
-    <div class="restartButton">Restart</div>
+    <div class="restartButton">
+    <form class="scoreForm" action="../../../landingPageM12/landing/php_controllers/userController.php" method="POST">
+        <input name="id_user" type="hidden" value="$_SESSION['user']">
+        <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
+        <input type="submit" class="nextGameButton" name="nextGameButtonBarcelona">
+    </form>    
+    Restart
+    </div>
+
+    
 
 </div>
 

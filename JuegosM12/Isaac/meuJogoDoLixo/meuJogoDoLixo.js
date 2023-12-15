@@ -14,8 +14,10 @@ const gameContainer = document.querySelector(".gameContainer");
 const gameOverMessage = document.querySelector(".gameOverMessage");
 const youWinMessage = document.querySelector(".youWinMessage");
 const restartButton = document.querySelector(".restartButton");
+const nextGameButton = document.querySelector(".nextGameButton");
 
 restartButton.style.display = 'none';
+nextGameButton.style.display = 'none';
 
 const organicImageSources = [
   'images/organic/apple.png',
@@ -174,8 +176,8 @@ function startGame() {
   function startGameAfterCountdown() {
     // Configuración del juego
     trashCan.style.display = "block";
-    player.score = 0;
-    player.timeToFinish = 30;
+    player.score = 10;
+    player.timeToFinish = 2;
     player.totalElement = 100;
     player.currentlyPlaying = true;
     
@@ -330,7 +332,6 @@ function makeEnemies() {
   
 
   restartButton.addEventListener("click", () => {
-
     // Recargar la página
     location.reload();
   });
@@ -342,7 +343,10 @@ function makeEnemies() {
     } else {
       gameOverMessage.innerHTML = "GAME OVER";
     }
+
+    document.getElementById("scoreInput").value = player.score;
   
+    nextGameButton.style.display = "block";
     restartButton.style.display = 'block';
     youWinMessage.style.zIndex = "999";
     gameOverMessage.style.zIndex = "999";

@@ -195,7 +195,7 @@ img{
     font-size: 32px;
     /* margin: 30px 0px; */
     padding: 20px;
-    color: greenyellow;
+    color: /*rgb(106, 172, 7)*/ var(--colorWhite);
 }
 
 .first-screen img{

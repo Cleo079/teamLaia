@@ -339,6 +339,9 @@ form {
     position: absolute;
     bottom: 0;
     right: 0;
+    color: #493F40;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .textoEntrar {
@@ -452,16 +455,10 @@ form {
     position: absolute;
     bottom: 0;
     right: 0;
-}
-
-.textoRegistrarse {
     color: #493F40;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    margin: 0;
-    padding: 0;
-    line-height: 66px;
 }
 
 .tituloPrincipal {

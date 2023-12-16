@@ -95,10 +95,9 @@
                                     Cerrar
                                 </button>
 
-                                <div class="botonEntrar">
-                                    <button type="submit" name="logIn" class="textoEntrar"
-                                    data-section= "registrarse" data-value="entrar">Entrar</button>
-                                </div>
+                                <button type="submit" name="logIn" class="botonEntrar" data-section= "registrarse" data-value="entrar">
+                                    Entrar
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -132,10 +131,9 @@
                                     Cerrar
                                 </button>
 
-                                <div class="botonRegistrarse">
-                                    <button type="submit" name="singUp" class="textoRegistrarse"
-                                    data-section= "registrarse2" data-value="registrarse2">Registrarse</button>
-                                </div>
+                                <button type="submit" name="singUp" class="botonRegistrarse" data-section= "registrarse2" data-value="registrarse2">
+                                    Registrarse
+                                </button>
                             </div>
                         </form>
                     </div>

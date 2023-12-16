@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const score = document.querySelector(".score");
 const timeLeft = document.querySelector(".timeLeft");
 const textMessage = document.querySelector(".textMessage");
@@ -75,6 +76,7 @@ glassStartButton.addEventListener("click", startGlassMode);
 paperCardboardStartButton.addEventListener("click", startPaperCardboardMode);
 plasticsStartButton.addEventListener("click", startPlasticsMode);
 
+
 let isOrganicMode = false;
 let isGlassMode = false;
 let isPaperCardboardMode = false;
@@ -149,6 +151,7 @@ function startPlasticsMode() {
 }
 
 function startGame() {
+  body.style.backgroundImage = "url('../images/background.png')";
   container.style.display = "none";
   trashCan.style.display = "block";
   const countdownElement = document.getElementById('countdown');
@@ -176,8 +179,8 @@ function startGame() {
   function startGameAfterCountdown() {
     // Configuración del juego
     trashCan.style.display = "block";
-    player.score = 10;
-    player.timeToFinish = 2;
+    player.score = 0;
+    player.timeToFinish = 30;
     player.totalElement = 100;
     player.currentlyPlaying = true;
     

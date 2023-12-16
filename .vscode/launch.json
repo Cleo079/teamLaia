@@ -22,7 +22,7 @@
             //IVAN-Jogo
             //"url": "http://localhost:8080/teamLaia/JuegosM12/Ivan/index.html",
             // ISAAC
-            //"url": "http://localhost:8080/collection/index.php",
+            // "url": "http://localhost:8080/teamLaia/JuegosM12/Isaac/meuJogoDoLixo/meuJogoDoLixo.php",
 
             "webRoot": "${workspaceFolder}"
         }

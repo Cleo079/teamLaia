@@ -15,9 +15,14 @@
 </head>
 <body>
 
-    <button id="back">
-        back
-    </button>
+    <section class="counter-container">
+
+        <button id="back"> back </button>
+
+        <p id="counter"> timer </p>
+
+    </section>
+
     <div class="game">
         <h1 id="title">Maze</h1>
         <select id="levelSelect">
@@ -33,16 +38,16 @@
             <div id="lantern"></div>
             <div id="lanternDoor"></div>
         </div>
+
     </div>
 
     <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
     <div class="restartButton">
-    <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
-        <input name="id_user" type="hidden" value="$_SESSION['user']">
-        <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
-        <input type="submit" class="nextGameButton" name="nextGameButtonBarcelona">
-    </form>    
-    Restart
+        <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
+            <input name="id_user" type="hidden" value="$_SESSION['user']">
+            <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
+            <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona" id="again" >Restart</button>
+        </form>
     </div>
 
     

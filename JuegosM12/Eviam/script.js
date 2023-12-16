@@ -66,11 +66,29 @@ let mazeArray = level1;
 let chooseLevel = document.getElementById("levelSelect");
 let title = document.getElementById("title");
 let back = document.getElementById("back");
+let counterElement = document.getElementById("counter");
+let again = document.getElementById("again");
 let maze = document.getElementById("maze-container");
-let warrior= document.getElementById("warrior");
-let door= document.getElementById("door");
+let warrior = document.getElementById("warrior");
+let door = document.getElementById("door");
+let winPos = false;
+let counter = 0;
 
 
+function winPosition (mazeArray)
+{
+    let position = [-1 , -1];
+    for (let i = 0; i < mazeArray.length; i++) {
+        for (let j = 0; j < mazeArray[i].length; j++) {
+            if (mazeArray[i][j] == 3)  {
+                position[0] = i;
+                position[1] = j;
+            }
+        }
+    }
+    // console.log("warrior position is " + position);
+    return position;
+};
 
 chooseLevel.addEventListener("change",
 function()
@@ -81,23 +99,25 @@ function()
     if (level == 1)
     {
         mazeArray = level1;
-        winPosition = [6,12];
+        winPosition = winPosition(mazeArray);
     };
     if (level == 2)
     {
         mazeArray = level2;
-        winPosition = [7,9];
+        winPosition = winPosition(mazeArray);
     };
     if (level == 3)
     {
         mazeArray = level3;
-        winPosition = [14,22];
+        winPosition = winPosition(mazeArray);
     };
 
     maze.innerHTML =
     '<img src="images/warrior/warrior_down.gif" alt="warrior" id="warrior" height="50px" width="50px"> <div id="lantern"></div> <div id="lanternDoor"></div>'
     createMaze();
     console.log(mazeArray[0].length);
+    console.log("win position is:" + winPosition);
+    
 });
     
 
@@ -155,10 +175,13 @@ function win(warriorPosition)
 {
     warriorPosition = getWarriorPosition();
     console.log(warriorPosition);
+    console.log(winPosition);
 
     if (warriorPosition[0] == winPosition[0] && warriorPosition[1] == winPosition[1])
     {
-        alert("You win You win You win You win You win You win You win You win You win You win You win You win You win You win");
+        winPos = true;
+        alert("You win You win");
+        endGame()
     }
 }
 
@@ -176,7 +199,7 @@ document.addEventListener("keydown",
         {
             if (warriorLeft < (mazeArray[0].length - 1) * 50)
             {
-                if (mazeArray[warriorPosition[0]][warriorPosition[1] + 1] == 1)
+                if (mazeArray[warriorPosition[0]][warriorPosition[1] + 1] >= 1)
                 {
                     warriorLeft += 52;
                     warrior.style.left = warriorLeft + "px";
@@ -190,7 +213,7 @@ document.addEventListener("keydown",
         {
             if (warriorLeft > 0)
             {
-                if (mazeArray[warriorPosition[0]][warriorPosition[1] - 1] == 1)
+                if (mazeArray[warriorPosition[0]][warriorPosition[1] - 1] >= 1)
                 {
                     warriorLeft -= 52;
                     warrior.style.left = warriorLeft + "px";
@@ -205,7 +228,7 @@ document.addEventListener("keydown",
         {
             if (warriorTop > 0)
             {
-                if (mazeArray[warriorPosition[0] - 1][warriorPosition[1]] == 1)
+                if (mazeArray[warriorPosition[0] - 1][warriorPosition[1]] >= 1)
                 {
                     warriorTop -= 52;
                     warrior.style.top = warriorTop + "px";
@@ -218,7 +241,7 @@ document.addEventListener("keydown",
         {
             if (warriorTop < (mazeArray.length - 1) * 50)
             {
-                if (mazeArray[warriorPosition[0] + 1][warriorPosition[1]] == 1)
+                if (mazeArray[warriorPosition[0] + 1][warriorPosition[1]] >= 1)
                 {
                     warriorTop += 52;
                     warrior.style.top = warriorTop + "px";
@@ -259,6 +282,17 @@ function buttons()
 {
     maze.style.display = 'block';
     back.style.display = 'flex';
+    counterElement.style.display = 'flex';
+    chooseLevel.style.display = 'none';
+    title.style.fontSize = '60px';
+};
+
+function endGame()
+{
+    maze.style.display = 'none';
+    back.style.display = 'none';
+    again.style.display = 'flex';
+    counterElement.style.display = 'none';
     chooseLevel.style.display = 'none';
     title.style.fontSize = '60px';
 };
@@ -270,6 +304,24 @@ back.addEventListener("click",
         maze.style.display = 'none';
         title.style.fontSize = '150px';
         back.style.display = 'none';
+        counterElement.style.display = 'none';
         chooseLevel.style.display = 'block';
+        mazeArray = [];
+        console.log(mazeArray);
     }
 );
+
+let counterId = setInterval(()=>{
+    counter++;
+
+    if(winPos == true)
+    {
+        clearInterval(counterId)
+    }
+    else
+    {
+        counterElement.innerText = counter;
+    }
+},1000)
+        
+

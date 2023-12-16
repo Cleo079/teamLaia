@@ -179,8 +179,8 @@ function startGame() {
   function startGameAfterCountdown() {
     // Configuración del juego
     trashCan.style.display = "block";
-    player.score = 0;
-    player.timeToFinish = 30;
+    player.score = 10;
+    player.timeToFinish = 20;
     player.totalElement = 100;
     player.currentlyPlaying = true;
     

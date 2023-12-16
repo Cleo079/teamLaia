@@ -16,6 +16,9 @@ if (isset($_POST['logIn']))
         // esto me lo guardo...
         $_SESSION['user'] = $user;
 
+        // Almaceno el id_user en la sesión
+        $_SESSION['id_user'] = $user['id_user'];
+
         if ($user['userRol'] == 3)
         {
             header('Location: ../administration.php');
@@ -25,7 +28,6 @@ if (isset($_POST['logIn']))
             header('Location: ../../gameInterface/mainPage.php');
         }
         exit();
-
     };
 
     if ($_SESSION['userExist'] == false )
@@ -50,6 +52,9 @@ if (isset($_POST['singUp']))
         $user = selectUserbyName($_POST['user_name']);
         $_SESSION['user'] = $user;
         
+        // Almaceno el id_user en la sesión
+        $_SESSION['id_user'] = $user['id_user'];
+
         header('Location: ../../gameInterface/mainPage.php');
     }
     else
@@ -64,6 +69,7 @@ if (isset($_POST['singUp']))
         exit();
     };
 };
+
 
 if (isset($_POST['update']))
 {
@@ -125,7 +131,17 @@ if (isset($_POST['insert']))
 };
 
 if (isset($_POST['nextGameButtonBarcelona'])) {
-    insertBarcelonaData($_POST ['id_user'], $_POST ['scoreDataCollect']);
+    // Recuperar los datos del formulario
+    $id_user = intval($_SESSION['id_user']);  // Usar el ID almacenado en la sesión
+    $score = $_POST['scoreDataCollect'];
+
+    // Mensaje de depuración
+    echo "ID Usuario: $id_user, Puntuación: $score";
+    
+    // Insertar los datos en la base de datos
+    insertBarcelonaData($id_user, $score);
+
+    // Redireccionar a la página deseada
     header('Location: ../../gameInterface/carrouselJuegos.html');
     exit();
 }

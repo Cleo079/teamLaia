@@ -47,8 +47,9 @@
     <form class="scoreForm" action="../../../landingPageM12/landing/php_controllers/userController.php" method="POST">
         <input name="id_user" type="hidden" value="<?php echo $_SESSION['user']?>">
         <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
-        <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">Restart</button>
+        <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">Siguiente Juego</button>
     </form>
+    Restart
     </div>
 
     

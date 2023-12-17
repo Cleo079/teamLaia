@@ -300,22 +300,6 @@ function deleteUser($id_user) {
     $connection = closeDb();
 }
 
-// if (isset($_POST['nextGameButtonBarcelona'])) {
-//     // Recuperar los datos del formulario
-//     $id_user = intval($_SESSION['id_user']);  // Convertir a entero
-//     $score = $_POST['scoreDataCollect'];
-
-//     // Mensaje de depuración
-//     echo "ID Usuario: $id_user, Puntuación: $score";
-
-//     // Insertar los datos en la base de datos
-//     insertBarcelonaData($id_user, $score);
-
-//     // Redireccionar a la página deseada
-//     header('Location: ../../gameInterface/carrouselJuegos.html');
-//     exit();
-// }
-
 // Función para insertar datos en la base de datos
 function insertBarcelonaData($id_user, $score)
 {

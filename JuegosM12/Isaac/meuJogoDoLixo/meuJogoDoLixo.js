@@ -179,21 +179,24 @@ function startOrganicMode() {
 function startGlassMode() {
   isGlassMode = true;
   // Cambiar la imagen de la papelera para el modo glass
-  trashCan.style.backgroundImage = "url('images/trashcans/glassTrashcan.png')";
+  trashCan.style.backgroundImage = "url('images/menuGlassTrashcan.png')";
   startGame(); // Iniciar el juego
 }
 
 function startPaperCardboardMode() {
   isPaperCardboardMode = true;
   // Cambiar la imagen de la papelera para el modo paperCardboard
-  trashCan.style.backgroundImage = "url('images/trashcans/paperCardboardTrashcan.png')";
+  trashCan.style.backgroundImage = "url('images/menuPaperCardboardTrashcan.png')";
+  trashCan.style.width = "200px";
+  trashCan.style.height = "204px";
   startGame(); // Iniciar el juego
 }
 
 function startPlasticsMode() {
   isPlasticsMode = true;
   // Cambiar la imagen de la papelera para el modo plstics
-  trashCan.style.backgroundImage = "url('images/trashcans/plasticsTrashcan.png')";
+  trashCan.style.backgroundImage = "url('images/menuPlasticsTrashcan.png')";
+  trashCan.style.width = "200px";
   startGame(); // Iniciar el juego
 }
 
@@ -231,7 +234,7 @@ function startGame() {
       // Configuración del juego
       trashCan.style.display = "block";
       player.score = 0;
-      player.timeToFinish = 100;
+      player.timeToFinish = 30;
       player.totalElement = 100;
       player.currentlyPlaying = true;
       
@@ -404,7 +407,7 @@ function makeEnemies() {
     });
 
     // Verificar si el puntaje es 10 o más
-    if (player.score >= 10) {
+    if (player.score >= 15) {
       youWinMessage.innerHTML = "HAS GANADO!";
       nextGameButton.style.display = "block";
     } else {

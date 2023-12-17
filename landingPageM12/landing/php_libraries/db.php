@@ -365,4 +365,55 @@ function insertBarcelonaData($id_user, $score)
         die("Error in insertBarcelonaData: " . errorMessage($e));
     }
 }
+
+
+
+function insertKenyaData($id_user, $score)
+{
+    try {
+        $connection = openDb();
+
+        // Verificar si el registro ya existe
+        $existingRecord = $connection->prepare("SELECT * FROM stats WHERE id_user = :id_user AND id_game = 3");
+        $existingRecord->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $existingRecord->execute();
+
+        if ($existingRecord->rowCount() > 0) {
+            // El registro ya existe, verificar si el score es diferente antes de eliminar e insertar
+            $existingData = $existingRecord->fetch(PDO::FETCH_ASSOC);
+
+            if ($existingData['score'] < $score) {
+                // El score es diferente y mayor, eliminar el registro con el score más bajo o igual
+                $deleteLowestScoreRecord = $connection->prepare("DELETE FROM stats WHERE id_user = :id_user AND id_game = 3 AND score <= :score ORDER BY score ASC LIMIT 3");
+                $deleteLowestScoreRecord->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+                $deleteLowestScoreRecord->bindParam(':score', $score, PDO::PARAM_INT);
+                $deleteLowestScoreRecord->execute();
+
+                // Insertar el nuevo registro
+                $insertNewRecord = $connection->prepare("INSERT INTO stats (id_user, id_game, score) VALUES (:id_user, 3, :score)");
+                $insertNewRecord->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+                $insertNewRecord->bindParam(':score', $score, PDO::PARAM_INT);
+                $insertNewRecord->execute();
+
+                echo "Registro con el score más bajo o igual eliminado y nuevo registro insertado con éxito";
+            } else {
+                // El score es igual o menor, no se necesita eliminar ni insertar
+                echo "El nuevo score no es mayor al score existente, no se realizó ninguna acción";
+            }
+        } else {
+            // Insertar el nuevo registro
+            $insertNewRecord = $connection->prepare("INSERT INTO stats (id_user, id_game, score) VALUES (:id_user, 3, :score)");
+            $insertNewRecord->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+            $insertNewRecord->bindParam(':score', $score, PDO::PARAM_INT);
+            $insertNewRecord->execute();
+
+            echo "Nuevo registro insertado con éxito";
+        }
+
+        $connection = closeDb();
+
+    } catch (PDOException $e) {
+        die("Error in insertKenyaData: " . errorMessage($e));
+    }
+}
 ?>

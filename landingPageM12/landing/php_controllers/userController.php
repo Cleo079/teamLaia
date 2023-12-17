@@ -163,4 +163,22 @@ if (isset($_POST['nextGameButtonKenya'])) {
     exit();
 }
 
+
+if (isset($_POST['nextGameButtonIndia'])) {
+    // Recuperar los datos del formulario
+    $id_user = intval($_SESSION['id_user']);  // Usar el ID almacenado en la sesión
+    $score = $_POST['scoreDataCollect'];
+
+    // Mensaje de depuración
+    echo "ID Usuario: $id_user, Puntuación: $score";
+    
+    // Insertar los datos en la base de datos
+    insertIndiaData($id_user, $score);
+
+    // Redireccionar a la página deseada
+    header('Location: ../../gameInterface/carrouselJuegos.html');
+    exit();
+}
+
+
 ?>

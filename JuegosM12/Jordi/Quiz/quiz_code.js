@@ -143,7 +143,18 @@ function mostrarExplicacion(respuestaCorrecta, explanation) {
     }, 4000);
 }
 
-// ... (tu código posterior)
+ // Verificar si el puntaje es 10 o más
+ if (player.score >= 10) {
+    youWinMessage.innerHTML = "HAS GANADO!";
+    nextGameButton.style.display = "block";
+  } else {
+    gameOverMessage.innerHTML = "HAS PERDIDO :(";
+    gameOverMessage2.innerHTML = "Pero no pasa nada, vuelve a jugar para que Laia pueda coger el vuelo hacia Brasil!";
+    nextGameButton.style.display = "none";
+  }
+
+
+document.getElementById("scoreInput").value = player.score;
 
 
 

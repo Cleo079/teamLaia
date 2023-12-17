@@ -364,7 +364,7 @@ function insertIndiaData($id_user, $score)
             // El registro ya existe, verificar si el score es diferente antes de eliminar e insertar
             $existingData = $existingRecord->fetch(PDO::FETCH_ASSOC);
 
-            if ($existingData['score'] < $score) {
+            if ($existingData['score'] > $score) {
                 // El score es diferente y mayor, eliminar el registro con el score más bajo o igual
                 $deleteLowestScoreRecord = $connection->prepare("DELETE FROM stats WHERE id_user = :id_user AND id_game = 4 AND score <= :score ORDER BY score ASC LIMIT 4");
                 $deleteLowestScoreRecord->bindParam(':id_user', $id_user, PDO::PARAM_INT);

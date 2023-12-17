@@ -151,6 +151,8 @@ function mostrarPregunta() {
 
                     // Mostrar la pantalla de instrucciones 2
     document.getElementById("instrucciones2").style.display = "block";
+
+    document.getElementById("scoreInput").value = tiempoTotal;
                 } else {
                     // Mostrar puntaje final y reiniciar el juego
                     alert("¡Quiz terminado! Tu puntaje es: " + puntaje);

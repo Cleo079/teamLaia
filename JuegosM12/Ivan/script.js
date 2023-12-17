@@ -1,9 +1,9 @@
-let matrix = shuffleMatrix();
-// let matrix = [
-//     ['1', '2', '3'],
-//     ['4', '5', '6'],
-//     ['7', '', '8']
-// ];
+// let matrix = shuffleMatrix();
+let matrix = [
+    ['1', '2', '3'],
+    ['4', '5', '6'],
+    ['7', '', '8']
+];
 
 let board = document.querySelector('.board');
 let body = document.body;
@@ -60,12 +60,12 @@ startBtn.addEventListener('click', ()=> {
     nextGameButton.style.display = 'none';
     counterElement.style.display = 'block';
     pistaElement.style.display = 'block';
-    matrix = shuffleMatrix();
-    // matrix = [
-    //     ['1', '2', '3'],
-    //     ['4', '5', '6'],
-    //     ['7', '', '8']
-    // ];
+    // matrix = shuffleMatrix();
+    matrix = [
+        ['1', '2', '3'],
+        ['4', '5', '6'],
+        ['7', '', '8']
+    ];
     drawTokens();
     counter = 240;
     playerWin = false;

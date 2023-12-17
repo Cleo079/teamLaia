@@ -51,17 +51,18 @@
             <button class="play-btn" id="start">Start</button>
             <div class="btn-shadow"></div>
         </section>
+
+        <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
+        <div class="restartButton">
+            <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
+                <input name="id_user" type="hidden" value="<?php echo $_SESSION['user']?>">
+                <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
+                <button type="submit" class="nextGameButton" name="nextGameButtonKenya">Siguiente juego</button>
+            </form>    
+            <!-- Restart -->
+        </div>
     </div>
 
-    <!-- añadido para pasar al siguinte juego y que se guarde en la base de datos por php -->
-    <div class="restartButton">
-    <form class="scoreForm" action="../../landingPageM12/landing/php_controllers/userController.php" method="POST">
-        <input name="id_user" type="hidden" value="<?php echo $_SESSION['user']?>">
-        <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
-        <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">Siguiente juego</button>
-    </form>    
-    Restart
-    </div>
 
 
     <script src="./script.js"></script>

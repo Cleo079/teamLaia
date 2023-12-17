@@ -133,7 +133,15 @@ body, html {
 }
 
 .plasticsTrashcanImage {
+    height: 57%;
+    width: 83%;
+    margin-top: 40%;
     background-image: url('../images/menuPlasticsTrashcan.png'); 
+}
+
+.plasticsCategory p {
+    padding-top: 12%;
+    margin-top: 0px;
 }
 
 .tutorialContainer {

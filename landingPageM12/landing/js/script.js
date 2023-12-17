@@ -1,5 +1,6 @@
 // Variable global para almacenar las traducciones
 let translations;
+const botonJuegaAhora = document.querySelector(".botonJuegaAhora");
 
 // Función para cargar el archivo JSON según el idioma
 function cargarTraducciones(idioma) {
@@ -44,3 +45,11 @@ cargarTraducciones('es');
 function cambiarIdioma(idioma) {
     cargarTraducciones(idioma);
 }
+
+botonJuegaAhora.addEventListener("click", () => {
+    // Especifica la ruta del archivo al que deseas redirigir
+    const newPath = "../gameInterface/mainPage.php";
+
+    // Cambia la ubicación del navegador al nuevo archivo
+    window.location.href = newPath;
+});

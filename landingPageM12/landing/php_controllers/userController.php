@@ -25,7 +25,8 @@ if (isset($_POST['logIn']))
         }
         else
         {
-            header('Location: ../../gameInterface/mainPage.php');
+            // header('Location: ../../gameInterface/mainPage.php');
+            header('Location: ../index.php');
         }
         exit();
     };
@@ -37,7 +38,8 @@ if (isset($_POST['logIn']))
 
     if (isset($_SESSION['userExist']))
     {
-        header('Location: ../mainPage.php');
+        // header('Location: ../mainPage.php');
+        header('Location: ../index.php');
         exit();
     };
 };
@@ -55,7 +57,8 @@ if (isset($_POST['singUp']))
         // Almaceno el id_user en la sesión
         $_SESSION['id_user'] = $user['id_user'];
 
-        header('Location: ../../gameInterface/mainPage.php');
+        // header('Location: ../../gameInterface/mainPage.php');
+        header('Location: ../index.php');
     }
     else
     {
@@ -65,7 +68,8 @@ if (isset($_POST['singUp']))
 
     if (isset($_SESSION['error']))
     {
-        header('Location: ../mainPage.php');
+        // header('Location: ../mainPage.php');
+        header('Location: ../index.php');
         exit();
     };
 };

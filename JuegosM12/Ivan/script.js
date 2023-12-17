@@ -9,7 +9,7 @@ let board = document.querySelector('.board');
 let body = document.body;
 let startBtn = document.querySelector('#start');
 let backBtn = document.querySelector('#back');
-let nextGameBtn = document.querySelector('nextGameButtonBarcelona');
+let nextGameBtn = document.querySelector('nextGameButtonKenya');
 let firstScreen = document.querySelector('.first-screen');
 let startBtnContainer = document.querySelector('.startBtn-container');
 let backBtnContainer = document.querySelector('.backBtn-container');
@@ -38,13 +38,13 @@ backBtn.addEventListener('mouseup', ()=> {
     backBtn.style.top = '0px';
 });
 
-// nextGameBtn.addEventListener('mousedown', ()=> {
-//     nextGameBtn.style.top = '4px';
-// });
+nextGameButton.addEventListener('mousedown', ()=> {
+    nextGameButton.style.top = '4px';
+});
 
-// nextGameBtn.addEventListener('mouseup', ()=> {
-//     nextGameBtn.style.top = '0px';
-// });
+nextGameButton.addEventListener('mouseup', ()=> {
+    nextGameButton.style.top = '0px';
+});
 /*Cambio de Imagenes del Fondo de la etiqueta body*/
 startBtn.addEventListener('click', function () {
     body.style.backgroundImage = "url('./Imagenes/kenya.png')";

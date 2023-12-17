@@ -81,7 +81,7 @@
                 <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCredits"
                     data-section= "mainPage" data-value="cred">
-                        Creditos
+                        Créditos
                     </button>
                     <br>
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
@@ -158,33 +158,33 @@
                 <div class="modal-content">
                     <div class="divStats">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div class="row row-cols-4">
+                            <div class="row row-cols-2">
                                 <div class="col">
                                     <div class="divContenedor">
                                         <img src="./images/LaiaChibi.png" alt="LaiaChibi"
                                         width="215px" height="200px">
-                                        <p class="textbg">Gatita493</p>
+                                        <p class="textbg">Eviam Albuja</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="divContenedor">
                                         <img src="./images/LaiaOtaka.png" alt="LaiaOtaka"
                                         width="215px" height="200px">
-                                        <p class="textbg">Alfonso</p>
+                                        <p class="textbg">Jordi Gomez</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="divContenedor">
                                         <img src="./images/LaiaChibi.png" alt="LaiaChibi"
                                         width="215px" height="200px">
-                                        <p class="textbg">Juanjo</p>
+                                        <p class="textbg">Ivan Martinez</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="divContenedor">
                                         <img src="./images/LaiaOtaka.png" alt="LaiaOtaka"
                                         width="215px" height="200px">
-                                        <p class="textbg">Alberto</p>
+                                        <p class="textbg">Isaac Ruiz</p>
                                     </div>
                                 </div>
                             </div>

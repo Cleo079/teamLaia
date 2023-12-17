@@ -137,6 +137,7 @@ body {
     font-family: var(--textFamily);
 }
 .divContenedor{
+    margin-top: 4px;
     margin-left: 4px;
     border: 2px solid grey;
     border-radius: 5px;

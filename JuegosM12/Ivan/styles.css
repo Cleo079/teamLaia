@@ -228,7 +228,7 @@ img{
     /* color: var(--btnText); */
     color: var(--colorWhite);
     border: 1px solid #E0D3C6;
-    position: absolute;
+    position: relative;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
 }
@@ -243,33 +243,54 @@ img{
     /* color: var(--tokenShadow); */
     color: var(--colorWhite);
     border: 1px solid #E0D3C6;
-    position: absolute;
+    position: relative;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
 }
-.back-btn-shadow{
+.nextGameButton{
+    display: none;
     width: 280px;
     height: 60px;
-    /* background-color: var(--backBtnShadow); */
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--tokens);
+    background-color: rgb(51, 45, 45);
+    color: var(--tokenShadow);
+    color: var(--colorWhite);
+    border: 1px solid #E0D3C6;
+    position: relative;
+    top: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+/*Mirar como puedo ponerlos sin que uno se enchueque*/
+/* .back-btn-shadow{
+    width: 280px;
+    height: 60px;
+    background-color: var(--backBtnShadow);
     background-color: rgb(23, 20, 20);
     border-radius: 8px;
-    position: absolute;
+    position: relative;
     top: 4px;
     z-index: -1;
 }
 .btn-shadow{
     width: 280px;
     height: 60px;
-    /* background-color: var(--btnShadow); */
+    background-color: var(--btnShadow);
     background-color: rgb(23, 20, 20);
     border-radius: 8px;
     position: absolute;
     top: 4px;
     z-index: -1;
-}
+} */
 
 .contenedorBotones{
     display: flex;
+    justify-content: space-between;
+    width: 600px;
+    flex-direction: row;
+    margin-left: 500px;
 }
 
 .counter-container{

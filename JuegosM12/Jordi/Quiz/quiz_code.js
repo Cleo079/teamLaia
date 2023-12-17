@@ -64,7 +64,36 @@ function cambiarImagenBombilla(encendida) {
     bombillas[preguntaActual].src = encendida ? "./imagenes/bombilla encendida.png" : "./imagenes/bombilla apagada.png";
 }
 
+let tiempoTranscurrido = 0;
+let intervaloTiempo;
+let tiempoTotal = 0; // Variable para almacenar el tiempo total en segundos
+
+function reiniciarJuego() {
+    // Reiniciar variables de control
+    preguntaActual = 0;
+    puntaje = 0;
+
+    // Reiniciar imágenes de bombilla
+    const bombillas = document.querySelectorAll(".bombillas img");
+    bombillas.forEach(bombilla => {
+        bombilla.src = "./imagenes/bombilla apagada.png";
+    });
+
+    // Mostrar la primera pregunta
+    mostrarPregunta();
+}
+
 function empezarQuiz() {
+     // Restablecer el tiempo transcurrido al iniciar el quiz
+     tiempoTranscurrido = 0;
+
+     // Iniciar el intervalo de tiempo
+     intervaloTiempo = setInterval(function () {
+         tiempoTranscurrido++;
+         tiempoTotal = tiempoTranscurrido
+          document.getElementById("tiempo").textContent = tiempoTotal + " segundos";
+     }, 1000);
+
     // Ocultar el mensaje y mostrar el quiz
     document.getElementById("instrucciones").style.display = "none";
     document.getElementById("quiz-container").style.display = "block";
@@ -113,12 +142,31 @@ function mostrarPregunta() {
                     mostrarPregunta();
                 }, 4000);
             } else {
-                // Mostrar puntaje final
-                alert("¡Quiz terminado! Tu puntaje es: " + puntaje);
+                // Verificar si todas las preguntas fueron respondidas correctamente
+                const todasCorrectas = puntaje === preguntas.length;
+        
+                if (todasCorrectas) {
+                    // Detener el intervalo de tiempo al finalizar el quiz
+        clearInterval(intervaloTiempo);
+
+                    // Mostrar la pantalla de instrucciones 2
+    document.getElementById("instrucciones2").style.display = "block";
+                } else {
+                    // Mostrar puntaje final y reiniciar el juego
+                    alert("¡Quiz terminado! Tu puntaje es: " + puntaje);
+                    reiniciarJuego();
+                }
             }
         };
+        
+       
         document.querySelector(".options").appendChild(boton);
     }
+}
+
+function mostrarInstrucciones2() {
+    document.getElementById("instrucciones2").style.display = "none";  // Oculta las instrucciones 2
+    reiniciarJuego();  // Puedes reiniciar el juego o realizar otras acciones aquí
 }
 
 function mostrarExplicacion(respuestaCorrecta, explanation) {
@@ -143,18 +191,6 @@ function mostrarExplicacion(respuestaCorrecta, explanation) {
     }, 4000);
 }
 
- // Verificar si el puntaje es 10 o más
- if (player.score >= 10) {
-    youWinMessage.innerHTML = "HAS GANADO!";
-    nextGameButton.style.display = "block";
-  } else {
-    gameOverMessage.innerHTML = "HAS PERDIDO :(";
-    gameOverMessage2.innerHTML = "Pero no pasa nada, vuelve a jugar para que Laia pueda coger el vuelo hacia Brasil!";
-    nextGameButton.style.display = "none";
-  }
-
-
-document.getElementById("scoreInput").value = player.score;
 
 
 

@@ -109,7 +109,7 @@ body, html {
 }
 
 .organicTrashcanImage, .glassTrashcanImage, .paperCardboardTrashcanImage, .plasticsTrashcanImage {
-    width: 80%;
+    width: 75%;
     height: 100%;
     background-size: cover; /* Ajusta según sea necesario */
     background-repeat: no-repeat;
@@ -170,8 +170,8 @@ body, html {
 .trashCan {
     background-image: url('/images/trashcan.png');
     background-size: cover;
-    height: 200px;
-    width: 150px;
+    height: 213px;
+    width: 164px;
     position: absolute;
     bottom: 0;
     left: 45%;  /*Centra horizontalmente */
@@ -210,17 +210,30 @@ body, html {
     pointer-events: none;
 }
 
-.gameOverMessage {
+.gameOverMessageContainer {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.gameOverMessage {
     pointer-events: none;
     font-size: 100px; /* Tamaño del texto del contador */
     font-weight: 700;
     text-shadow: 2px 2px 8px #000000;    
     color: #f50000; /* Color del texto */
+    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.15);
+}
+
+.gameOverMessage2 {
+    pointer-events: none;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000000;    
+    color: #ffffff; /* Color del texto */
+    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.15);
+    font-size: 32px;
 }
 
 .youWinMessage {
@@ -236,30 +249,41 @@ body, html {
     color: rgb(0, 245, 33); /* Color del texto */
 }
 
-.restartButton {
+.afterGameButtons {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    background-color: rgb(75, 198, 91);
-    font-size: 30px;
+    left: 29%;
+    top: 85%;
+    width: 65%;
     text-align: center;
-    color: rgb(229, 229, 229);
+    font-size: 40px;
     font-weight: 500;
+    color: #c6c6c6;
+    text-shadow: 2px 2px 8px #000000;
 }
 
-.restartButton:hover {
+.nextGameButton, .restartGameButton:hover {
     cursor: pointer;
 }
 
-.nextGameButton {
-    position: relative; /* o absolute, dependiendo de tu diseño */
-    top: 0; /* o ajusta según sea necesario */
-    left: 0; /* o ajusta según sea necesario */
-    z-index: 1; /* Asegúrate de que esté en una capa superior si es necesario */
+.scoreForm {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.restartButton:hover {
-    cursor: pointer;
+.nextGameButton, .restartGameButton {
+    height: 75px;
+    width: 300px;
+    border: 3px solid rgba(134, 127, 122, 0.56);
+    background: rgba(224, 211, 198, 0.08);
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFF;
+    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.15);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5px;
 }
+

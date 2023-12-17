@@ -16,11 +16,12 @@ const trashCan = document.querySelector(".trashCan");
 const container = document.querySelector(".container");
 const gameContainer = document.querySelector(".gameContainer");
 const gameOverMessage = document.querySelector(".gameOverMessage");
+const gameOverMessage2 = document.querySelector(".gameOverMessage2");
 const youWinMessage = document.querySelector(".youWinMessage");
-const restartButton = document.querySelector(".restartButton");
+const afterGameButtons = document.querySelector(".afterGameButtons");
 const nextGameButton = document.querySelector(".nextGameButton");
 
-restartButton.style.display = 'none';
+afterGameButtons.style.display = 'none';
 nextGameButton.style.display = 'none';
 topBar.style.display = 'none';
 
@@ -171,7 +172,7 @@ function selectCategory(category) {
 function startOrganicMode() {
   isOrganicMode = true;
   // Cambiar la imagen de la papelera para el modo orgánico
-  trashCan.style.backgroundImage = "url('images/trashcans/organicTrashcan.png')";
+  trashCan.style.backgroundImage = "url('images/menuOrganicTrashcan.png')";
   startGame(); // Iniciar el juego
 }
 
@@ -229,8 +230,8 @@ function startGame() {
     function startGameAfterCountdown() {
       // Configuración del juego
       trashCan.style.display = "block";
-      player.score = 10;
-      player.timeToFinish = 20;
+      player.score = 0;
+      player.timeToFinish = 100;
       player.totalElement = 100;
       player.currentlyPlaying = true;
       
@@ -385,23 +386,37 @@ function makeEnemies() {
   
   
 
-  restartButton.addEventListener("click", () => {
+  afterGameButtons.addEventListener("click", () => {
     // Recargar la página
     location.reload();
   });
   
   function endGame() {
+    body.style.backgroundImage = 'url("./images/menuBackground.png")';
+
+    trashCan.style.display = "none";
+
+    topBar.style.display = 'none';
+
+    const enemyElements = document.querySelectorAll(".element");
+    enemyElements.forEach((element) => {
+      gameContainer.removeChild(element);
+    });
+
     // Verificar si el puntaje es 10 o más
     if (player.score >= 10) {
-      youWinMessage.innerHTML = "YOU WIN!";
+      youWinMessage.innerHTML = "HAS GANADO!";
+      nextGameButton.style.display = "block";
     } else {
-      gameOverMessage.innerHTML = "GAME OVER";
+      gameOverMessage.innerHTML = "HAS PERDIDO :(";
+      gameOverMessage2.innerHTML = "Pero no pasa nada, vuelve a jugar para que Laia pueda coger el vuelo hacia Brasil!";
+      nextGameButton.style.display = "none";
     }
 
     document.getElementById("scoreInput").value = player.score;
   
-    nextGameButton.style.display = "block";
-    restartButton.style.display = 'block';
+    
+    afterGameButtons.style.display = 'block';
     youWinMessage.style.zIndex = "999";
     gameOverMessage.style.zIndex = "999";
     player.currentlyPlaying = false;

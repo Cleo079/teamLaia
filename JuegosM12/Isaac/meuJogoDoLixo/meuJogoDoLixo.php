@@ -67,17 +67,20 @@
     
     <div class="trashCan"></div>
 
-    <div class="gameOverMessage"></div>
+    <div class="gameOverMessageContainer">
+        <div class="gameOverMessage"></div>
+        <div class="gameOverMessage2"></div>
+    </div>
 
     <div class="youWinMessage"></div>
 
-    <div class="restartButton">
+    <div class="afterGameButtons">
     <form class="scoreForm" action="../../../landingPageM12/landing/php_controllers/userController.php" method="POST">
         <input name="id_user" type="hidden" value="<?php echo $_SESSION['user']?>">
         <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
-        <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">Siguiente Juego</button>
+        <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">SIGUIENTE JUEGO</button>
     </form>
-    Restart
+    <button class="restartGameButton" >VOLVER A JUGAR</button> 
     </div>
 
     

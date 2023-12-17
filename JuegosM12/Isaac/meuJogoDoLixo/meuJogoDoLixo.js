@@ -1,4 +1,7 @@
-const body = document.querySelector("body");
+let body = document.body;
+const topBar = document.querySelector(".topBar");
+const gameTitle = document.querySelector(".gameTitle");
+const actionButtons = document.querySelector(".actionButtons");
 const score = document.querySelector(".score");
 const timeLeft = document.querySelector(".timeLeft");
 const textMessage = document.querySelector(".textMessage");
@@ -19,6 +22,7 @@ const nextGameButton = document.querySelector(".nextGameButton");
 
 restartButton.style.display = 'none';
 nextGameButton.style.display = 'none';
+topBar.style.display = 'none';
 
 const organicImageSources = [
   'images/organic/apple.png',
@@ -71,12 +75,6 @@ let keys = {
   ArrowLeft: false,
 };
 
-organicStartButton.addEventListener("click", startOrganicMode);
-glassStartButton.addEventListener("click", startGlassMode);
-paperCardboardStartButton.addEventListener("click", startPaperCardboardMode);
-plasticsStartButton.addEventListener("click", startPlasticsMode);
-
-
 let isOrganicMode = false;
 let isGlassMode = false;
 let isPaperCardboardMode = false;
@@ -122,6 +120,54 @@ function scoreUpdate() {
   timeLeft.textContent = player.timeToFinish;
 }
 
+let selectedCategory = null;
+
+organicStartButton.addEventListener("click", () => selectCategory("organic"));
+glassStartButton.addEventListener("click", () => selectCategory("glass"));
+paperCardboardStartButton.addEventListener("click", () => selectCategory("paperCardboard"));
+plasticsStartButton.addEventListener("click", () => selectCategory("plastics"));
+
+const playButton = document.querySelector(".playButton");
+
+playButton.addEventListener("click", () => {
+  // Check if a category is selected
+  if (selectedCategory) {
+    // Determine which category is selected and start the game accordingly
+    if (selectedCategory === "organic") {
+      startOrganicMode();
+    } else if (selectedCategory === "glass") {
+      startGlassMode();
+    } else if (selectedCategory === "paperCardboard") {
+      startPaperCardboardMode();
+    } else if (selectedCategory === "plastics") {
+      startPlasticsMode();
+    }
+  } else {
+    // If no category is selected, provide a message or handle it as needed
+    window.alert("Por favor, selecciona una categoría");
+  }
+});
+
+function selectCategory(category) {
+  // Si la categoría ya está seleccionada, deselecciónala
+  if (selectedCategory === category) {
+    console.log(`Deseleccionando ${category}`);
+    document.querySelector(`.${category}Category`).style.backgroundColor = "";
+    selectedCategory = null;
+  } else {
+    // Desseleccionar la categoría anterior si ya hay una seleccionada
+    if (selectedCategory) {
+      console.log(`Deseleccionando ${selectedCategory}`);
+      document.querySelector(`.${selectedCategory}Category`).style.backgroundColor = "";
+    }
+
+    // Seleccionar la nueva categoría
+    selectedCategory = category;
+    console.log(`Seleccionando ${category}`);
+    document.querySelector(`.${category}Category`).style.backgroundColor = "rgba(224, 211, 198, 0.08)";
+  }
+}
+
 function startOrganicMode() {
   isOrganicMode = true;
   // Cambiar la imagen de la papelera para el modo orgánico
@@ -151,53 +197,58 @@ function startPlasticsMode() {
 }
 
 function startGame() {
-  body.style.backgroundImage = "url('../images/background.png')";
-  container.style.display = "none";
-  trashCan.style.display = "block";
-  const countdownElement = document.getElementById('countdown');
-  countdownElement.style.display = 'block'; // Asegurar que el contador sea visible al comenzar el juego
-
-  countdownFadeEffect(3);
-
-  function countdownFadeEffect(count) {
-    if (count >= 0) {
-      countdownElement.textContent = count;
-      count--;
-
-      setTimeout(function () {
-        countdownFadeEffect(count);
-      }, 1000);
-    } else {
-      countdownElement.style.display = 'none'; // Ocultar el contador una vez finalizada la cuenta regresiva
-
-      setTimeout(function () {
-        startGameAfterCountdown();
-      }, 100);
-    }
-  }
-
-  function startGameAfterCountdown() {
-    // Configuración del juego
+  if (selectCategory) {
+    body.style.backgroundImage = 'url("./images/background.png")';
+    container.style.display = "none";
     trashCan.style.display = "block";
-    player.score = 10;
-    player.timeToFinish = 20;
-    player.totalElement = 100;
-    player.currentlyPlaying = true;
-    
-    scoreUpdate();
-
-    countdownInterval = setInterval(function () {
-    player.timeToFinish--;
-    scoreUpdate();
-
-    if (player.timeToFinish === 0) {
-      clearInterval(countdownInterval);
-      endGame();
+    topBar.style.display = 'block';
+    gameTitle.style.display = 'none';
+    actionButtons.style.display = 'none';
+    const countdownElement = document.getElementById('countdown');
+    countdownElement.style.display = 'block'; // Asegurar que el contador sea visible al comenzar el juego
+  
+    countdownFadeEffect(3);
+  
+    function countdownFadeEffect(count) {
+      if (count >= 0) {
+        countdownElement.textContent = count;
+        count--;
+  
+        setTimeout(function () {
+          countdownFadeEffect(count);
+        }, 1000);
+      } else {
+        countdownElement.style.display = 'none'; // Ocultar el contador una vez finalizada la cuenta regresiva
+  
+        setTimeout(function () {
+          startGameAfterCountdown();
+        }, 100);
+      }
     }
-  }, 1000);
-
-    setupEnemies(3);
-    requestAnimationFrame(playGame);
+  
+    function startGameAfterCountdown() {
+      // Configuración del juego
+      trashCan.style.display = "block";
+      player.score = 10;
+      player.timeToFinish = 20;
+      player.totalElement = 100;
+      player.currentlyPlaying = true;
+      
+      scoreUpdate();
+  
+      countdownInterval = setInterval(function () {
+      player.timeToFinish--;
+      scoreUpdate();
+  
+      if (player.timeToFinish === 0) {
+        clearInterval(countdownInterval);
+        endGame();
+      }
+    }, 1000);
+  
+      setupEnemies(3);
+      requestAnimationFrame(playGame);
+    }
   }
 }
 
@@ -357,3 +408,12 @@ function makeEnemies() {
     document.body.style.overflowY = "hidden";
   }
   
+  const backButton = document.querySelector(".backButton");
+
+  backButton.addEventListener("click", () => {
+    // Especifica la ruta del archivo al que deseas redirigir
+    const newPath = "../../../landingPageM12/gameInterface/carrouselJuegos.html";
+
+    // Cambia la ubicación del navegador al nuevo archivo
+    window.location.href = newPath;
+});

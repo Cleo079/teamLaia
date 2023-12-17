@@ -24,13 +24,41 @@
         Time Left: <span class="timeLeft">0</span>s
     </div>
     
+    <div class="gameTitle">Reciclar en Barcelona</div>
 
     <div class="container">
-        <div class="textMessage">Choose a category</div>
-        <div class="organicCategory">Organic</div>
-        <div class="glassCategory">Glass</div>
-        <div class="paperCardboardCategory">Paper and cardboard</div>
-        <div class="plasticsCategory">Plastics</div>
+        <div class="organicCategory">
+            <div class="organicTrashcanImage"></div>
+            <p>Orgánico</p> 
+        </div>
+
+        <div class="glassCategory">
+            <div class="glassTrashcanImage"></div>
+            <p>Vidrio</p> 
+        </div>
+
+        <div class="paperCardboardCategory">
+            <div class="paperCardboardTrashcanImage"></div>
+            <p>Papel y cartón</p> 
+        </div>
+
+        <div class="plasticsCategory">
+            <div class="plasticsTrashcanImage"></div>
+            <p>Envases</p> 
+        </div>
+
+        <div class="tutorialContainer">
+            <p>Controles</p>
+            <div class="tutorialImage"></div>
+        </div>
+    </div>
+
+
+
+    <div class="actionButtons">
+        <button class="backButton">ATRÁS</button>
+
+        <button class="playButton" >JUGAR</button>
     </div>
 
     <div class="countdown-container">

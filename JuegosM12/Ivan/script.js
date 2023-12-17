@@ -1,15 +1,15 @@
-// let matrix = shuffleMatrix();
-let matrix = [
-    ['1', '2', '3'],
-    ['4', '5', '6'],
-    ['7', '', '8']
-];
+let matrix = shuffleMatrix();
+// let matrix = [
+//     ['1', '2', '3'],
+//     ['4', '5', '6'],
+//     ['7', '', '8']
+// ];
 
 let board = document.querySelector('.board');
 let body = document.body;
 let startBtn = document.querySelector('#start');
 let backBtn = document.querySelector('#back');
-let nextGameBtn = document.querySelector('nextGameButtonBarcelona');
+let nextGameBtn = document.querySelector('nextGameButtonKenya');
 let firstScreen = document.querySelector('.first-screen');
 let startBtnContainer = document.querySelector('.startBtn-container');
 let backBtnContainer = document.querySelector('.backBtn-container');
@@ -38,13 +38,13 @@ backBtn.addEventListener('mouseup', ()=> {
     backBtn.style.top = '0px';
 });
 
-// nextGameBtn.addEventListener('mousedown', ()=> {
-//     nextGameBtn.style.top = '4px';
-// });
+nextGameButton.addEventListener('mousedown', ()=> {
+    nextGameButton.style.top = '4px';
+});
 
-// nextGameBtn.addEventListener('mouseup', ()=> {
-//     nextGameBtn.style.top = '0px';
-// });
+nextGameButton.addEventListener('mouseup', ()=> {
+    nextGameButton.style.top = '0px';
+});
 /*Cambio de Imagenes del Fondo de la etiqueta body*/
 startBtn.addEventListener('click', function () {
     body.style.backgroundImage = "url('./Imagenes/kenya.png')";
@@ -60,12 +60,12 @@ startBtn.addEventListener('click', ()=> {
     nextGameButton.style.display = 'none';
     counterElement.style.display = 'block';
     pistaElement.style.display = 'block';
-    // matrix = shuffleMatrix();
-    matrix = [
-        ['1', '2', '3'],
-        ['4', '5', '6'],
-        ['7', '', '8']
-    ];
+    matrix = shuffleMatrix();
+    // matrix = [
+    //     ['1', '2', '3'],
+    //     ['4', '5', '6'],
+    //     ['7', '', '8']
+    // ];
     drawTokens();
     counter = 240;
     playerWin = false;
@@ -279,6 +279,7 @@ function startCounter(){
         if(playerWin == true){
             let puntuacion = tiempo - counter;
             board.innerHTML = `<p class="game-over">Has ganado con ${puntuacion} puntos!</p>`;
+            document.getElementById("scoreInput").value = puntuacion;
             clearInterval(counterId);
         }
         

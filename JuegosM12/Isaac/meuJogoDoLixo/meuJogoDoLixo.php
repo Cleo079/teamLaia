@@ -72,6 +72,9 @@
             <p class="helpScoresText"><img class="bombImage" src="./images/rubbishBag.png" alt="bomba">Bien reciclado +1 punto</p> </br></br>
         </div>
         <div class="helpScores">
+            <p class="helpScoresText"><img class="bombImage" src="./images/rubbishBag.png" alt="bomba">Mal reciclado -1 punto</p> </br></br>
+        </div>
+        <div class="helpScores">
             <p class="helpScoresText"><img class="bombImage" src="./images/bomb.png" alt="bomba"> Bomba -5 puntos</p>
         </div>
         <div class="helpContainer">

@@ -202,7 +202,7 @@ img{
     width: 300px;
 }
 .textContainer{
-    border: 1px solid var(--colorWhite);
+    border: 4px solid var(--colorWhite);
     margin: 90px 450px 90px 450px;
 }
 .textoLoreKenya{
@@ -218,31 +218,31 @@ img{
 }
 .play-btn{
     width: 280px;
-    height: 60px;
-    font-size: 18px;
-    border-radius: 8px;
+    height: 80px;
+    font-size: 24px;
+    /* border-radius: 8px; */
     cursor: pointer;
     /* background-color: var(--btnBackground); */
     /* background: rgba(224, 211, 198, 0.08); */
     background-color: rgb(51, 45, 45);
     /* color: var(--btnText); */
     color: var(--colorWhite);
-    border: 1px solid #E0D3C6;
+    border: 4px solid #E0D3C6;
     position: relative;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
 }
 .back-btn{
     width: 280px;
-    height: 60px;
-    font-size: 18px;
-    border-radius: 8px;
+    height: 80px;
+    font-size: 24px;
+    /* border-radius: 8px; */
     cursor: pointer;
     /* background-color: var(--tokens); */
     background-color: rgb(51, 45, 45);
     /* color: var(--tokenShadow); */
     color: var(--colorWhite);
-    border: 1px solid #E0D3C6;
+    border: 4px solid #E0D3C6;
     position: relative;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -250,15 +250,15 @@ img{
 .nextGameButton{
     display: none;
     width: 280px;
-    height: 60px;
-    font-size: 18px;
-    border-radius: 8px;
+    height: 80px;
+    font-size: 24px;
+    /* border-radius: 8px; */
     cursor: pointer;
     background-color: var(--tokens);
     background-color: rgb(51, 45, 45);
     color: var(--tokenShadow);
     color: var(--colorWhite);
-    border: 1px solid #E0D3C6;
+    border: 4px solid #E0D3C6;
     position: relative;
     top: 0;
     font-family: 'Pixelify Sans', sans-serif;
@@ -305,7 +305,7 @@ img{
 .pista{
     width: 50px;
     height: 50px;
-    border: 1px solid var(--colorWhite);
+    border: 4px solid var(--colorWhite);
     margin: 5px;
     display: none;
     border-radius: 4px;

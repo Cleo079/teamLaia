@@ -85,7 +85,7 @@
 
                 <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCredits"
-                    data-section= "mainPage" data-value="cred">
+                    data-section= "mainPage" data-value="Créditos">
                         Créditos
                     </button>
                     <br>

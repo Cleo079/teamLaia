@@ -68,11 +68,16 @@
     <div class="helpButton">?</div>
     <div class="helpContent">
     <button id="closeButton">&times;</button>
+        <div class="helpScores">
+            <p class="helpScoresText"><img class="bombImage" src="./images/rubbishBag.png" alt="bomba">Bien reciclado +1 punto</p> </br></br>
+        </div>
+        <div class="helpScores">
+            <p class="helpScoresText"><img class="bombImage" src="./images/rubbishBag.png" alt="bomba">Mal reciclado -1 punto</p> </br></br>
+        </div>
+        <div class="helpScores">
+            <p class="helpScoresText"><img class="bombImage" src="./images/bomb.png" alt="bomba"> Bomba -5 puntos</p>
+        </div>
         <div class="helpContainer">
-            <!-- <p>Para ayudar a la planta de reciclaje y conseguir dinero para volar hacia Brasil necesitas reciclar 15 cosas en menos de 30 segundos
-            La basura que tires en el contenedor correcto sumará +1 punto, por cada basura que no corresponda a la basura del contenedor resta -1 punto,
-            y si una bomba cae en tu contenedor destruira 5 objetos que hayas reciclado y restará -5 puntos
-            </p> -->
             <div class="organicHelp">
                 ¿Que se puede tirar en el contenedor organico?
                 <div class="helpImagesContainer">

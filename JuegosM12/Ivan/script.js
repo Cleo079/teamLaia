@@ -145,9 +145,9 @@ function addEventListeners(){
             if(result === true){
                 playerWin = true;
                 startBtnContainer.style.display = 'block';
-                startBtn.innerText = "Restart";
+                startBtn.innerText = "RESTART";
                 nextGameButton.style.display = 'block';
-                nextGameButton.innerText = "Next Game";
+                nextGameButton.innerText = "NEXT GAME";
                 backBtnContainer.style.display = 'none';
 
                 confetti({

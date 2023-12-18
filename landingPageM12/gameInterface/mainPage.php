@@ -33,7 +33,6 @@
 </head>
 <body class="bodyBg">
     <div class="void">
-        <div class="dropdown">
             <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="imagenCambioIdioma" src="./images/worldCambiarIdioma.png" alt="lang">
             </button>
@@ -48,7 +47,6 @@
                     </svg>
                 <li><a class="dropdown-item" onclick="cambiarIdioma('cat')">Català</a></li>
             </ul>
-        </div>
         <div class="centrado">
             <h1 id="titulo" data-section= "mainPage" data-value="laia">Laia Ferrer ¿nos iluminas?</h1>
             <br>
@@ -56,14 +54,6 @@
                 <li>
                     <a class="li_a" href="./carrouselJuegos.html">
                         <p class="txt borderBottom" data-section= "mainPage" data-value="jugar">Jugar</p>
-                    </a>
-                    <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
-                        <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
-                    </svg>
-                </li>
-                <li>
-                    <a class="li_a" href="../../landingPageM12/landing/index.php">
-                        <p class="txt" data-section= "mainPage" data-value="nuevo">Cerrar Sesion</p>
                     </a>
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>

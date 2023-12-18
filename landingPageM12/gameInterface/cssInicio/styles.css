@@ -24,7 +24,7 @@ body {
     --textFamily: 'Belleza', sans-serif;
     --textColorWhite: #E0D3C6;
     --textShadow: 2px 2px 5px #5F4A43;
-    --backgroundImage: url("../images/fondo.png");
+    --backgroundImage: url("../images/fondo.webp");
     --backgroundBlur: blur(0px);
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
 }
@@ -159,6 +159,7 @@ body {
 }
 
 .btn-secondary {
+    display: flex;
     width: 70px;
     height: 50px;
     border-radius: 12px;
@@ -169,6 +170,9 @@ body {
     right: 0;
     margin-top: 20px;
     margin-right: 30px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .btn-secondary.show {

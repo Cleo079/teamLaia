@@ -60,8 +60,8 @@
 
    <!-- Div de Instrucciones 2 -->
 <div class="instrucciones2" id="instrucciones2" style="display: none;">
-    <h2>¡Felicidades!</h2>
-    <p>Has respondido todas las preguntas correctamente.</p>
+    <h2 class="feliz">¡Felicidades!</h2>
+    <p class="feliz">Has respondido todas las preguntas correctamente.</p>
     <div class="botones-container">
     <button onclick="mostrarInstrucciones2()" class="restartButton">Reiniciar juego</button>
     <!-- Añadido para pasar al siguiente juego y guardar en la base de datos por PHP -->

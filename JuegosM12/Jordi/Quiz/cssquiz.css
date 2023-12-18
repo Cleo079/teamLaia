@@ -103,9 +103,12 @@ body {
     width: 50%;
 }
 .crono{
-    text-decoration-color: #eee;
+    color: #eee;
     text-align: center;
     
+}
+.feliz{
+    text-align: center;
 }
 
 .instrucciones{

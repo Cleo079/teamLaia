@@ -92,7 +92,7 @@ function empezarQuiz() {
          tiempoTranscurrido++;
          tiempoTotal = tiempoTranscurrido
           document.getElementById("tiempo").textContent = tiempoTotal + " segundos";
-     }, 3000);
+     }, 1000);
 
     // Ocultar el mensaje y mostrar el quiz
     document.getElementById("instrucciones").style.display = "none";

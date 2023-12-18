@@ -451,4 +451,84 @@ function insertKenyaData($id_user, $score)
         die("Error in insertKenyaData: " . errorMessage($e));
     }
 }
+
+
+function inserDataGame($id_user, $id_game, $score)
+{
+    try 
+    {
+        $connection = openDb();
+
+        $statementTxt = "insert into stats (id_user, id_game, score) values (:id_user, :id_game, :score);";
+        $statement = $connection->prepare($statementTxt);
+        $statement->bindParam(':id_user', $id_user);
+        $statement->bindParam(':id_game', $id_game);
+        $statement->bindParam(':score', $score);
+        $statement->execute();
+
+        // $_SESSION['message'] = 'Record inserted succesfully';
+    }
+    catch (PDOException $e) 
+    {
+        $_SESSION['error'] = errorMessage($e);
+    }
+
+    $connection = closeDb();
+}
+
+
+function selectStats()
+{
+    $connection = openDb();
+
+    $statementTxt = "SELECT
+                        u.user_name as id_user,
+                        g.name_game as id_game,
+                        s.score
+                    FROM
+                        stats s
+                    JOIN
+                        users u ON s.id_user = u.id_user
+                    JOIN
+                        games g ON s.id_game = g.id_game;
+                    ";
+
+    $statement = $connection->prepare($statementTxt);
+    $statement->execute();
+
+    // fetchAll(PDO::FETCH_ASSOC) return me an associative array AND OLNY THE NAMES!!
+    $result = $statement->fetchAll();
+
+    $connection = closeDb();
+
+    return $result;
+}
+
+function selectStatsByGame($id_game)
+{
+    $connection = openDb();
+
+    $statementTxt = "SELECT
+                        u.user_name as id_user,
+                        id_game,
+                        s.score
+                    FROM
+                        stats s
+                    JOIN
+                        users u ON s.id_user = u.id_user
+                    WHERE
+                        id_game = :id_game;
+                    ";
+
+    $statement = $connection->prepare($statementTxt);
+    $statement->bindParam(':id_game', $id_game);
+    $statement->execute();
+
+    // fetchAll(PDO::FETCH_ASSOC) return me an associative array AND OLNY THE NAMES!!
+    $result = $statement->fetchAll();
+
+    $connection = closeDb();
+
+    return $result;
+}
 ?>

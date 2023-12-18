@@ -59,7 +59,7 @@
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
                 </li>
-                <li>
+                <!-- <li>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalStats">
                         Ranking
                     </button>
@@ -67,16 +67,15 @@
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>
-                </li>
+                </li> -->
 
 
 
                 <!-- Prueba con el ranking php -->
                 <li>
                     <a class="li_a" href="../landing/ranking.php">
-                        <p class="txt"> Ranking PHP</p>
+                        <p class="txt"> Ranking</p>
                     </a>
-                    <br>
                     <svg class="lily" xmlns="http://www.w3.org/2000/svg" width="206" height="7" viewBox="0 0 206 7" fill="none">
                         <path d="M0.113252 3.2972L3.00423 6.17972L5.88675 3.28874L2.99577 0.40622L0.113252 3.2972ZM205.887 2.99592L202.996 0.113395L200.113 3.00437L203.004 5.88689L205.887 2.99592ZM3.00073 3.79297L203.001 3.50014L202.999 2.50014L2.99927 2.79297L3.00073 3.79297Z" fill="#E0D3C6"/>
                     </svg>

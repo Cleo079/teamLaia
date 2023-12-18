@@ -30,7 +30,7 @@
             </div>
             
            <div class="botones-container">
-            <a href="../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">Back</button></a>
+            <a href="../../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">Back</button></a>
             <button class="botonEmpezar" onclick="empezarQuiz()">¡Empezar!</button>
             </div>
         </div>

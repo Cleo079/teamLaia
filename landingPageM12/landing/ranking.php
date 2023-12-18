@@ -21,7 +21,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include_once ('./php_partials/menu.php') ?>
     
     <div class="container">
         <table class="table table-dark table-striped">

@@ -1,7 +1,7 @@
 <?php
-    session_start();
+    // session_start();
 
-    $userSession = $_SESSION['user'];
+    // $userSession = $_SESSION['user'];
 
     require_once('../../../landingPageM12/landing/php_libraries/db.php');
 ?>

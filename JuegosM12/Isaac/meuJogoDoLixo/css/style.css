@@ -130,6 +130,21 @@ body, html {
     height: 100%;
 }
 
+.helpScores {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.helpScoresText {
+    display: flex;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
 .organicHelp, .glassHelp, .paperCardboardHelp, .plasticsHelp {
     display: flex;
     flex-direction: column;
@@ -158,6 +173,11 @@ body, html {
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-around;
+}
+
+.bombImage {
+    height: 50px;
+    width: 50px;
 }
 
 .helpImages {

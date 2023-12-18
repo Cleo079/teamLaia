@@ -92,7 +92,7 @@ function empezarQuiz() {
          tiempoTranscurrido++;
          tiempoTotal = tiempoTranscurrido
           document.getElementById("tiempo").textContent = tiempoTotal + " segundos";
-     }, 1000);
+     }, 3000);
 
     // Ocultar el mensaje y mostrar el quiz
     document.getElementById("instrucciones").style.display = "none";
@@ -140,7 +140,7 @@ function mostrarPregunta() {
             if (preguntaActual < preguntas.length) {
                 setTimeout(function() {
                     mostrarPregunta();
-                }, 1);
+                }, 3000);
             } else {
                 // Verificar si todas las preguntas fueron respondidas correctamente
                 const todasCorrectas = puntaje === preguntas.length;

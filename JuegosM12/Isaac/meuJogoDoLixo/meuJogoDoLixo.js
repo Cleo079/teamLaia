@@ -177,7 +177,7 @@ function selectCategory(category) {
     // Seleccionar la nueva categoría
     selectedCategory = category;
     console.log(`Seleccionando ${category}`);
-    document.querySelector(`.${category}Category`).style.backgroundColor = "rgba(224, 211, 198, 0.08)";
+    document.querySelector(`.${category}Category`).style.backgroundColor = "rgba(224, 211, 198, 0.30)";
   }
 }
 

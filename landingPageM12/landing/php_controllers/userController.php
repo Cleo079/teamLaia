@@ -25,8 +25,8 @@ if (isset($_POST['logIn']))
         }
         else
         {
-            // header('Location: ../../gameInterface/mainPage.php');
-            header('Location: ../index.php');
+            header('Location: ../../gameInterface/mainPage.php');
+            // header('Location: ../index.php');
         }
         exit();
     };

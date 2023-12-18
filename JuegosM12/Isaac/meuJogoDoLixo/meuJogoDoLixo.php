@@ -1,4 +1,8 @@
 <?php
+    session_start();
+
+    $userSession = $_SESSION['user'];
+
     require_once('../../../landingPageM12/landing/php_libraries/db.php');
 ?>
 
@@ -123,7 +127,7 @@
 
     <div class="afterGameButtons">
     <form class="scoreForm" action="../../../landingPageM12/landing/php_controllers/userController.php" method="POST">
-        <input name="id_user" type="hidden" value="<?php echo $_SESSION['user']?>">
+        <input name="id_user" type="hidden" value="<?php echo $userSession ?>">
         <input id="scoreInput" name="scoreDataCollect" type="hidden" value="">
         <button type="submit" class="nextGameButton" name="nextGameButtonBarcelona">SIGUIENTE JUEGO</button>
     </form>

@@ -4,7 +4,7 @@
 
     $userSession = $_SESSION['user'];
 
-    $players = selectPlayers();
+    $players = selectStats();
 
     $n = 1;
 
@@ -21,21 +21,23 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include_once ('./php_partials/menu.php') ?>
     
     <div class="container">
         <table class="table table-dark table-striped">
             <tr>
-                <th>Posición</th>
-                <th>Nombre</th>
-                <th>Puntuación</th>
+                <th>Position</th>
+                <th>Name</th>
+                <th>Game</th>
+                <th>Score</th>
             </tr>
             
             <?php foreach($players as $player) { ?>
 
                 <tr>
                     <td><?php echo $n; ?></td>
-                    <td><?php echo $player['user_name']; ?></td>
+                    <td><?php echo $player['id_user']; ?></td>
+                    <td><?php echo $player['id_game']; ?></td>
+                    <td><?php echo $player['score']; ?></td>
                 </tr>
             <?php 
 

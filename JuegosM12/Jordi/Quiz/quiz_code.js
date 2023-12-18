@@ -140,7 +140,7 @@ function mostrarPregunta() {
             if (preguntaActual < preguntas.length) {
                 setTimeout(function() {
                     mostrarPregunta();
-                }, 4000);
+                }, 1);
             } else {
                 // Verificar si todas las preguntas fueron respondidas correctamente
                 const todasCorrectas = puntaje === preguntas.length;
@@ -190,7 +190,7 @@ function mostrarExplicacion(respuestaCorrecta, explanation) {
     // Ocultar la explicación después de 4 segundos
     setTimeout(function() {
         document.querySelector(".explicacion").style.display = "none";
-    }, 4000);
+    }, 1);
 }
 
 

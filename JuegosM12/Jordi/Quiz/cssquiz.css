@@ -102,6 +102,11 @@ body {
 .colb{
     width: 50%;
 }
+.crono{
+    text-decoration-color: #eee;
+    text-align: center;
+    
+}
 
 .instrucciones{
     font-size: 33px;

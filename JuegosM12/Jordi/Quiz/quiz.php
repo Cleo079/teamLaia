@@ -47,7 +47,7 @@
                 <img src="./imagenes/bombilla apagada.png">
                 
             </div>
-            <div id="tiempo">Tiempo: 0 Segundos</div>
+            <div id="tiempo" class="crono">Tiempo: 0 Segundos</div>
           <p class="enunciado" id="enunciado"></p>
           
         <div class="options">

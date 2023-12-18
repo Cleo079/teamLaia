@@ -99,12 +99,11 @@ function empezarQuiz() {
     document.getElementById("quiz-container").style.display = "block";
 }
 
-// Función para mostrar la pregunta actual
-// ... (tu código anterior)
 
-// ... (tu código anterior)
+let preguntaRespondida= false;
 
 function mostrarPregunta() {
+    preguntaRespondida = false;
     let pregunta = preguntas[preguntaActual];
     document.querySelector(".question img").src = pregunta.imagen;
     document.querySelector("#enunciado").textContent = pregunta.pregunta;
@@ -116,6 +115,12 @@ function mostrarPregunta() {
         boton.textContent = pregunta.opciones[i];
         boton.classList.add("option");
         boton.onclick = function() {
+             // Verificar si la pregunta ya ha sido respondida
+             if (preguntaRespondida) {
+                return; // Salir de la función si la pregunta ya ha sido respondida
+            }
+
+            preguntaRespondida = true;
             // Comprobar si la respuesta es correcta
             const respuestaCorrecta = i === pregunta.respuesta;
 
@@ -140,7 +145,7 @@ function mostrarPregunta() {
             if (preguntaActual < preguntas.length) {
                 setTimeout(function() {
                     mostrarPregunta();
-                }, 4000);
+                }, 5000);
             } else {
                 // Verificar si todas las preguntas fueron respondidas correctamente
                 const todasCorrectas = puntaje === preguntas.length;
@@ -155,7 +160,7 @@ function mostrarPregunta() {
     document.getElementById("scoreInput").value = tiempoTotal;
                 } else {
                     // Mostrar puntaje final y reiniciar el juego
-                    alert("¡Quiz terminado! Tu puntaje es: " + puntaje);
+                    alert("haz fallado, intentalo de nuevo " + puntaje+"/6");
                     reiniciarJuego();
                 }
             }
@@ -190,7 +195,7 @@ function mostrarExplicacion(respuestaCorrecta, explanation) {
     // Ocultar la explicación después de 4 segundos
     setTimeout(function() {
         document.querySelector(".explicacion").style.display = "none";
-    }, 4000);
+    }, 5000);
 }
 
 

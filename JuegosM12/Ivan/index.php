@@ -36,19 +36,21 @@
             <p class="textoLoreKenya">Laia viajó a Kenia, durante</br>
                 su visita vió muchos animales,</br>
                 que de entre ellos uno destacó</br>
-                más que el resto
+                más que el resto.</br>
+                Deberas hacer click en la pieza</br>
+                para moverla y completar el puzzle.
             </p>
         </div>
     </section>
 
     <div class="contenedorBotones">
         <section class="backBtn-container">
-            <a href="../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">Back</button></a>
+            <a href="../../landingPageM12/gameInterface/carrouselJuegos.html"><button class="back-btn" id="back">BACK</button></a>
             <div class="back-btn-shadow"></div>
         </section>
         
         <section class="startBtn-container">
-            <button class="play-btn" id="start">Start</button>
+            <button class="play-btn" id="start">START</button>
             <div class="btn-shadow"></div>
         </section>
 

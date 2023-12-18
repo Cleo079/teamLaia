@@ -160,15 +160,11 @@
 
     <div class="divTextoLore">
         <p class="textoLore">
-        En un mundo donde la tecnología y la magia se entrelazan, Laia Ferrer se erige como una poderosa ingeniera con la misión de tejer las fibras invisibles que alimentan la vida de los diversos pueblos. Nacida en Barcelona, pero con raíces profundas en el tranquilo pueblo de Forcall, en Castelló, Laia se sumerge en el corazón de la naturaleza cada vez que sus deberes como creadora de redes de energía sostenible lo permiten.<br><br>
+            En un mundo donde la tecnología y la magia convergen, Laia Ferrer, ingeniera de Barcelona con raíces en Forcall, Castelló, lidera un equipo en la creación de redes de energía sostenible. A sus 46 años, Laia y su equipo enfrentan desafíos matemáticos y pruebas geográficas al recorrer pueblos, formando una red eléctrica para satisfacer necesidades específicas. <br><br>
 
-        Con 46 años de edad, Laia lidera un equipo de valientes colaboradores, todos ellos unidos por un propósito común: satisfacer las necesidades energéticas de los pueblos. Su jornada no es solo un ejercicio técnico, sino una aventura que comienza con el contacto directo con la gente y los líderes locales. Juntos, recopilan información vital sobre las necesidades específicas de cada población.<br><br>
+            Su formación en Ingeniería Industrial en la Universitat Politècnica de Catalunya la ha preparado para este viaje, donde no solo comparte conocimientos como catedrática, sino que también busca innovadoras alternativas de energía sostenible. <br><br>
 
-        A medida que Laia y sus colaboradores recorren los diversos pueblos, el juego se despliega ante ellos. Desafíos matemáticos, preguntas sobre geografía, problemas combinatorios: estas pruebas se presentan como obstáculos en su camino. Sin embargo, son estas pruebas las que dan forma a su misión, guiándolos hacia la creación de una red eléctrica útil y sostenible para las comunidades que sirven.<br><br>
-
-        La formación en Ingeniería Industrial en la Universitat Politècnica de Catalunya ha preparado a Laia para este viaje. Como catedrática, no solo transmite conocimientos, sino que también encabeza la búsqueda de alternativas innovadoras con energías sostenibles. Su compromiso con la creación de un mundo mejor resuena con la niña que alguna vez soñó con viajar y dejar una huella positiva en el mundo.<br><br>
-
-        Adéntrate en este juego épico, donde cada decisión cuenta y cada desafío superado acerca a Laia y su equipo a la realización de un sueño compartido: iluminar el mundo con una red de energía sostenible que perdure a través de las eras. ¡Prepárate para un viaje emocionante, donde la magia de la ingeniería y el espíritu aventurero se entrelazan para forjar un futuro brillante!<br><br>
+            Acompaña a Laia en este juego épico, donde cada decisión cuenta, superando desafíos para iluminar el mundo con una red de energía duradera. ¡Prepárate para un emocionante viaje donde la magia de la ingeniería y el espíritu aventurero crean un futuro brillante! <br><br>
         </p>
     </div>
 

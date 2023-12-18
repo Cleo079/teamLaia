@@ -20,7 +20,7 @@
 
 <div class="gameContainer">
     <div class="topBar">        
-        Score: <span class="score">0</span>/10
+        Score: <span class="score">0</span>/15
         Time Left: <span class="timeLeft">0</span>s
     </div>
     
@@ -59,6 +59,49 @@
         <button class="backButton">ATRÁS</button>
 
         <button class="playButton" >JUGAR</button>
+    </div>
+
+    <div class="helpButton">?</div>
+    <div class="helpContent">
+    <button id="closeButton">&times;</button>
+        <div class="helpContainer">
+            <div class="organicHelp">
+                ¿Que se puede tirar en el contenedor organico?
+                <div class="helpImagesContainer">
+                    <img class="helpImages" src="./images/organic/apple.png" alt="manzana">
+                    <img class="helpImages" src="./images/organic/banana.png" alt="plátano">
+                    <img class="helpImages" src="./images/organic/egg.png" alt="huevo">
+                    <img class="helpImages" src="./images/organic/fish.png" alt="pescado">
+                </div>
+            </div>
+            <div class="glassHelp">
+                ¿Que se puede tirar en el contenedor de vidrio?
+                <div class="helpImagesContainer">
+                    <img class="helpImages" src="./images/glass/canningJar.png" alt="bote">
+                    <img class="helpImages" src="./images/glass/glassBottle.png" alt="botella">
+                    <img class="helpImages" src="./images/glass/testTube.png" alt="tubo de ensayo">
+                    <img class="helpImages" src="./images/glass/wineGlass.png" alt="botella de vino">
+                </div>
+            </div>
+            <div class="paperCardboardHelp">
+                ¿Que se puede tirar en el contenedor de papel y cartón?
+                <div class="helpImagesContainer">
+                    <img class="helpImages" src="./images/paperAndCardboard/cardboardBox.png" alt="caja">
+                    <img class="helpImages" src="./images/paperAndCardboard/cardboardTube.png" alt="tubito">
+                    <img class="helpImages" src="./images/paperAndCardboard/cerealBox.png" alt="caja de cereales">
+                    <img class="helpImages" src="./images/paperAndCardboard/newspaper.png" alt="periodico">
+                </div>
+            </div>
+            <div class="plasticsHelp">
+                ¿Que se puede tirar en el contenedor de envases?
+                <div class="helpImagesContainer">
+                    <img class="helpImages" src="./images/plastics/bleachBottle.png" alt="lejía">
+                    <img class="helpImages" src="./images/plastics/can.png" alt="lata">
+                    <img class="helpImages" src="./images/plastics/plasticBag.png" alt="bolsa">
+                    <img class="helpImages" src="./images/plastics/waterBottle.png" alt="botella">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="countdown-container">

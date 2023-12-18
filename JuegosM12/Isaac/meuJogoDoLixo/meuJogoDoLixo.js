@@ -2,6 +2,7 @@ let body = document.body;
 const topBar = document.querySelector(".topBar");
 const gameTitle = document.querySelector(".gameTitle");
 const actionButtons = document.querySelector(".actionButtons");
+const helpButton = document.querySelector(".helpButton");
 const score = document.querySelector(".score");
 const timeLeft = document.querySelector(".timeLeft");
 const textMessage = document.querySelector(".textMessage");
@@ -20,6 +21,16 @@ const gameOverMessage2 = document.querySelector(".gameOverMessage2");
 const youWinMessage = document.querySelector(".youWinMessage");
 const afterGameButtons = document.querySelector(".afterGameButtons");
 const nextGameButton = document.querySelector(".nextGameButton");
+const helpContent = document.querySelector('.helpContent');
+const closeButton = document.getElementById('closeButton');
+
+    helpButton.addEventListener('click', function () {
+        helpContent.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function () {
+        helpContent.style.display = 'none';
+    });
 
 afterGameButtons.style.display = 'none';
 nextGameButton.style.display = 'none';
@@ -101,6 +112,7 @@ let player = {
   currentlyPlaying: false,
   speed: 15,
   totalElement: 0,
+  totalBomb: 0,
   lives: 3,
 };
 
@@ -187,8 +199,8 @@ function startPaperCardboardMode() {
   isPaperCardboardMode = true;
   // Cambiar la imagen de la papelera para el modo paperCardboard
   trashCan.style.backgroundImage = "url('images/menuPaperCardboardTrashcan.png')";
-  trashCan.style.width = "200px";
-  trashCan.style.height = "204px";
+  trashCan.style.width = "160px";
+  trashCan.style.height = "163px";
   startGame(); // Iniciar el juego
 }
 
@@ -196,7 +208,8 @@ function startPlasticsMode() {
   isPlasticsMode = true;
   // Cambiar la imagen de la papelera para el modo plstics
   trashCan.style.backgroundImage = "url('images/menuPlasticsTrashcan.png')";
-  trashCan.style.width = "200px";
+  trashCan.style.width = "160px";
+  trashCan.style.height = "186px";
   startGame(); // Iniciar el juego
 }
 
@@ -208,6 +221,7 @@ function startGame() {
     topBar.style.display = 'block';
     gameTitle.style.display = 'none';
     actionButtons.style.display = 'none';
+    helpButton.style.display = 'none';
     const countdownElement = document.getElementById('countdown');
     countdownElement.style.display = 'block'; // Asegurar que el contador sea visible al comenzar el juego
   
@@ -229,28 +243,30 @@ function startGame() {
         }, 100);
       }
     }
+    
   
     function startGameAfterCountdown() {
-      // Configuración del juego
       trashCan.style.display = "block";
       player.score = 0;
       player.timeToFinish = 30;
       player.totalElement = 100;
+      player.totalBomb = 1;
       player.currentlyPlaying = true;
-      
+    
       scoreUpdate();
-  
+    
       countdownInterval = setInterval(function () {
-      player.timeToFinish--;
-      scoreUpdate();
-  
-      if (player.timeToFinish === 0) {
-        clearInterval(countdownInterval);
-        endGame();
-      }
-    }, 1000);
-  
+        player.timeToFinish--;
+        scoreUpdate();
+    
+        if (player.timeToFinish === 0) {
+          clearInterval(countdownInterval);
+          endGame();
+        }
+      }, 1000);
+    
       setupEnemies(3);
+      setupBombs(1);
       requestAnimationFrame(playGame);
     }
   }
@@ -261,6 +277,43 @@ function setupEnemies(num) {
     makeEnemies();
   }
 }
+
+function setupBombs(num) {
+  for (let x = 0; x < num; x++) {
+    const randomInterval = Math.floor(Math.random() * 30000);
+    setInterval(makeBomb, randomInterval);
+  }
+}
+
+function makeBomb() {
+  if (player.timeToFinish > 0 && player.totalBomb > 0) {
+    player.totalBomb--;
+    scoreUpdate();
+
+    const bombImage = 'images/bomb.png'; // Adjust the image path as needed
+
+    let bomb = document.createElement("div");
+    bomb.style.backgroundImage = `url(${bombImage})`;
+    bomb.classList.add("element");
+
+    let minDistance = 20;
+    do {
+      bomb.x = Math.floor(Math.random() * (boundGameContainer.width - 100));
+      if (bomb.x < 0) {
+        bomb.x = 100;
+      }
+      bomb.y = Math.floor(Math.random() * 500) * -1 - 200;
+    } while (isTooCloseToOthers(bomb, minDistance));
+
+    let maxSpeed = 10;
+    bomb.speed = Math.min(Math.ceil(Math.random() * 10) + 3, maxSpeed);
+
+    gameContainer.appendChild(bomb);
+    bomb.style.left = bomb.x + "px";
+    bomb.style.top = bomb.y + "px";
+  }
+}
+
 
 function makeEnemies() {
   if (player.timeToFinish > 0 && player.totalElement > 0) {
@@ -332,32 +385,41 @@ function makeEnemies() {
   
     if (e.y > window.innerHeight - 100) {
       gameContainer.removeChild(e);
-      makeEnemies();
+      if (e.style.backgroundImage.includes("bomb")) {
+        makeBomb();
+      } else {
+        makeEnemies();
+      }
     } else {
       e.style.top = e.y + "px";
   
       if (isCollide(trashCan, e)) {
         const imageUrl = e.style.backgroundImage;
   
-        // Puntuación basada en la categoría correcta
-        if ((isOrganicMode && imageUrl.includes("images/organic")) ||
-            (isPlasticsMode && imageUrl.includes("images/plastics")) ||
-            (isPaperCardboardMode && imageUrl.includes("images/paperAndCardboard")) ||
-            (isGlassMode && imageUrl.includes("images/glass"))) {
-          player.score++;
+        if (imageUrl.includes("bomb")) {
+          player.score -= 5; // Subtract 5 points for hitting a bomb
         } else {
-          player.score--;
+          if ((isOrganicMode && imageUrl.includes("images/organic")) ||
+              (isPlasticsMode && imageUrl.includes("images/plastics")) ||
+              (isPaperCardboardMode && imageUrl.includes("images/paperAndCardboard")) ||
+              (isGlassMode && imageUrl.includes("images/glass"))) {
+            player.score++;
+          } else {
+            player.score--;
+          }
         }
   
         gameContainer.removeChild(e);
         scoreUpdate();
-        makeEnemies();
+  
+        if (!imageUrl.includes("bomb")) {
+          makeEnemies();
+        } else {
+          makeBomb();
+        }
       }
     }
   }
-  
-
-  
 
   function playGame() {
     if (player.currentlyPlaying) {

@@ -20,8 +20,8 @@
 
 <div class="gameContainer">
     <div class="topBar">        
-        Score: <span class="score">0</span>/15
-        Time Left: <span class="timeLeft">0</span>s
+        Puntuación: <span class="score">0</span>/15
+        Tiempo restante: <span class="timeLeft">0</span>s
     </div>
     
     <div class="gameTitle">Reciclar en Barcelona</div>
@@ -65,6 +65,10 @@
     <div class="helpContent">
     <button id="closeButton">&times;</button>
         <div class="helpContainer">
+            <!-- <p>Para ayudar a la planta de reciclaje y conseguir dinero para volar hacia Brasil necesitas reciclar 15 cosas en menos de 30 segundos
+            La basura que tires en el contenedor correcto sumará +1 punto, por cada basura que no corresponda a la basura del contenedor resta -1 punto,
+            y si una bomba cae en tu contenedor destruira 5 objetos que hayas reciclado y restará -5 puntos
+            </p> -->
             <div class="organicHelp">
                 ¿Que se puede tirar en el contenedor organico?
                 <div class="helpImagesContainer">

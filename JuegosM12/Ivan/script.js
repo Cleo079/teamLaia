@@ -18,7 +18,7 @@ let nextGameButton = document.querySelector('.nextGameButton');
 let counterElement = document.querySelector('.counter');
 let pistaElement = document.querySelector('.pista');
 let pauseElement = document.querySelector('.pause');
-let counter = 240;
+let counter = 480;
 let playerWin = false;
 
 /*Animacion botones*/
@@ -67,7 +67,7 @@ startBtn.addEventListener('click', ()=> {
     //     ['7', '', '8']
     // ];
     drawTokens();
-    counter = 240;
+    counter = 480;
     playerWin = false;
     startCounter();
     addEventListeners();
@@ -259,7 +259,7 @@ function compareMatrix(){
 }
 
 // Contador
-let tiempo = 240;
+let tiempo = 480;
 function startCounter(){
     counterElement.innerText = counter;
     let counterId = setInterval(()=>{

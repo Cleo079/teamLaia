@@ -469,7 +469,7 @@ function makeEnemies() {
     });
 
     // Verificar si el puntaje es 10 o más
-    if (player.score >= 15) {
+    if (player.score >= 10) {
       youWinMessage.innerHTML = "HAS GANADO!";
       nextGameButton.style.display = "block";
     } else {

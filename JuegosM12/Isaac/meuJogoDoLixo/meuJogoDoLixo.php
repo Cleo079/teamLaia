@@ -24,7 +24,7 @@
 
 <div class="gameContainer">
     <div class="topBar">        
-        Puntuación: <span class="score">0</span>/15
+        Puntuación: <span class="score">0</span>/10
         Tiempo restante: <span class="timeLeft">0</span>s
     </div>
     
